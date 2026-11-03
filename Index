@@ -1,1 +1,171 @@
 
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RMM Group | IIT Bhilai</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="dw-lock">
+
+<!-- Diwali Splash Screen -->
+<div id="diwali" role="dialog" aria-label="Diwali greetings">
+  <canvas id="dwfx" aria-hidden="true"></canvas>
+  <div class="card">
+    <p class="hi">RMM Research Group</p>
+    <p class="wish">wishes you a</p>
+    <h2>Happy Diwali</h2>
+    <p class="sub">May the festival of lights fill your life with joy, health, prosperity and new discoveries.</p>
+    <button type="button" id="dwgo">Enter Website &rarr;</button>
+  </div>
+</div>
+
+<!-- Header / Navigation -->
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">RMM Group</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#facilities">Facilities</a></li>
+        <li><a href="#members">Members</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="wrap">
+      <p class="lab">Department of Chemistry and Department of Bioscience and Biomedical Engineering, IIT Bhilai</p>
+      <h1>Bioinorganic and <span class="hl">Chemical Biology</span> Laboratory</h1>
+      <p class="d">The RMM Group designs metal complexes that act as smart MRI and optical probes to see inside tumours, as theranostic and therapeutic agents that detect and treat cancer, and as bioinspired catalysts that activate oxygen and carbon dioxide.</p>
+      <div class="btns">
+        <a class="btn solid" href="#research">Our research</a>
+        <a class="btn line" href="#contact">Join the group</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="wrap">
+      <h2>Principal Investigator</h2>
+      <div class="about-grid">
+        <div class="pif">
+          <img src="images/pi.jpg" alt="Dr. Ramasamy Mayilmurugan" class="pi">
+        </div>
+        <div>
+          <h3>Dr. Ramasamy Mayilmurugan</h3>
+          <p class="role">Associate Professor, Department of Chemistry & Bioscience and Biomedical Engineering, IIT Bhilai<br>
+          <a href="mailto:murugan@iitbhilai.ac.in">murugan@iitbhilai.ac.in</a></p>
+          <div class="links">
+            <a class="btn solid" href="https://scholar.google.co.in/citations?user=-9ywDWAAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar profile</a>
+            <a class="btn line" href="https://orcid.org/0000-0002-5370-594X" target="_blank" rel="noopener">ORCID</a>
+          </div>
+          <p>Dr. Mayilmurugan received his PhD from Bharathidasan University under Prof. M. Palaniandavar, FNA, FASc, and his M.Sc. from Madurai Kamaraj University. He performed postdoctoral research with Prof. Nadia C. Mösch-Zanetti (University of Graz, Austria) and Prof. Janet Morrow (University at Buffalo, SUNY, USA) as a Fulbright scholar, and was an INSA-DFG visiting scientist at Heidelberg University.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Section -->
+  <section id="research">
+    <div class="wrap">
+      <h2>Research</h2>
+      <p class="lead">Chemists and biologists working together on health problems, combining design, synthesis and biological validation.</p>
+      <div class="topics">
+        <div class="topic">
+          <h3>Smart MRI probes</h3>
+          <p>Fe(II) macrocycles as pH-responsive PARACEST agents, and Fe(III)-catecholate complexes as dual-modal T1 MRI and optical agents for nitric oxide and acidic tumour pH.</p>
+        </div>
+        <div class="topic">
+          <h3>Oxygen activation</h3>
+          <p>Fe(II), Ni(II) and Cu(II) complexes as models for cysteine dioxygenase and copper monooxygenases, studied with spectroscopy and computation.</p>
+        </div>
+        <div class="topic">
+          <h3>CO₂ activation</h3>
+          <p>Bioinspired Cu(II) and Ni(II) complexes that fix atmospheric CO₂ under mild conditions and convert it into cyclic carbonates and carboxylic acids.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="wrap">
+      <h2>Ongoing Projects</h2>
+      <div class="tbl">
+        <table>
+          <thead>
+            <tr>
+              <th>Project</th>
+              <th>Funding agency</th>
+              <th>Amount</th>
+              <th>Years</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Redox activated smart manganese-based MRI contrast agents</td>
+              <td>SERB, New Delhi</td>
+              <td>₹42.50 lakhs</td>
+              <td>2023-2026</td>
+            </tr>
+            <tr>
+              <td>Optical imaging probe appended smart MRI contrast agents</td>
+              <td>RIG, IIT Bhilai</td>
+              <td>₹12 lakhs</td>
+              <td>2022-2025</td>
+            </tr>
+            <tr>
+              <td>Healthcare and community medicine empowerment: biological validation of cancer and sickle cell anemia</td>
+              <td>DST: IBITF, IIT Bhilai</td>
+              <td>₹99.96 lakhs</td>
+              <td>2024-2026</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="wrap">
+      <h2>Contact and Openings</h2>
+      <div class="contact-grid">
+        <div>
+          <h3>Find Us</h3>
+          <p>Department of Chemistry and Department of Bioscience and Biomedical Engineering</p>
+          <p>Indian Institute of Technology (IIT) Bhilai, Chhattisgarh, India</p>
+        </div>
+        <div>
+          <h3>Write to Us</h3>
+          <p><a href="mailto:murugan@iitbhilai.ac.in">murugan@iitbhilai.ac.in</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>&copy; 2026 RMM Group, IIT Bhilai</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
