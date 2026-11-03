@@ -1,0 +1,294 @@
+:root {
+  --bg: #f2f6f7;
+  --ink: #12263a;
+  --navy: #0c1f33;
+  --muted: #55687a;
+  --line: #cfdadf;
+  --teal: #0f9d8a;
+  --violet: #6d4bd8;
+  --rose: #d6336c;
+  --amber: #e08a00;
+  --display: "Bricolage Grotesque", system-ui, sans-serif;
+  --body: "Instrument Sans", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+body.dw-lock {
+  overflow: hidden;
+}
+
+a {
+  color: var(--teal);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.wrap {
+  width: min(100% - 2.5rem, 66rem);
+  margin-inline: auto;
+}
+
+/* Header & Nav */
+header.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(242, 246, 247, 0.94);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 3.5rem;
+  flex-wrap: wrap;
+  padding: 0.5rem 0;
+}
+
+.brand {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: var(--ink);
+}
+
+.nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.nav ul a {
+  color: var(--ink);
+  font-weight: 500;
+  font-size: 0.93rem;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #091a2e, #12305a);
+  color: #fff;
+  padding: clamp(4rem, 10vw, 7rem) 0;
+}
+
+.hero .lab {
+  color: #7fe3d1;
+  font-weight: 600;
+}
+
+.hero h1 {
+  font-family: var(--display);
+  font-size: clamp(2.2rem, 6vw, 4.2rem);
+  line-height: 1.1;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.hero h1 .hl {
+  color: var(--amber);
+}
+
+.hero p.d {
+  max-width: 34rem;
+  color: #c8d6e2;
+  font-size: 1.15rem;
+}
+
+.btns {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.3rem;
+  border-radius: 4px;
+  font-weight: 600;
+  border: 2px solid transparent;
+}
+
+.btn.solid {
+  background: var(--teal);
+  color: #fff;
+}
+
+.btn.line {
+  border-color: #fff;
+  color: #fff;
+}
+
+/* Sections */
+section {
+  padding: clamp(3rem, 6vw, 5rem) 0;
+  border-bottom: 1px solid var(--line);
+}
+
+h2 {
+  font-family: var(--display);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  margin-top: 0;
+}
+
+.about-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: minmax(14rem, 18rem) 1fr;
+}
+
+@media (max-width: 48rem) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pi {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+}
+
+.topics {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+
+.topic {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-top: 5px solid var(--teal);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+/* Table Responsive */
+.tbl {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 32rem;
+}
+
+th, td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+}
+
+th {
+  background: #12305a;
+  color: #fff;
+  font-family: var(--display);
+}
+
+tbody tr:nth-child(even) {
+  background: #f1f6fb;
+}
+
+/* Contact & Footer */
+#contact {
+  background: linear-gradient(135deg, #091a2e, #2a1b6b);
+  color: #dfe8f2;
+}
+
+#contact h2, #contact h3 {
+  color: #fff;
+}
+
+.contact-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+
+footer {
+  padding: 2rem 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Diwali Splash Screen Styling */
+#diwali {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: #fff;
+  background: radial-gradient(circle, #2a0f3a, #05020f);
+  transition: opacity 0.8s ease, visibility 0.8s;
+}
+
+#diwali.out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#diwali canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#diwali .card {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  max-width: 36rem;
+}
+
+#diwali h2 {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  color: #ffd36b;
+  margin: 0.5rem 0;
+}
+
+#diwali button {
+  font-family: var(--body);
+  font-weight: 700;
+  padding: 0.8rem 2rem;
+  border-radius: 99px;
+  border: 0;
+  color: #2a0f3a;
+  background: linear-gradient(90deg, #ffd36b, #ff9a3c);
+  cursor: pointer;
+}
