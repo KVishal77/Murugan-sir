@@ -1,63 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RMM Group | IIT Bhilai</title>
-<meta name="description" content="RMM Group, Bioinorganic and Chemical Biology Laboratory, IIT Bhilai.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-</head>
-<body class="dw-lock">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RMM Research Group | IIT Bhilai</title>
+    <!-- Favicon -->
+    <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --primary-light: #3b82f6;
+            --accent: #e11d48;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --border: #e2e8f0;
+            --card-bg: #ffffff;
+            --transition: all 0.3s ease;
+        }
 
-<div id="diwali" role="dialog" aria-label="Diwali greetings">
-  <canvas id="dwfx" aria-hidden="true"></canvas>
-  <div class="card">
-    <p class="hi">RMM Research Group</p>
-    <p class="wish">wishes you a</p>
-    <h2>Happy Diwali</h2>
-    <p class="sub">May the festival of lights fill your life with joy, health, prosperity and new discoveries.</p>
-    <div class="diyas">
-      <svg class="diya" viewBox="0 0 40 40" aria-hidden="true"><path class="fl" d="M20 3c5 6 7 10 7 14a7 7 0 0 1-14 0c0-4 2-8 7-14z" fill="#ffb02e"/><path class="fl" d="M20 10c2.5 3.2 3.5 5.4 3.5 7.6a3.5 3.5 0 0 1-7 0c0-2.200 1-4.400 3.500-7.600z" fill="#fff3b0"/><path d="M3 22h34c0 8-7 14-17 14S3 30 3 22z" fill="#c2410c"/><path d="M3 22h34" stroke="#ffd36b" stroke-width="2"/></svg>
-      <svg class="diya" viewBox="0 0 40 40" aria-hidden="true"><path class="fl" d="M20 3c5 6 7 10 7 14a7 7 0 0 1-14 0c0-4 2-8 7-14z" fill="#ffb02e"/><path class="fl" d="M20 10c2.5 3.2 3.5 5.4 3.5 7.6a3.5 3.5 0 0 1-7 0c0-2.200 1-4.400 3.500-7.600z" fill="#fff3b0"/><path d="M3 22h34c0 8-7 14-17 14S3 30 3 22z" fill="#c2410c"/><path d="M3 22h34" stroke="#ffd36b" stroke-width="2"/></svg>
-    </div>
-    <button type="button" id="dwgo">Enter Website &rarr;</button>
-  </div>
-</div>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
 
-<header class="nav"><div class="wrap">
-  <a class="brand" href="index.html">RMM Group</a>
-  <nav aria-label="Main"><ul>
-    <li><a href="about.html">About</a></li>
-    <li><a href="research.html">Research</a></li>
-    <li><a href="publications.html">Publications</a></li>
-    <li><a href="news.html">News</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="facilities.html">Facilities</a></li>
-    <li><a href="members.html">Members</a></li>
-    <li><a href="gallery.html">Gallery</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul></nav>
-</div></header>
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            position: relative;
+            overflow-x: hidden;
+        }
 
-<main id="top">
-<div class="hero">
-  <div class="wrap">
-    <p class="lab">Department of Chemistry and Department of Bioscience and Biomedical Engineering, IIT Bhilai</p>
-    <h1 class="swap"><span class="s1">Bioinorganic and <span class="hl">Chemical Biology</span> Laboratory</span><span class="s2" aria-hidden="true"><span class="hl">RMM</span> Research Group</span></h1>
-    <p class="d">The RMM Group designs metal complexes that act as smart MRI and optical probes to see inside tumours, as theranostic and therapeutic agents that detect and treat cancer, and as bioinspired catalysts that activate oxygen and carbon dioxide.</p>
-    <div class="btns"><a class="btn solid" href="research.html">Our research</a><a class="btn line" href="contact.html">Join the group</a></div>
-  </div>
-  <div class="tiles" aria-hidden="true">
-    <div class="tile mn"><small>25</small>Mn</div><div class="tile"><small>26</small>Fe</div><div class="tile"><small>27</small>Co</div><div class="tile"><small>28</small>Ni</div><div class="tile"><small>29</small>Cu</div>
-  </div>
-</div>
-</main>
+        /* Chemistry Canvas Background Animation */
+        #chem-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.25;
+        }
 
-<footer><div class="wrap">© 2026 RMM Group, IIT Bhilai · Parag Bashichandra</div></footer>
-<script src="js/main.js"></script>
-</body>
-</html>
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .logo-area img {
+            height: 40px;
+            object-fit: contain;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--accent);
+        }
+
+        /* Main Wrapper */
+        main {
+            position: relative;
+            z-index: 1;
+            max-width: 1280px;
+            margin: 120px auto 60px;
+            padding: 0 2rem;
+        }
+
+        /* Hero / About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-content h1 {
+            font-size: 2.75rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .about-content p {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .hero
