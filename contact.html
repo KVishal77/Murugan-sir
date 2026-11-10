@@ -3,58 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | RMM Research Group</title>
-    <link rel="icon" href="favicon/favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Contact Us | RMM Group</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <canvas id="chem-canvas"></canvas>
-    <header>
-        <div class="nav-container">
-            <a href="index.html" class="logo-area"><img src="logo/logo.png" alt="Logo" onerror="this.style.display='none'"><span>RMM Group</span></a>
-            <ul class="nav-links">
-                <li><a href="index.html">About</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="facilities.html">Facilities</a></li>
-                <li><a href="members.html">Members</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="visitors.html">Visitors</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-            </ul>
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-area">
+                <img src="assets/logo/logo.png" alt="Logo" class="site-logo">
+                <div class="logo-text"><span class="lab-name">RMM Group</span><span class="inst-name">IIT Bhilai</span></div>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="about.html">About / PI</a>
+                <a href="research.html">Research</a>
+                <a href="publications.html">Publications</a>
+                <a href="members.html">Team</a>
+                <a href="facilities.html">Facilities</a>
+                <a href="contact.html" class="btn-contact active">Contact Us</a>
+            </nav>
+            <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
         </div>
     </header>
-    <main>
-        <h1 class="page-title">Contact & Openings</h1>
-        <div class="contact-wrapper">
-            <div class="contact-info">
-                <h3>Get in Touch</h3>
-                <p><i class="fas fa-map-marker-alt"></i> Department of Chemistry and Department of Bioscience and Biomedical Engineering, Indian Institute of Technology (IIT) Bhilai, Chhattisgarh, India[cite: 60].</p>
-                <p><i class="fas fa-envelope"></i> kvishal@iitbhilai.ac.in</p>
-                <p><i class="fas fa-info-circle"></i> Join us as PhD Scholars, Project staff, postdocs and interns. Email your CV and a short note[cite: 60].</p>
+
+    <div class="page-header">
+        <h1>Get In Touch</h1>
+        <p>Reach out to join our lab or collaborate with us</p>
+    </div>
+
+    <section class="section">
+        <div class="container" style="display:grid; grid-template-columns:1fr 1fr; gap:40px;">
+            <div>
+                <h3 style="color:var(--primary); margin-bottom:20px;">Contact Information</h3>
+                <p style="margin-bottom:10px;"><i class="fas fa-map-marker-alt" style="color:var(--secondary); margin-right:10px;"></i> Department of Bioscience and Biomedical Engineering, IIT Bhilai, Kutelabhata, Durg, Chhattisgarh - 491001, India</p>
+                <p style="margin-bottom:10px;"><i class="fas fa-envelope" style="color:var(--secondary); margin-right:10px;"></i> mayilmurugan@iitbhilai.ac.in</p>
             </div>
-            <!-- Form configured via Formspree to send directly -->
-            <form action="https://formspree.io/f/mabevwkp" method="POST">
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Send Message</button>
+            <form style="display:flex; flex-direction:column; gap:15px;">
+                <input type="text" placeholder="Your Name" required style="padding:12px; border:1px solid #d1d5db; border-radius:5px;">
+                <input type="email" placeholder="Your Email" required style="padding:12px; border:1px solid #d1d5db; border-radius:5px;">
+                <textarea rows="5" placeholder="Your Message" required style="padding:12px; border:1px solid #d1d5db; border-radius:5px;"></textarea>
+                <button type="submit" class="btn btn-primary">Send Message</button>
             </form>
         </div>
-    </main>
-    <footer><p>&copy; 2026 RMM Group, IIT Bhilai</p></footer>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 RMM Group, IIT Bhilai. All Rights Reserved.</p>
+            <p class="designer-credit">Designed by Vish Technologies</p>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
