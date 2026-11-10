@@ -1,40 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Publications | RMM Group</title>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications | RMM Research Group</title>
+    <link rel="icon" href="favicon/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #1e3a8a; --primary-light: #3b82f6; --accent: #e11d48; --dark: #0f172a; --light: #f8fafc; --gray: #64748b; --border: #e2e8f0; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
+        header { position: fixed; top: 0; left: 0; width: 100%; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); z-index: 1000; }
+        .nav-container { max-width: 1280px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+        .logo-area { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--dark); font-weight: 700; font-size: 1.25rem; }
+        .logo-area img { height: 40px; }
+        .nav-links { display: flex; gap: 1.2rem; list-style: none; }
+        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 500; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+        main { max-width: 1280px; margin: 120px auto 60px; padding: 0 2rem; }
+        h1 { font-size: 2.25rem; color: var(--primary); margin-bottom: 2rem; }
+        .pub-container { display: grid; grid-template-columns: 260px 1fr; gap: 2.5rem; }
+        .pub-sidebar { background: #fff; padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border); height: fit-content; position: sticky; top: 100px; }
+        .search-input { width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 8px; margin-bottom: 1rem; outline: none; font-size: 0.9rem; }
+        .year-list { display: flex; flex-direction: column; gap: 0.5rem; max-height: 400px; overflow-y: auto; }
+        .year-btn { background: transparent; border: none; text-align: left; padding: 0.5rem 0.75rem; border-radius: 6px; cursor: pointer; font-weight: 500; color: var(--gray); transition: 0.3s; }
+        .year-btn:hover, .year-btn.active { background: var(--primary); color: #fff; }
+        .pub-list-area { display: flex; flex-direction: column; gap: 1.5rem; }
+        .pub-item { background: #fff; padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border); display: grid; grid-template-columns: 80px 1fr; gap: 1.5rem; align-items: start; }
+        .pub-thumb { width: 80px; height: 100px; object-fit: cover; border-radius: 6px; border: 1px solid var(--border); }
+        .pub-details h4 a { color: var(--primary); text-decoration: none; font-size: 1.05rem; }
+        .pub-details h4 a:hover { color: var(--accent); text-decoration: underline; }
+        .pub-authors { font-size: 0.9rem; color: var(--gray); margin: 0.25rem 0; }
+        .pub-meta { font-size: 0.85rem; font-weight: 600; color: var(--accent); }
+        footer { background: var(--dark); color: #fff; text-align: center; padding: 2rem; margin-top: 4rem; }
+        @media(max-width:968px){ .pub-container { grid-template-columns: 1fr; } .nav-links { display: none; } }
+    </style>
 </head>
 <body>
+    <header>
+        <div class="nav-container">
+            <a href="about.html" class="logo-area"><img src="logo/logo.png" alt="Logo" onerror="this.style.display='none'"><span>RMM Group</span></a>
+            <ul class="nav-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="publications.html" class="active">Publications</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="members.html">Members</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="visitors.html">Visitors</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <h1>Publications</h1>
+        <div class="pub-container">
+            <div class="pub-sidebar">
+                <h3 style="margin-bottom:1rem; color:var(--primary);">Filter by Year</h3>
+                <input type="text" id="pubSearch" class="search-input" placeholder="Search papers...">
+                <div class="year-list" id="yearList"></div>
+            </div>
+            <div class="pub-list-area" id="pubListArea"></div>
+        </div>
+    </main>
+    <footer><p>&copy; 2026 RMM Group, IIT Bhilai</p></footer>
 
-<header class="nav"><div class="wrap">
-  <a class="brand" href="index.html">RMM Group</a>
-  <nav aria-label="Main"><ul>
-    <li><a href="about.html">About</a></li>
-    <li><a href="research.html">Research</a></li>
-    <li><a href="publications.html" class="active">Publications</a></li>
-    <li><a href="news.html">News</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="facilities.html">Facilities</a></li>
-    <li><a href="members.html">Members</a></li>
-    <li><a href="gallery.html">Gallery</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul></nav>
-</div></header>
+    <script>
+        const publicationsData = [
+            { year: "2026", title: "Mn (II) and Fe (III) complexes as MRI contrast agents: exploration of the second sphere relaxation", authors: "T. A. Amanullah, A. K. Samal, R. Mayilmurugan", journal: "Coord. Chem. Rev. 563 (2026) 217913", doi: "https://doi.org/10.1016/j.ccr.2026.217913", image: "publication_images/pub2026_1.jpg" },
+            { year: "2025", title: "Biotin Conjugated Fe(III)-Triscatecholate Complex as Tumour Targeting T1 MRI Contrast Agent", authors: "M. Duraiyarasu, S. Senthil Kumaran, R. Mayilmurugan", journal: "Chem. Eur. J. 2025, 31 (5)", doi: "https://doi.org/10.1002/chem.202403619", image: "publication_images/pub2025_1.jpg" }
+        ];
 
-<section id="publications"><div class="wrap">
-  <h2>Recent publications</h2>
-  <p class="lead">A selection of recent papers. The full list is available on Google Scholar.</p>
-  <ul class="pubs" id="pubs">
-    <li><a class="t" href="#">Bioinspired manganese complexes for MRI Applications</a><span class="a">Inorg. Chem. 2025</span></li>
-  </ul>
-  <div class="btns">
-    <a class="btn solid" href="https://scholar.google.co.in/citations?user=-9ywDWAAAAAJ&hl=en" target="_blank" rel="noopener">All papers on Google Scholar</a>
-  </div>
-</div></section>
+        function renderPublications(filterYear = "All", searchQuery = "") {
+            const listArea = document.getElementById('pubListArea');
+            listArea.innerHTML = "";
+            let filtered = publicationsData.filter(pub => {
+                let matchesYear = filterYear === "All" || pub.year === filterYear;
+                let matchesSearch = pub.title.toLowerCase().includes(searchQuery.toLowerCase()) || pub.authors.toLowerCase().includes(searchQuery.toLowerCase());
+                return matchesYear && matchesSearch;
+            });
+            if(filtered.length === 0) { listArea.innerHTML = `<p style="color:var(--gray);">No publications found.</p>`; return; }
+            filtered.forEach(pub => {
+                const item = document.createElement('div');
+                item.className = 'pub-item';
+                item.innerHTML = `
+                    <img src="${pub.image}" alt="Thumb" class="pub-thumb" onerror="this.src='https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=200&q=80'">
+                    <div class="pub-details">
+                        <h4><a href="${pub.doi}" target="_blank">${pub.title}</a></h4>
+                        <div class="pub-authors">${pub.authors}</div>
+                        <div class="pub-meta">${pub.journal} (${pub.year})</div>
+                    </div>
+                `;
+                listArea.appendChild(item);
+            });
+        }
 
-<footer><div class="wrap">© 2026 RMM Group, IIT Bhilai · Parag Bashichandra</div></footer>
+        const years = ["All", ...new Set(publicationsData.map(p => p.year))].sort((a,b) => b - a);
+        const yearList = document.getElementById('yearList');
+        years.forEach(yr => {
+            const btn = document.createElement('button');
+            btn.className = `year-btn ${yr === 'All' ? 'active' : ''}`;
+            btn.innerText = yr === 'All' ? 'All Publications' : yr;
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.year-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                renderPublications(yr, document.getElementById('pubSearch').value);
+            });
+            yearList.appendChild(btn);
+        });
+
+        document.getElementById('pubSearch').addEventListener('input', (e) => {
+            const activeYear = document.querySelector('.year-btn.active').innerText;
+            renderPublications(activeYear === 'All Publications' ? 'All' : activeYear, e.target.value);
+        });
+
+        renderPublications();
+    </script>
 </body>
 </html>
