@@ -3,52 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research | RMM Research Group</title>
-    <link rel="icon" href="favicon/favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Research Areas | RMM Group</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <canvas id="chem-canvas"></canvas>
-    <header>
-        <div class="nav-container">
-            <a href="index.html" class="logo-area"><img src="logo/logo.png" alt="Logo" onerror="this.style.display='none'"><span>RMM Group</span></a>
-            <ul class="nav-links">
-                <li><a href="index.html">About</a></li>
-                <li><a href="research.html" class="active">Research</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="facilities.html">Facilities</a></li>
-                <li><a href="members.html">Members</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="visitors.html">Visitors</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-area">
+                <img src="assets/logo/logo.png" alt="Logo" class="site-logo">
+                <div class="logo-text"><span class="lab-name">RMM Group</span><span class="inst-name">IIT Bhilai</span></div>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="about.html">About / PI</a>
+                <a href="research.html" class="active">Research</a>
+                <a href="publications.html">Publications</a>
+                <a href="members.html">Team</a>
+                <a href="facilities.html">Facilities</a>
+                <a href="contact.html" class="btn-contact">Contact Us</a>
+            </nav>
+            <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
         </div>
     </header>
-    <main>
-        <h1 class="page-title">Our Research Areas</h1>
-        <div class="research-grid">
-            <div class="research-card">
-                <h3>Smart MRI Probes</h3>
-                <p>Designing Fe(II) macrocycles as pH-responsive PARACEST agents and Fe(III)-catecholate complexes as dual-modal T1 MRI and optical agents[cite: 40].</p>
+
+    <div class="page-header">
+        <h1>Research Areas</h1>
+        <p>Frontier explorations in bioinorganic chemistry and chemical biology</p>
+    </div>
+
+    <section class="section">
+        <div class="container" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:30px;">
+            <div style="background:var(--light); padding:30px; border-radius:8px;">
+                <i class="fas fa-atom" style="font-size:2.5rem; color:var(--secondary); margin-bottom:15px;"></i>
+                <h3 style="color:var(--primary); margin-bottom:10px;">Bioinorganic Chemistry</h3>
+                <p>Investigating metalloenzymes, oxygen and CO2 activation, and creating synthetic functional mimics.</p>
             </div>
-            <div class="research-card">
-                <h3>Oxygen Activation</h3>
-                <p>Investigating Fe(II), Ni(II), and Cu(II) complexes as models for cysteine dioxygenase and catalytic aromatic C-H bond hydroxylation[cite: 40].</p>
+            <div style="background:var(--light); padding:30px; border-radius:8px;">
+                <i class="fas fa-brain" style="font-size:2.5rem; color:var(--secondary); margin-bottom:15px;"></i>
+                <h3 style="color:var(--primary); margin-bottom:10px;">Smart MRI & Contrast Agents</h3>
+                <p>Designing redox-activated smart manganese-based contrast agents for advanced molecular diagnostic imaging.</p>
             </div>
-            <div class="research-card">
-                <h3>CO2 Activation</h3>
-                <p>Developing bioinspired Cu(II) and Ni(II) complexes that fix atmospheric CO2 under mild conditions and convert it into cyclic carbonates[cite: 40].</p>
-            </div>
-            <div class="research-card">
-                <h3>Cancer Theranostics</h3>
-                <p>Bridging nanotechnology and cancer biology to advance precision oncology, targeted drug delivery, and ferroptosis models[cite: 41].</p>
+            <div style="background:var(--light); padding:30px; border-radius:8px;">
+                <i class="fas fa-dna" style="font-size:2.5rem; color:var(--secondary); margin-bottom:15px;"></i>
+                <h3 style="color:var(--primary); margin-bottom:10px;">Targeted Nanomedicine</h3>
+                <p>Exploring ferroptosis, targeted cancer therapy, and therapeutic delivery systems.</p>
             </div>
         </div>
-    </main>
-    <footer><p>&copy; 2026 RMM Group, IIT Bhilai</p></footer>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 RMM Group, IIT Bhilai. All Rights Reserved.</p>
+            <p class="designer-credit">Designed by Vish Technologies</p>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
