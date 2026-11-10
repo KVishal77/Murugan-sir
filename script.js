@@ -1,4 +1,3 @@
-/* 1. Chemistry Canvas Background Animation */
 document.addEventListener("DOMContentLoaded", () => {
     const canvas = document.getElementById('chem-canvas');
     if (canvas) {
