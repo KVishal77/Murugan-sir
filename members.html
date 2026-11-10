@@ -1,50 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Members | RMM Group</title>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members | RMM Research Group</title>
+    <link rel="icon" href="favicon/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #1e3a8a; --primary-light: #3b82f6; --accent: #e11d48; --dark: #0f172a; --light: #f8fafc; --gray: #64748b; --border: #e2e8f0; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
+        header { position: fixed; top: 0; left: 0; width: 100%; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); z-index: 1000; }
+        .nav-container { max-width: 1280px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+        .logo-area { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--dark); font-weight: 700; font-size: 1.25rem; }
+        .logo-area img { height: 40px; }
+        .nav-links { display: flex; gap: 1.2rem; list-style: none; }
+        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 500; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+        main { max-width: 1280px; margin: 120px auto 60px; padding: 0 2rem; }
+        h1 { font-size: 2.25rem; color: var(--primary); margin-bottom: 2rem; }
+        .members-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; }
+        .member-card { background: #fff; border-radius: 12px; border: 1px solid var(--border); text-align: center; padding: 1.5rem; cursor: pointer; transition: 0.3s; }
+        .member-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05); border-color: var(--accent); }
+        .member-card img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem; border: 3px solid var(--border); }
+        .member-card h4 { font-size: 1.1rem; color: var(--dark); margin-bottom: 0.25rem; }
+        .member-card p { font-size: 0.85rem; color: var(--gray); }
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(5px); display: flex; justify-content: center; align-items: center; z-index: 2000; opacity: 0; pointer-events: none; transition: 0.3s; }
+        .modal-overlay.active { opacity: 1; pointer-events: auto; }
+        .modal-box { background: #fff; width: 90%; max-width: 650px; border-radius: 12px; overflow: hidden; position: relative; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); border-top: 6px solid var(--accent); transform: scale(0.9); transition: 0.3s; }
+        .modal-overlay.active .modal-box { transform: scale(1); }
+        .modal-close { position: absolute; top: 15px; right: 15px; background: transparent; border: none; font-size: 1.25rem; cursor: pointer; color: var(--dark); }
+        .modal-body { padding: 2.5rem; display: grid; grid-template-columns: 200px 1fr; gap: 2rem; align-items: start; }
+        .modal-body img { width: 100%; height: 220px; object-fit: cover; border-radius: 8px; }
+        .modal-info .category { font-size: 0.85rem; font-weight: 600; color: var(--accent); margin-bottom: 0.25rem; }
+        .modal-info h2 { font-size: 1.5rem; color: var(--dark); margin-bottom: 0.75rem; }
+        .modal-info p { font-size: 0.95rem; color: var(--gray); margin-bottom: 1rem; }
+        .modal-email-btn { display: inline-block; background: var(--accent); color: #fff; padding: 0.5rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; margin-top: 1rem; }
+        footer { background: var(--dark); color: #fff; text-align: center; padding: 2rem; margin-top: 4rem; }
+        @media(max-width:968px){ .nav-links { display: none; } .modal-body { grid-template-columns: 1fr; text-align: center; } .modal-body img { margin: 0 auto; max-width: 180px; } }
+    </style>
 </head>
 <body>
-
-<header class="nav"><div class="wrap">
-  <a class="brand" href="index.html">RMM Group</a>
-  <nav aria-label="Main"><ul>
-    <li><a href="about.html">About</a></li>
-    <li><a href="research.html">Research</a></li>
-    <li><a href="publications.html">Publications</a></li>
-    <li><a href="news.html">News</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="facilities.html">Facilities</a></li>
-    <li><a href="members.html" class="active">Members</a></li>
-    <li><a href="gallery.html">Gallery</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul></nav>
-</div></header>
-
-<section id="members"><div class="wrap">
-  <h2>Group members</h2>
-  <p class="lead">Click a photo or name to read more about each member.</p>
-  
-  <div class="g">
-    <h3>Research Staff & Technical Assistants</h3>
-    <div class="mgrid">
-      <div class="mc">
-        <div class="ph">
-          <img src="images/vishal.png" alt="K Vishal Johnson" onerror="this.style.display='none'">
-          <span class="ini">VJ</span>
+    <header>
+        <div class="nav-container">
+            <a href="about.html" class="logo-area"><img src="logo/logo.png" alt="Logo" onerror="this.style.display='none'"><span>RMM Group</span></a>
+            <ul class="nav-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="members.html" class="active">Members</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="visitors.html">Visitors</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </div>
-        <div class="t">
-          <strong>K Vishal Johnson</strong>
-          <small>Technical Assistant</small>
+    </header>
+    <main>
+        <h1>Group Members</h1>
+        <div class="members-grid" id="membersGrid"></div>
+    </main>
+
+    <div class="modal-overlay" id="memberModal">
+        <div class="modal-box">
+            <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+            <div class="modal-body" id="modalBodyContent"></div>
         </div>
-      </div>
     </div>
-  </div>
-</div></section>
 
-<footer><div class="wrap">© 2026 RMM Group, IIT Bhilai · Parag Bashichandra</div></footer>
+    <footer><p>&copy; 2026 RMM Group, IIT Bhilai</p></footer>
+
+    <script>
+        const membersData = [
+            { name: "Dr. Ramasamy Mayilmurugan", role: "Principal Investigator", category: "Principal investigator", dept: "Associate Professor, Department of Chemistry & Department of Bioscience and Biomedical Engineering, IIT Bhilai", bio: "Received PhD from Bharathidasan University under Prof. M. Palaniandavar, and postdoctoral work at University of Graz, Austria, and University at Buffalo, USA as a Fulbright Scholar.", education: "M.Sc. Madurai Kamaraj University; Ph.D. Bharathidasan University", email: "murugan@iitbhilai.ac.in", photo: "images/pi.jpg" },
+            { name: "Debabrata Behera", role: "PhD scholar", category: "PhD scholars, Bioscience and Biomedical Engineering", dept: "Department of Bioscience and Biomedical Engineering, IIT Bhilai", bio: "Debabrata Behera is a PhD scholar working on targeted nanomedicine and cancer biology.", education: "B.Sc. Zoology; M.Sc. Zoology, BHU", email: "debabrata@iitbhilai.ac.in", photo: "member_images/member1.jpg" },
+            { name: "K Vishal Johnson", role: "Software engineer / Technical Assistant", category: "Project staff", dept: "Departments of Chemistry and Bioscience and Biomedical Engineering, IIT Bhilai", bio: "Managing frontend web architectures, responsive interfaces, and research project documentation systems.", education: "B.Tech / Technical Assistant", email: "kvishal@iitbhilai.ac.in", photo: "member_images/member3.jpg" }
+        ];
+
+        const membersGrid = document.getElementById('membersGrid');
+        membersData.forEach(m => {
+            const card = document.createElement('div');
+            card.className = 'member-card';
+            card.innerHTML = `
+                <img src="${m.photo}" alt="${m.name}" onerror="this.src='https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=300&q=80'">
+                <h4>${m.name}</h4>
+                <p>${m.role}</p>
+            `;
+            card.addEventListener('click', () => openModal(m));
+            membersGrid.appendChild(card);
+        });
+
+        const modal = document.getElementById('memberModal');
+        const modalClose = document.getElementById('modalClose');
+        const modalBodyContent = document.getElementById('modalBodyContent');
+
+        function openModal(member) {
+            modalBodyContent.innerHTML = `
+                <img src="${member.photo}" alt="${member.name}" onerror="this.src='https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=300&q=80'">
+                <div class="modal-info">
+                    <div class="category">${member.category}</div>
+                    <h2>${member.name}</h2>
+                    <p><strong>${member.role}</strong>, ${member.dept}</p>
+                    <p>${member.bio}</p>
+                    <div style="font-size:0.9rem; font-weight:600; color:var(--primary); margin-top:1rem; margin-bottom:0.25rem;">Education</div>
+                    <p>${member.education}</p>
+                    <a href="mailto:${member.email}" class="modal-email-btn">Email</a>
+                </div>
+            `;
+            modal.classList.add('active');
+        }
+
+        modalClose.addEventListener('click', () => modal.classList.remove('active'));
+        modal.addEventListener('click', (e) => { if(e.target === modal) modal.classList.remove('active'); });
+    </script>
 </body>
 </html>
