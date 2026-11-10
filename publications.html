@@ -7,42 +7,15 @@
     <link rel="icon" href="favicon/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root { --primary: #1e3a8a; --primary-light: #3b82f6; --accent: #e11d48; --dark: #0f172a; --light: #f8fafc; --gray: #64748b; --border: #e2e8f0; }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-        body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
-        header { position: fixed; top: 0; left: 0; width: 100%; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); z-index: 1000; }
-        .nav-container { max-width: 1280px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
-        .logo-area { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--dark); font-weight: 700; font-size: 1.25rem; }
-        .logo-area img { height: 40px; }
-        .nav-links { display: flex; gap: 1.2rem; list-style: none; }
-        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 500; font-size: 0.9rem; transition: 0.3s; }
-        .nav-links a:hover, .nav-links a.active { color: var(--accent); }
-        main { max-width: 1280px; margin: 120px auto 60px; padding: 0 2rem; }
-        h1 { font-size: 2.25rem; color: var(--primary); margin-bottom: 2rem; }
-        .pub-container { display: grid; grid-template-columns: 260px 1fr; gap: 2.5rem; }
-        .pub-sidebar { background: #fff; padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border); height: fit-content; position: sticky; top: 100px; }
-        .search-input { width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 8px; margin-bottom: 1rem; outline: none; font-size: 0.9rem; }
-        .year-list { display: flex; flex-direction: column; gap: 0.5rem; max-height: 400px; overflow-y: auto; }
-        .year-btn { background: transparent; border: none; text-align: left; padding: 0.5rem 0.75rem; border-radius: 6px; cursor: pointer; font-weight: 500; color: var(--gray); transition: 0.3s; }
-        .year-btn:hover, .year-btn.active { background: var(--primary); color: #fff; }
-        .pub-list-area { display: flex; flex-direction: column; gap: 1.5rem; }
-        .pub-item { background: #fff; padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border); display: grid; grid-template-columns: 80px 1fr; gap: 1.5rem; align-items: start; }
-        .pub-thumb { width: 80px; height: 100px; object-fit: cover; border-radius: 6px; border: 1px solid var(--border); }
-        .pub-details h4 a { color: var(--primary); text-decoration: none; font-size: 1.05rem; }
-        .pub-details h4 a:hover { color: var(--accent); text-decoration: underline; }
-        .pub-authors { font-size: 0.9rem; color: var(--gray); margin: 0.25rem 0; }
-        .pub-meta { font-size: 0.85rem; font-weight: 600; color: var(--accent); }
-        footer { background: var(--dark); color: #fff; text-align: center; padding: 2rem; margin-top: 4rem; }
-        @media(max-width:968px){ .pub-container { grid-template-columns: 1fr; } .nav-links { display: none; } }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <canvas id="chem-canvas"></canvas>
     <header>
         <div class="nav-container">
-            <a href="about.html" class="logo-area"><img src="logo/logo.png" alt="Logo" onerror="this.style.display='none'"><span>RMM Group</span></a>
+            <a href="index.html" class="logo-area"><img src="logo/logo.png" alt="Logo" onerror="this.style.display='none'"><span>RMM Group</span></a>
             <ul class="nav-links">
-                <li><a href="about.html">About</a></li>
+                <li><a href="index.html">About</a></li>
                 <li><a href="research.html">Research</a></li>
                 <li><a href="publications.html" class="active">Publications</a></li>
                 <li><a href="projects.html">Projects</a></li>
@@ -55,7 +28,7 @@
         </div>
     </header>
     <main>
-        <h1>Publications</h1>
+        <h1 class="page-title">Publications</h1>
         <div class="pub-container">
             <div class="pub-sidebar">
                 <h3 style="margin-bottom:1rem; color:var(--primary);">Filter by Year</h3>
@@ -66,10 +39,11 @@
         </div>
     </main>
     <footer><p>&copy; 2026 RMM Group, IIT Bhilai</p></footer>
-
+    <script src="script.js"></script>
     <script>
         const publicationsData = [
-            { year: "2026", title: "Mn (II) and Fe (III) complexes as MRI contrast agents: exploration of the second sphere relaxation", authors: "T. A. Amanullah, A. K. Samal, R. Mayilmurugan", journal: "Coord. Chem. Rev. 563 (2026) 217913", doi: "https://doi.org/10.1016/j.ccr.2026.217913", image: "publication_images/pub2026_1.jpg" },
+            { year: "2026", title: "Mn (II) and Fe (III) complexes as MRI contrast agents: exploration of second sphere relaxation", authors: "T. A. Amanullah, A. K. Samal, R. Mayilmurugan", journal: "Coord. Chem. Rev. 563 (2026) 217913", doi: "https://doi.org/10.1016/j.ccr.2026.217913", image: "publication_images/pub2026_1.jpg" },
+            { year: "2026", title: "Catalytic CO2 fixation into cyclic carbonates by copper (II) complexes of N4 ligands under mild conditions", authors: "M. Sethuraman, W. P. Sohtun, M. Velusamy, R. Mayilmurugan", journal: "Dalton Trans., 2026, 55, 7392", doi: "https://doi.org/10.1039/D6DT00331A", image: "publication_images/pub2026_2.jpg" },
             { year: "2025", title: "Biotin Conjugated Fe(III)-Triscatecholate Complex as Tumour Targeting T1 MRI Contrast Agent", authors: "M. Duraiyarasu, S. Senthil Kumaran, R. Mayilmurugan", journal: "Chem. Eur. J. 2025, 31 (5)", doi: "https://doi.org/10.1002/chem.202403619", image: "publication_images/pub2025_1.jpg" }
         ];
 
