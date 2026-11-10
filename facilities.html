@@ -3,52 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facilities | RMM Research Group</title>
-    <link rel="icon" href="favicon/favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Lab Facilities | RMM Group</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <canvas id="chem-canvas"></canvas>
-    <header>
-        <div class="nav-container">
-            <a href="index.html" class="logo-area"><img src="logo/logo.png" alt="Logo" onerror="this.style.display='none'"><span>RMM Group</span></a>
-            <ul class="nav-links">
-                <li><a href="index.html">About</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="facilities.html" class="active">Facilities</a></li>
-                <li><a href="members.html">Members</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="visitors.html">Visitors</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-area">
+                <img src="assets/logo/logo.png" alt="Logo" class="site-logo">
+                <div class="logo-text"><span class="lab-name">RMM Group</span><span class="inst-name">IIT Bhilai</span></div>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="about.html">About / PI</a>
+                <a href="research.html">Research</a>
+                <a href="publications.html">Publications</a>
+                <a href="members.html">Team</a>
+                <a href="facilities.html" class="active">Facilities</a>
+                <a href="contact.html" class="btn-contact">Contact Us</a>
+            </nav>
+            <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
         </div>
     </header>
-    <main>
-        <h1 class="page-title">Lab Facilities</h1>
-        <div class="facilities-grid">
-            <div class="facility-card">
-                <img src="facility_images/minispec.jpg" alt="minispec Relaxometer" onerror="this.src='https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&w=400&q=80'">
-                <h4>minispec Relaxometer</h4>
+
+    <div class="page-header">
+        <h1>Lab Facilities & Infrastructure</h1>
+        <p>State-of-the-art equipment for synthesis and analysis</p>
+    </div>
+
+    <section class="section">
+        <div class="container" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(350px, 1fr)); gap:30px;">
+            <div style="background:var(--light); border-radius:8px; overflow:hidden;">
+                <img src="assets/facilities/fac1.jpg" alt="Lab" style="width:100%; height:200px; object-fit:cover;">
+                <div style="padding:20px;">
+                    <h3 style="color:var(--primary); margin-bottom:10px;">Advanced Synthesis Laboratory</h3>
+                    <p>Equipped with Schlenk lines, fume hoods, and glove boxes for air-sensitive compound synthesis.</p>
+                </div>
             </div>
-            <div class="facility-card">
-                <img src="facility_images/uv.jpg" alt="UV-Visible Spectrophotometer" onerror="this.src='https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=400&q=80'">
-                <h4>UV-Visible Spectrophotometer</h4>
-            </div>
-            <div class="facility-card">
-                <img src="facility_images/microscope.jpg" alt="Nikon Inverted Microscope" onerror="this.src='https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=400&q=80'">
-                <h4>Nikon Inverted Microscope</h4>
-            </div>
-            <div class="facility-card">
-                <img src="facility_images/incubator.jpg" alt="CO2 Incubator" onerror="this.src='https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=400&q=80'">
-                <h4>CO2 Incubator</h4>
+            <div style="background:var(--light); border-radius:8px; overflow:hidden;">
+                <img src="assets/facilities/fac2.jpg" alt="Tools" style="width:100%; height:200px; object-fit:cover;">
+                <div style="padding:20px;">
+                    <h3 style="color:var(--primary); margin-bottom:10px;">Analytical Instrumentation</h3>
+                    <p>UV-Vis, FTIR, Fluorescence spectrometers, and electrochemical workstations.</p>
+                </div>
             </div>
         </div>
-    </main>
-    <footer><p>&copy; 2026 RMM Group, IIT Bhilai</p></footer>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 RMM Group, IIT Bhilai. All Rights Reserved.</p>
+            <p class="designer-credit">Designed by Vish Technologies</p>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
