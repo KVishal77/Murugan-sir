@@ -3,134 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About PI | RMM Research Group - IIT Bhilai</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <title>About | RMM Research Group</title>
+    <link rel="icon" href="favicon/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #1e3a8a; --primary-light: #3b82f6; --accent: #e11d48; --dark: #0f172a; --light: #f8fafc; --gray: #64748b; --border: #e2e8f0; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
+        header { position: fixed; top: 0; left: 0; width: 100%; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); z-index: 1000; }
+        .nav-container { max-width: 1280px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+        .logo-area { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--dark); font-weight: 700; font-size: 1.25rem; }
+        .logo-area img { height: 40px; }
+        .nav-links { display: flex; gap: 1.2rem; list-style: none; }
+        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 500; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+        main { max-width: 1280px; margin: 120px auto 60px; padding: 0 2rem; }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+        .about-content h1 { font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem; }
+        .about-content p { color: var(--gray); margin-bottom: 1.5rem; }
+        .about-image img { width: 100%; max-width: 400px; border-radius: 16px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border: 4px solid #fff; display: block; margin: 0 auto; }
+        footer { background: var(--dark); color: #fff; text-align: center; padding: 2rem; margin-top: 4rem; }
+        @media(max-width:968px){ .about-grid { grid-template-columns: 1fr; text-align: center; } .nav-links { display: none; } }
+    </style>
 </head>
 <body>
-
-    <header class="header">
-        <div class="top-bar">
-            <div class="container flex-between">
-                <div class="institution-branding">
-                    <span>Department of Chemistry & BioScience and Biomedical Engineering</span>
-                    <span class="divider">|</span>
-                    <span>IIT Bhilai</span>
-                </div>
-                <div class="top-contact">
-                    <a href="mailto:murugan@iitbhilai.ac.in"><i class="fa-solid fa-envelope"></i> murugan@iitbhilai.ac.in</a>
-                </div>
-            </div>
+    <header>
+        <div class="nav-container">
+            <a href="about.html" class="logo-area"><img src="logo/logo.png" alt="Logo" onerror="this.style.display='none'"><span>RMM Group</span></a>
+            <ul class="nav-links">
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="members.html">Members</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="visitors.html">Visitors</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </div>
-        
-        <nav class="navbar">
-            <div class="container flex-between">
-                <a href="index.html" class="brand-logo">
-                    <span class="logo-highlight">RMM</span> Research Group
-                </a>
-                
-                <button class="mobile-menu-btn" aria-label="Toggle navigation">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" class="active">About PI</a></li>
-                    <li><a href="research.html">Research</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="publications.html">Publications</a></li>
-                    <li><a href="facilities.html">Facilities</a></li>
-                    <li><a href="members.html">Members</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact.html" class="nav-cta">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
     </header>
-
-    <!-- About PI Hero Section -->
-    <section class="section bg-light">
-        <div class="container">
-            <div class="section-title">
-                <h2>About the Principal Investigator</h2>
-                <p>Academic background, international experience, and research leadership</p>
+    <main>
+        <div class="about-grid">
+            <div class="about-content">
+                <span style="background:rgba(59,130,246,0.1); color:var(--primary-light); padding:0.4rem 1rem; border-radius:50px; font-weight:600; font-size:0.85rem;">IIT Bhilai Research Group</span>
+                <h1 style="margin-top:1rem;">Dr. Ramasamy Mayilmurugan</h1>
+                <p><strong>Associate Professor</strong>, Department of Chemistry & Department of Bioscience and Biomedical Engineering, Indian Institute of Technology (IIT) Bhilai.</p>
+                <p>Our group focuses on interdisciplinary research involving the design and synthesis of carefully tailored metal complexes acting as smart MRI and optical probes to target tumors and understand complex biochemical processes.</p>
             </div>
-            
-            <div class="about-grid">
-                <div class="about-img-box">
-                    <img src="images/pi.jpg" alt="Dr. Ramasamy Mayilmurugan" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80'">
-                    <div class="pi-social-box" style="margin-top: 1.5rem; text-align: center;">
-                        <a href="https://scholar.google.co.in/citations?user=-9ywDWAAAAAJ&hl=en" target="_blank" class="btn btn-primary" style="margin: 0.25rem; font-size: 0.85rem;"><i class="fa-solid fa-graduation-cap"></i> Google Scholar</a>
-                        <a href="https://orcid.org/0000-0002-5370-594X" target="_blank" class="btn btn-outline" style="margin: 0.25rem; font-size: 0.85rem; background: var(--primary-dark);"><i class="fa-brands fa-orcid"></i> ORCID ID</a>
-                    </div>
-                </div>
-                <div class="about-text-box">
-                    <h3>Dr. Ramasamy Mayilmurugan</h3>
-                    <p class="position-title">Associate Professor, Department of Chemistry, IIT Bhilai</p>
-                    <p>
-                        Dr. R. Mayilmurugan received his Ph.D. from Bharathidasan University, Tiruchirapalli, under the supervision of distinguished bioinorganic chemist Prof. M. Palaniandavar, FNA, FASc[cite: 3]. He earned his M.Sc. from Madurai Kamaraj University (ANJA College)[cite: 3], where he was awarded a gold medal for securing the first rank[cite: 3]. Before joining IIT Bhilai, he served as an Assistant Professor at Madurai Kamaraj University[cite: 3].
-                    </p>
-                    <p>
-                        His global research exposure includes prestigious post-doctoral and visiting fellowships:
-                    </p>
-                    <ul class="styled-list">
-                        <li><strong>Fulbright Scholar Award (2014)[cite: 3]:</strong> Worked on iron-based PARACEST MRI contrast agents in Prof. Janet Morrow's group at the University at Buffalo, SUNY, USA[cite: 3].</li>
-                        <li><strong>Post-Doctoral Fellowship:</strong> Focused on biomimetic chemistry of molybdenum-containing oxo transferase enzymes and reaction mechanisms with Prof. Nadia C. Mösch-Zanetti at the University of Graz, Austria[cite: 3].</li>
-                        <li><strong>INSA-DFG Visiting Scientist:</strong> Conducted research at Prof. Peter Comba's laboratory at Heidelberg University, Germany[cite: 3].</li>
-                    </ul>
-                </div>
+            <div class="about-image">
+                <img src="images/pi.jpg" alt="Dr. Ramasamy Mayilmurugan" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80'">
             </div>
-
-            <!-- Additional Academic Details Grid -->
-            <div style="margin-top: 4rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
-                
-                <!-- Awards & Recognitions -->
-                <div style="background: var(--white); padding: 2rem; border-radius: 10px; border: 1px solid var(--border-color);">
-                    <h3 style="color: var(--primary-dark); margin-bottom: 1.2rem; font-size: 1.25rem;"><i class="fa-solid fa-award" style="color: var(--primary); margin-right: 0.5rem;"></i> Awards & Recognitions</h3>
-                    <ul class="styled-list" style="font-size: 0.95rem; color: var(--text-light);">
-                        <li>Bronze Medal (2020), Chemical Research Society of India[cite: 3]</li>
-                        <li>Fulbright Scholar Award (2014)[cite: 3]</li>
-                        <li>Council Member (2020-23), Chemical Research Society of India[cite: 3]</li>
-                        <li>Member, SERB-VORTEX for Inorganic Physical Chemistry (2020)[cite: 3]</li>
-                        <li>DST Young Scientist Award (2012)[cite: 3]</li>
-                        <li>DFG-INSA Visiting Fellowship to Germany (2014)[cite: 3]</li>
-                        <li>Qualified UGC-CSIR Exam[cite: 3]</li>
-                    </ul>
-                </div>
-
-                <!-- Visiting Professorship -->
-                <div style="background: var(--white); padding: 2rem; border-radius: 10px; border: 1px solid var(--border-color);">
-                    <h3 style="color: var(--primary-dark); margin-bottom: 1.2rem; font-size: 1.25rem;"><i class="fa-solid fa-globe" style="color: var(--primary); margin-right: 0.5rem;"></i> International Visiting Positions</h3>
-                    <ul class="styled-list" style="font-size: 0.95rem; color: var(--text-light);">
-                        <li>University at Buffalo, State University of New York, USA (2014–15)[cite: 4]</li>
-                        <li>Heidelberg University, Germany (May–July 2014)[cite: 4]</li>
-                        <li>Royal Institute of Technology, Stockholm, Sweden (Dec 2013)[cite: 4]</li>
-                        <li>Karl-Franzens-Universität Graz, Austria (Sep–Dec 2013 & May–June 2011)[cite: 4]</li>
-                    </ul>
-                </div>
-
-                <!-- Teaching & Supervision -->
-                <div style="background: var(--white); padding: 2rem; border-radius: 10px; border: 1px solid var(--border-color);">
-                    <h3 style="color: var(--primary-dark); margin-bottom: 1.2rem; font-size: 1.25rem;"><i class="fa-solid fa-book-open" style="color: var(--primary); margin-right: 0.5rem;"></i> Teaching & Supervision</h3>
-                    <p style="font-size: 0.95rem; color: var(--text-light); margin-bottom: 0.75rem;"><strong>Core Courses Taught:</strong> Basic Inorganic Chemistry, Coordination Chemistry, Bioinorganic Chemistry, MRI & Contrast Agents, EPR Spectroscopy, Biochemistry, Bioanalytical Methods, and Advances in Cancer Biology[cite: 4].</p>
-                    <p style="font-size: 0.95rem; color: var(--text-light);"><strong>Thesis Supervised:</strong> Ph.D. (Completed: 7, Ongoing: 6); M.Sc/M.Tech/M.Phil (Completed: 23, Ongoing: 3)[cite: 4].</p>
-                </div>
-
-            </div>
-
         </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container flex-between">
-            <p>&copy; 2026 RMM Research Group, IIT Bhilai. All Rights Reserved.</p>
-            <p>Designed with precision for academic excellence.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+    </main>
+    <footer><p>&copy; 2026 RMM Group, IIT Bhilai</p></footer>
 </body>
 </html>
