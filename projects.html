@@ -1,42 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Projects | RMM Group</title>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | RMM Research Group</title>
+    <link rel="icon" href="favicon/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #1e3a8a; --primary-light: #3b82f6; --accent: #e11d48; --dark: #0f172a; --light: #f8fafc; --gray: #64748b; --border: #e2e8f0; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
+        header { position: fixed; top: 0; left: 0; width: 100%; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); z-index: 1000; }
+        .nav-container { max-width: 1280px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+        .logo-area { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--dark); font-weight: 700; font-size: 1.25rem; }
+        .logo-area img { height: 40px; }
+        .nav-links { display: flex; gap: 1.2rem; list-style: none; }
+        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 500; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+        main { max-width: 1280px; margin: 120px auto 60px; padding: 0 2rem; }
+        h1 { font-size: 2.25rem; color: var(--primary); margin-bottom: 2rem; }
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .project-card { background: #fff; padding: 2rem; border-radius: 12px; border: 1px solid var(--border); border-top: 4px solid var(--primary-light); }
+        .project-card h3 { color: var(--primary); margin-bottom: 0.75rem; font-size: 1.2rem; }
+        .project-agency { color: var(--gray); font-size: 0.9rem; margin-bottom: 0.5rem; font-weight: 500; }
+        .project-amount { color: var(--accent); font-weight: 700; margin-top: 1rem; }
+        footer { background: var(--dark); color: #fff; text-align: center; padding: 2rem; margin-top: 4rem; }
+        @media(max-width:968px){ .nav-links { display: none; } }
+    </style>
 </head>
 <body>
-
-<header class="nav"><div class="wrap">
-  <a class="brand" href="index.html">RMM Group</a>
-  <nav aria-label="Main"><ul>
-    <li><a href="about.html">About</a></li>
-    <li><a href="research.html">Research</a></li>
-    <li><a href="publications.html">Publications</a></li>
-    <li><a href="news.html">News</a></li>
-    <li><a href="projects.html" class="active">Projects</a></li>
-    <li><a href="facilities.html">Facilities</a></li>
-    <li><a href="members.html">Members</a></li>
-    <li><a href="gallery.html">Gallery</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul></nav>
-</div></header>
-
-<section id="projects"><div class="wrap">
-  <h2>Ongoing projects</h2>
-  <div class="tbl"><table>
-    <thead><tr><th>Project</th><th>Funding agency</th><th>Amount</th><th>Years</th></tr></thead>
-    <tbody>
-      <tr><td>Redox activated smart manganese-based MRI contrast agents</td><td>SERB, New Delhi</td><td>₹42.50 lakhs</td><td>2023-2026</td></tr>
-      <tr><td>Optical imaging probe appended smart MRI contrast agents</td><td>RIG, IIT Bhilai</td><td>₹12 lakhs</td><td>2022-2025</td></tr>
-      <tr><td>Healthcare and community medicine empowerment of underprivileged tribal population</td><td>DST: IBITF, IIT Bhilai</td><td>₹99.96 lakhs</td><td>2024-2026</td></tr>
-      <tr><td>Bioinspired copper and nickel complexes for activation of CO₂</td><td>SERB, New Delhi</td><td>₹51.82 lakhs</td><td>2020-2023</td></tr>
-    </tbody>
-  </table></div>
-</div></section>
-
-<footer><div class="wrap">© 2026 RMM Group, IIT Bhilai · Parag Bashichandra</div></footer>
+    <header>
+        <div class="nav-container">
+            <a href="about.html" class="logo-area"><img src="logo/logo.png" alt="Logo" onerror="this.style.display='none'"><span>RMM Group</span></a>
+            <ul class="nav-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="members.html">Members</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="visitors.html">Visitors</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <h1>Ongoing Projects</h1>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Redox Activated Smart Manganese-Based MRI-Contrast Agents</h3>
+                <p class="project-agency">Funding Agency: SERB, New Delhi</p>
+                <p class="project-amount">₹42.50 Lakhs (2023-2026)</p>
+            </div>
+            <div class="project-card">
+                <h3>Healthcare and Community Medicine Empowerment of Underprivileged Tribal Population</h3>
+                <p class="project-agency">Funding Agency: DST: IBITF IIT Bhilai</p>
+                <p class="project-amount">₹99.96 Lakhs (2024-2026)</p>
+            </div>
+            <div class="project-card">
+                <h3>Bioinspired Copper and Nickel Complexes for Activation and Conversion of CO2</h3>
+                <p class="project-agency">Funding Agency: SERB, New Delhi</p>
+                <p class="project-amount">₹51.82 Lakhs (2020-2023)</p>
+            </div>
+        </div>
+    </main>
+    <footer><p>&copy; 2026 RMM Group, IIT Bhilai</p></footer>
 </body>
 </html>
