@@ -92,12 +92,6 @@ header {
     color: var(--accent);
 }
 
-.menu-toggle {
-    display: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
 /* Main Container */
 main {
     position: relative;
@@ -111,18 +105,6 @@ h1.page-title {
     font-size: 2.25rem;
     color: var(--primary);
     margin-bottom: 2rem;
-    position: relative;
-}
-
-h1.page-title::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    width: 50px;
-    height: 3px;
-    background: var(--accent);
-    border-radius: 2px;
 }
 
 /* About Grid */
@@ -167,7 +149,7 @@ h1.page-title::after {
     margin: 0 auto;
 }
 
-/* Research & Projects Cards */
+/* Research, Projects & Facilities Grids */
 .research-grid, .projects-grid, .facilities-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -180,13 +162,6 @@ h1.page-title::after {
     border-radius: 12px;
     border: 1px solid var(--border);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
-    transition: var(--transition);
-}
-
-.research-card:hover, .facility-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
-    border-color: var(--primary-light);
 }
 
 .research-card h3, .project-card h3 {
@@ -466,7 +441,7 @@ h1.page-title::after {
     margin-top: 1rem;
 }
 
-/* Empty States for Gallery & Visitors */
+/* Empty State */
 .empty-state {
     background: var(--card-bg);
     border: 2px dashed var(--border);
@@ -549,7 +524,6 @@ footer {
     z-index: 1;
 }
 
-/* Responsive Styles */
 @media (max-width: 968px) {
     .about-grid, .contact-wrapper, .pub-container, .modal-body {
         grid-template-columns: 1fr;
@@ -557,20 +531,6 @@ footer {
     }
     .nav-links {
         display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: #fff;
-        padding: 1.5rem;
-        box-shadow: 0 10px 15px rgba(0,0,0,0.05);
-    }
-    .nav-links.active {
-        display: flex;
-    }
-    .menu-toggle {
-        display: block;
     }
     .modal-body img {
         margin: 0 auto;
