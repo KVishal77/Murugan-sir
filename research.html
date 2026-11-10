@@ -7,33 +7,15 @@
     <link rel="icon" href="favicon/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root { --primary: #1e3a8a; --primary-light: #3b82f6; --accent: #e11d48; --dark: #0f172a; --light: #f8fafc; --gray: #64748b; --border: #e2e8f0; }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-        body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
-        header { position: fixed; top: 0; left: 0; width: 100%; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); z-index: 1000; }
-        .nav-container { max-width: 1280px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
-        .logo-area { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--dark); font-weight: 700; font-size: 1.25rem; }
-        .logo-area img { height: 40px; }
-        .nav-links { display: flex; gap: 1.2rem; list-style: none; }
-        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 500; font-size: 0.9rem; transition: 0.3s; }
-        .nav-links a:hover, .nav-links a.active { color: var(--accent); }
-        main { max-width: 1280px; margin: 120px auto 60px; padding: 0 2rem; }
-        h1 { font-size: 2.25rem; color: var(--primary); margin-bottom: 2rem; }
-        .research-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
-        .research-card { background: #fff; padding: 2rem; border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); }
-        .research-card h3 { color: var(--primary); margin-bottom: 1rem; }
-        .research-card p { color: var(--gray); font-size: 0.95rem; }
-        footer { background: var(--dark); color: #fff; text-align: center; padding: 2rem; margin-top: 4rem; }
-        @media(max-width:968px){ .nav-links { display: none; } }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <canvas id="chem-canvas"></canvas>
     <header>
         <div class="nav-container">
-            <a href="about.html" class="logo-area"><img src="logo/logo.png" alt="Logo" onerror="this.style.display='none'"><span>RMM Group</span></a>
+            <a href="index.html" class="logo-area"><img src="logo/logo.png" alt="Logo" onerror="this.style.display='none'"><span>RMM Group</span></a>
             <ul class="nav-links">
-                <li><a href="about.html">About</a></li>
+                <li><a href="index.html">About</a></li>
                 <li><a href="research.html" class="active">Research</a></li>
                 <li><a href="publications.html">Publications</a></li>
                 <li><a href="projects.html">Projects</a></li>
@@ -46,26 +28,27 @@
         </div>
     </header>
     <main>
-        <h1>Our Research Areas</h1>
+        <h1 class="page-title">Our Research Areas</h1>
         <div class="research-grid">
             <div class="research-card">
                 <h3>Smart MRI Probes</h3>
-                <p>Designing Fe(II) macrocycles as pH-responsive PARACEST agents and Fe(III)-catecholate complexes as dual-modal T1 MRI and optical agents.</p>
+                <p>Designing Fe(II) macrocycles as pH-responsive PARACEST agents and Fe(III)-catecholate complexes as dual-modal T1 MRI and optical agents[cite: 40].</p>
             </div>
             <div class="research-card">
                 <h3>Oxygen Activation</h3>
-                <p>Investigating Fe(II), Ni(II), and Cu(II) complexes as models for cysteine dioxygenase and catalytic aromatic C-H bond hydroxylation.</p>
+                <p>Investigating Fe(II), Ni(II), and Cu(II) complexes as models for cysteine dioxygenase and catalytic aromatic C-H bond hydroxylation[cite: 40].</p>
             </div>
             <div class="research-card">
                 <h3>CO2 Activation</h3>
-                <p>Developing bioinspired Cu(II) and Ni(II) complexes that fix atmospheric CO2 under mild conditions and convert it into cyclic carbonates.</p>
+                <p>Developing bioinspired Cu(II) and Ni(II) complexes that fix atmospheric CO2 under mild conditions and convert it into cyclic carbonates[cite: 40].</p>
             </div>
             <div class="research-card">
                 <h3>Cancer Theranostics</h3>
-                <p>Bridging nanotechnology and cancer biology to advance precision oncology, targeted drug delivery, and ferroptosis models.</p>
+                <p>Bridging nanotechnology and cancer biology to advance precision oncology, targeted drug delivery, and ferroptosis models[cite: 41].</p>
             </div>
         </div>
     </main>
     <footer><p>&copy; 2026 RMM Group, IIT Bhilai</p></footer>
+    <script src="script.js"></script>
 </body>
 </html>
