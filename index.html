@@ -3,44 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | RMM Research Group</title>
-    <link rel="icon" href="favicon/favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>RMM Group | Bioinorganic & Chemical Biology Laboratory | IIT Bhilai</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <canvas id="chem-canvas"></canvas>
-    <header>
-        <div class="nav-container">
-            <a href="index.html" class="logo-area"><img src="logo/logo.png" alt="Logo" onerror="this.style.display='none'"><span>RMM Group</span></a>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">About</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="facilities.html">Facilities</a></li>
-                <li><a href="members.html">Members</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="visitors.html">Visitors</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-area">
+                <img src="assets/logo/logo.png" alt="Logo" class="site-logo">
+                <div class="logo-text">
+                    <span class="lab-name">RMM Group</span>
+                    <span class="inst-name">IIT Bhilai</span>
+                </div>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About / PI</a>
+                <a href="research.html">Research</a>
+                <a href="publications.html">Publications</a>
+                <a href="members.html">Team</a>
+                <a href="facilities.html">Facilities</a>
+                <a href="contact.html" class="btn-contact">Contact Us</a>
+            </nav>
+            <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
         </div>
     </header>
-    <main>
-        <div class="about-grid">
-            <div class="about-content">
-                <span class="hero-badge">IIT Bhilai Research Group</span>
-                <h1>Dr. Ramasamy Mayilmurugan</h1>
-                <p><strong>Associate Professor</strong>, Department of Chemistry & Department of Bioscience and Biomedical Engineering, Indian Institute of Technology (IIT) Bhilai[cite: 2].</p>
-                <p>Our group focuses on interdisciplinary research involving the design and synthesis of carefully tailored metal complexes acting as smart MRI and optical probes to target tumors and understand complex biochemical processes[cite: 7].</p>
-            </div>
-            <div class="about-image">
-                <img src="images/pi.jpg" alt="Dr. Ramasamy Mayilmurugan" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80'">
-            </div>
+
+    <!-- Hero Section -->
+    <section class="section" style="height: 90vh; display:flex; align-items:center; text-align:center; background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('assets/facilities/fac1.jpg') center/cover; color:white; margin-top:75px;">
+        <div class="container">
+            <h1>Bioinorganic & Chemical Biology Laboratory</h1>
+            <p style="margin: 20px 0; font-size: 1.2rem;">Department of Bioscience and Biomedical Engineering, IIT Bhilai</p>
+            <a href="research.html" class="btn btn-primary">Explore Research</a>
         </div>
-    </main>
-    <footer><p>&copy; 2026 RMM Group, IIT Bhilai. Designed for K Vishal Johnson.</p></footer>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 RMM Group, IIT Bhilai. All Rights Reserved.</p>
+            <p class="designer-credit">Designed by Vish Technologies</p>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
