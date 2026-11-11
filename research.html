@@ -1,63 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research Areas | RMM Group</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research Areas | Bioinorganic & Chemical Biology</title>
+  <link rel="icon" href="images/fevicon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header class="navbar">
-        <div class="container nav-container">
-            <a href="index.html" class="logo-area">
-                <img src="assets/logo/logo.png" alt="Logo" class="site-logo">
-                <div class="logo-text"><span class="lab-name">RMM Group</span><span class="inst-name">IIT Bhilai</span></div>
-            </a>
-            <nav class="nav-links" id="navLinks">
-                <a href="index.html">Home</a>
-                <a href="about.html">About / PI</a>
-                <a href="research.html" class="active">Research</a>
-                <a href="publications.html">Publications</a>
-                <a href="members.html">Team</a>
-                <a href="facilities.html">Facilities</a>
-                <a href="contact.html" class="btn-contact">Contact Us</a>
-            </nav>
-            <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
-        </div>
-    </header>
+  <canvas id="molecule-canvas"></canvas>
 
-    <div class="page-header">
-        <h1>Research Areas</h1>
-        <p>Frontier explorations in bioinorganic chemistry and chemical biology</p>
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand">
+        <img src="images/site logo.png" alt="RMM Group Logo" class="site-logo" onerror="this.style.display='none'">
+        <span>Bioinorganic & Chemical Biology Lab</span>
+      </a>
+      <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="research.html" class="active">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="projects.html">Projects</a>
+        <a href="members.html">Members</a>
+        <a href="facilities.html">Facilities</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-title-box text-center">
+      <h1>Research Thrust Areas</h1>
+      <p>Chemists and biologists working together on health problems, combining design, synthesis, and biological validation.</p>
     </div>
 
-    <section class="section">
-        <div class="container" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:30px;">
-            <div style="background:var(--light); padding:30px; border-radius:8px;">
-                <i class="fas fa-atom" style="font-size:2.5rem; color:var(--secondary); margin-bottom:15px;"></i>
-                <h3 style="color:var(--primary); margin-bottom:10px;">Bioinorganic Chemistry</h3>
-                <p>Investigating metalloenzymes, oxygen and CO2 activation, and creating synthetic functional mimics.</p>
-            </div>
-            <div style="background:var(--light); padding:30px; border-radius:8px;">
-                <i class="fas fa-brain" style="font-size:2.5rem; color:var(--secondary); margin-bottom:15px;"></i>
-                <h3 style="color:var(--primary); margin-bottom:10px;">Smart MRI & Contrast Agents</h3>
-                <p>Designing redox-activated smart manganese-based contrast agents for advanced molecular diagnostic imaging.</p>
-            </div>
-            <div style="background:var(--light); padding:30px; border-radius:8px;">
-                <i class="fas fa-dna" style="font-size:2.5rem; color:var(--secondary); margin-bottom:15px;"></i>
-                <h3 style="color:var(--primary); margin-bottom:10px;">Targeted Nanomedicine</h3>
-                <p>Exploring ferroptosis, targeted cancer therapy, and therapeutic delivery systems.</p>
-            </div>
+    <section class="research-section">
+      <h2 class="section-heading"><i class="fas fa-atom"></i> Bioinorganic Chemistry</h2>
+      <div class="card-grid-3">
+        <div class="glass-card topic-card border-teal">
+          <div class="topic-icon"><i class="fas fa-bullseye"></i></div>
+          <h3>Smart MRI Probes</h3>
+          <p>Fe(II) macrocycles as pH-responsive PARACEST agents, and Fe(III)-catecholate complexes as dual-modal T1 MRI and optical agents for nitric oxide and acidic tumour pH. Biotin conjugation raises agent delivery to tumours. Mn(II/III) complexes serve as redox-responsive agents sensitive to L-cysteine.</p>
         </div>
+        <div class="glass-card topic-card border-purple">
+          <div class="topic-icon"><i class="fas fa-wind"></i></div>
+          <h3>Oxygen Activation</h3>
+          <p>Fe(II), Ni(II), and Cu(II) complexes as models for cysteine dioxygenase, diketone dioxygenase, and copper monooxygenases, acting as catalysts for aromatic C-H bond hydroxylation, investigated via spectroscopy and computation.</p>
+        </div>
+        <div class="glass-card topic-card border-pink">
+          <div class="topic-icon"><i class="fas fa-leaf"></i></div>
+          <h3>CO₂ Activation</h3>
+          <p>Bioinspired Cu(II) and Ni(II) complexes fixing atmospheric CO₂ under mild conditions to convert it into cyclic carbonates and carboxylic acids, validated with crystal structures of CO₂-derived intermediates.</p>
+        </div>
+      </div>
     </section>
 
-    <footer>
-        <div class="container footer-content">
-            <p>&copy; 2026 RMM Group, IIT Bhilai. All Rights Reserved.</p>
-            <p class="designer-credit">Designed by Vish Technologies</p>
+    <section class="research-section">
+      <h2 class="section-heading"><i class="fas fa-microscope"></i> Chemical Biology</h2>
+      <div class="card-grid-3">
+        <div class="glass-card topic-card border-teal">
+          <div class="topic-icon"><i class="fas fa-capsules"></i></div>
+          <h3>Nanomedicine for Targeted Therapy</h3>
+          <p>Advancing precision oncology via nanomedicine-based approaches for targeted cancer therapy, incorporating protein nanocages, engineered nanoparticles, liposomes, and hybrid nanostructures to enhance selectivity while minimizing systemic toxicity.</p>
         </div>
-    </footer>
-    <script src="script.js"></script>
+        <div class="glass-card topic-card border-purple">
+          <div class="topic-icon"><i class="fas fa-dna"></i></div>
+          <h3>Ferroptosis & Cancer Models</h3>
+          <p>Focusing on metal-dependent regulated cell death, specifically ferroptosis and its therapeutic exploitation against cervical, breast, and colorectal cancer models through cellular viability, cytotoxicity, gene regulation, and molecular pathways.</p>
+        </div>
+        <div class="glass-card topic-card border-pink">
+          <div class="topic-icon"><i class="fas fa-notes-medical"></i></div>
+          <h3>Cancer Theranostics</h3>
+          <p>Integrating diagnostic imaging with therapeutic interventions using multifunctional molecules and nanoplatforms for image-guided cancer intervention, bridging nanotechnology and cancer biology.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; Bioinorganic Chemistry and Chemical Biology Laboratory, IIT Bhilai.</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
