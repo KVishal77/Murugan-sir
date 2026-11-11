@@ -1,55 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About / Principal Investigator | RMM Group</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About PI | Dr. Ramasamy Mayilmurugan</title>
+  <link rel="icon" href="images/fevicon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header class="navbar">
-        <div class="container nav-container">
-            <a href="index.html" class="logo-area">
-                <img src="assets/logo/logo.png" alt="Logo" class="site-logo">
-                <div class="logo-text"><span class="lab-name">RMM Group</span><span class="inst-name">IIT Bhilai</span></div>
-            </a>
-            <nav class="nav-links" id="navLinks">
-                <a href="index.html">Home</a>
-                <a href="about.html" class="active">About / PI</a>
-                <a href="research.html">Research</a>
-                <a href="publications.html">Publications</a>
-                <a href="members.html">Team</a>
-                <a href="facilities.html">Facilities</a>
-                <a href="contact.html" class="btn-contact">Contact Us</a>
-            </nav>
-            <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
-        </div>
-    </header>
+  <canvas id="molecule-canvas"></canvas>
 
-    <div class="page-header">
-        <h1>Principal Investigator</h1>
-        <p>Meet our laboratory director and lead researcher</p>
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand">
+        <img src="images/site logo.png" alt="RMM Group Logo" class="site-logo" onerror="this.style.display='none'">
+        <span>Bioinorganic & Chemical Biology Lab</span>
+      </a>
+      <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="projects.html">Projects</a>
+        <a href="members.html">Members</a>
+        <a href="facilities.html">Facilities</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    <section class="section">
-        <div class="container" style="display:grid; grid-template-columns:300px 1fr; gap:40px; align-items:center;">
-            <img src="assets/pi/pi-photo.jpg" alt="Dr. Ramasamy Mayilmurugan" style="width:100%; border-radius:8px;">
-            <div>
-                <h2 style="color:var(--primary); font-size:2rem; margin-bottom:10px;">Dr. Ramasamy Mayilmurugan</h2>
-                <p style="color:var(--secondary); font-weight:600; margin-bottom:15px;">Associate Professor & Principal Investigator</p>
-                <p style="color:var(--gray); margin-bottom:20px;">Department of Bioscience and Biomedical Engineering, IIT Bhilai</p>
-                <p>Our research group focuses on bioinorganic chemistry, smart MRI contrast agents, oxygen/CO2 activation, and targeted nanomedicines for advanced biomedical applications.</p>
-            </div>
+  <main class="container">
+    <section class="glass-card page-header">
+      <div class="about-hero-grid">
+        <img src="images/sir2.png" alt="Dr. Ramasamy Mayilmurugan Profile" class="profile-pic" onerror="this.style.display='none'">
+        <div>
+          <h1>Dr. Ramasamy Mayilmurugan</h1>
+          <h3>Associate Professor</h3>
+          <p>Department of Chemistry & Department of Bioscience and Biomedical Engineering<br>IIT Bhilai | Email: <code>murugan@iitbhilai.ac.in</code></p>
+          <div class="profile-badges">
+            <a href="https://scholar.google.co.in/citations?user=-9ywDWAAAAAJ&hl=en" target="_blank" rel="noopener">
+              <img src="images/Google Scholar.png" alt="Google Scholar" class="badge-img" onerror="this.outerHTML='<span class=\"link-badge\">Google Scholar Profile</span>'">
+            </a>
+            <a href="https://orcid.org/0000-0002-5370-594X" target="_blank" rel="noopener">
+              <img src="images/Orcid.png" alt="ORCID" class="badge-img" onerror="this.outerHTML='<span class=\"link-badge\">ORCID Profile</span>'">
+            </a>
+          </div>
         </div>
+      </div>
     </section>
 
-    <footer>
-        <div class="container footer-content">
-            <p>&copy; 2026 RMM Group, IIT Bhilai. All Rights Reserved.</p>
-            <p class="designer-credit">Designed by Vish Technologies</p>
-        </div>
-    </footer>
-    <script src="script.js"></script>
+    <section class="glass-card section-space">
+      <h2>Biography & Academic Background</h2>
+      <p class="lead-text">Dr. R. Mayilmurugan received his Ph.D. from Bharathidasan University, Tiruchirapalli, under the supervision of distinguished bioinorganic chemist Prof. M. Palaniandavar, FNA, FASc, and M.Sc. from Madurai Kamaraj University (ANJA College), securing the <strong>Gold Medal / First Rank</strong>.</p>
+      <p>He completed Post-Doctoral Fellowships with Prof. Nadia C. Mösch-Zanetti (University of Graz, Austria) focusing on biomimetic chemistry of molybdenum oxotransferases, and with Prof. Janet Morrow (University at Buffalo, SUNY, USA) as a Fulbright Scholar working on iron-based PARACEST MRI contrast agents. He was also an INSA-DFG Visiting Scientist at Heidelberg University, Germany with Prof. Peter Comba. Prior to joining IIT Bhilai, he served as Assistant Professor at Madurai Kamaraj University.</p>
+    </section>
+
+    <section class="stats-grid">
+      <div class="glass-card stat-box">
+        <i class="fas fa-graduation-cap"></i>
+        <h3>Ph.D. Thesis Supervised</h3>
+        <p>Completed: <strong>7</strong> | Ongoing: <strong>6</strong></p>
+      </div>
+      <div class="glass-card stat-box">
+        <i class="fas fa-user-graduate"></i>
+        <h3>M.Sc / M.Tech / M.Phil</h3>
+        <p>Completed: <strong>23</strong> | Ongoing: <strong>3</strong></p>
+      </div>
+      <div class="glass-card stat-box">
+        <i class="fas fa-chalkboard-teacher"></i>
+        <h3>Invited Talks Delivered</h3>
+        <p><strong>36 Lectures</strong> (USA, Austria, Sweden, Germany, Singapore)</p>
+      </div>
+    </section>
+
+    <section class="grid-2col">
+      <div class="glass-card">
+        <h2>Awards & Recognitions</h2>
+        <ul class="styled-list">
+          <li>CRSI Bronze Medal (2020), Chemical Research Society of India</li>
+          <li>Fulbright Scholar Award (2014)</li>
+          <li>Council Member (2020-23), Chemical Research Society of India</li>
+          <li>Member, SERB-VORTEX for Inorganic Physical Chemistry (2020)</li>
+          <li>Convener, CRSI Tiruchy – Madurai Local Chapter</li>
+          <li>Fulbright Outreach Fund (2015)</li>
+          <li>DFG-INSA Visiting Fellowship to Germany (2014)</li>
+          <li>DST Young Scientist Award (2012)</li>
+          <li>Qualified UGC-CSIR Exam</li>
+        </ul>
+      </div>
+
+      <div class="glass-card">
+        <h2>Visiting Professorships</h2>
+        <ul class="styled-list">
+          <li>University at Buffalo, State University of New York, USA (2014-15)</li>
+          <li>Heidelberg University, Germany (2014)</li>
+          <li>Royal Institute of Technology, Stockholm, Sweden (2013)</li>
+          <li>Karl-Franzens-Universität Graz, Austria (2011, 2013)</li>
+        </ul>
+        <h2 style="margin-top: 20px;">Teaching</h2>
+        <p class="tag-cloud">Basic Inorganic Chemistry • Coordination Chemistry • Bioinorganic Chemistry • MRI Contrast Agents • EPR Spectroscopy • Biochemistry • Bioanalytical Methods • Advances in Cancer Biology</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; Bioinorganic Chemistry and Chemical Biology Laboratory, IIT Bhilai.</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
