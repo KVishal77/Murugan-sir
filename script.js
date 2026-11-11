@@ -1,9 +1,10 @@
-// Floating Chemistry Molecule Animation Canvas
+// Advanced Chemistry Research Canvas Animation (Periodic Elements & Molecular Nodes)
 const canvas = document.getElementById('molecule-canvas');
 const ctx = canvas.getContext('2d');
 
 let particlesArray = [];
-const numberOfParticles = 45;
+const numberOfParticles = 35;
+const chemSymbols = ['Fe', 'Cu', 'Ni', 'Mn', 'C', 'H', 'O', 'N', 'Zn', 'P'];
 
 function resizeCanvas() {
   canvas.width = window.innerWidth;
@@ -12,13 +13,15 @@ function resizeCanvas() {
 resizeCanvas();
 window.addEventListener('resize', resizeCanvas);
 
-class Particle {
+class ChemicalParticle {
   constructor() {
     this.x = Math.random() * canvas.width;
     this.y = Math.random() * canvas.height;
-    this.size = Math.random() * 3 + 2;
-    this.speedX = Math.random() * 1.5 - 0.75;
-    this.speedY = Math.random() * 1.5 - 0.75;
+    this.size = Math.random() * 4 + 3;
+    this.speedX = Math.random() * 0.8 - 0.4;
+    this.speedY = Math.random() * 0.8 - 0.4;
+    this.symbol = chemSymbols[Math.floor(Math.random() * chemSymbols.length)];
+    this.isElement = Math.random() > 0.6;
   }
   update() {
     this.x += this.speedX;
@@ -27,17 +30,23 @@ class Particle {
     if (this.y > canvas.height || this.y < 0) this.speedY *= -1;
   }
   draw() {
-    ctx.fillStyle = 'rgba(56, 189, 248, 0.6)';
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+    ctx.fillStyle = 'rgba(56, 189, 248, 0.7)';
     ctx.fill();
+
+    if (this.isElement) {
+      ctx.font = '12px Poppins, sans-serif';
+      ctx.fillStyle = 'rgba(192, 132, 252, 0.75)';
+      ctx.fillText(this.symbol, this.x + 8, this.y - 8);
+    }
   }
 }
 
 function initParticles() {
   particlesArray = [];
   for (let i = 0; i < numberOfParticles; i++) {
-    particlesArray.push(new Particle());
+    particlesArray.push(new ChemicalParticle());
   }
 }
 
@@ -52,10 +61,10 @@ function animateParticles() {
       const dy = particlesArray[i].y - particlesArray[j].y;
       const distance = Math.sqrt(dx * dx + dy * dy);
 
-      if (distance < 110) {
+      if (distance < 130) {
         ctx.beginPath();
-        ctx.strokeStyle = `rgba(168, 85, 247, ${1 - distance / 110})`;
-        ctx.lineWidth = 0.6;
+        ctx.strokeStyle = `rgba(56, 189, 248, ${0.25 * (1 - distance / 130)})`;
+        ctx.lineWidth = 0.8;
         ctx.moveTo(particlesArray[i].x, particlesArray[i].y);
         ctx.lineTo(particlesArray[j].x, particlesArray[j].y);
         ctx.stroke();
@@ -77,8 +86,28 @@ function switchTab(tabName) {
   event.target.classList.add('active');
 }
 
-// Publications Search & Filter
+// Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.getElementById('mobile-menu');
+  const navLinks = document.querySelector('.nav-links');
+
+  if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
+      navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+      if (navLinks.style.display === 'flex') {
+        navLinks.style.flexDirection = 'column';
+        navLinks.style.position = 'absolute';
+        navLinks.style.top = '70px';
+        navLinks.style.left = '0';
+        navLinks.style.width = '100%';
+        navLinks.style.background = 'rgba(9, 13, 22, 0.95)';
+        navLinks.style.padding = '20px';
+        navLinks.style.borderBottom = '1px solid rgba(255,255,255,0.1)';
+      }
+    });
+  }
+
+  // Publications Search & Filter
   const searchInput = document.getElementById('pub-search');
   const yearBtns = document.querySelectorAll('.year-btn');
   const pubItems = document.querySelectorAll('.pub-item');
