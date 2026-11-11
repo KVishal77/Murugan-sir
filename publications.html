@@ -1,56 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publications | RMM Group</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publications | RMM Research Group</title>
+  <link rel="icon" href="images/fevicon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header class="navbar">
-        <div class="container nav-container">
-            <a href="index.html" class="logo-area">
-                <img src="assets/logo/logo.png" alt="Logo" class="site-logo">
-                <div class="logo-text"><span class="lab-name">RMM Group</span><span class="inst-name">IIT Bhilai</span></div>
-            </a>
-            <nav class="nav-links" id="navLinks">
-                <a href="index.html">Home</a>
-                <a href="about.html">About / PI</a>
-                <a href="research.html">Research</a>
-                <a href="publications.html" class="active">Publications</a>
-                <a href="members.html">Team</a>
-                <a href="facilities.html">Facilities</a>
-                <a href="contact.html" class="btn-contact">Contact Us</a>
-            </nav>
-            <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
-        </div>
-    </header>
+  <canvas id="molecule-canvas"></canvas>
 
-    <div class="page-header">
-        <h1>Publications</h1>
-        <p>Peer-reviewed research and review papers</p>
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand">
+        <img src="images/site logo.png" alt="RMM Group Logo" class="site-logo" onerror="this.style.display='none'">
+        <span>Bioinorganic & Chemical Biology Lab</span>
+      </a>
+      <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html" class="active">Publications</a>
+        <a href="projects.html">Projects</a>
+        <a href="members.html">Members</a>
+        <a href="facilities.html">Facilities</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-title-box text-center">
+      <h1>Publications</h1>
+      <p>Research Articles, Reviews, and Conference Proceedings</p>
     </div>
 
-    <section class="section">
-        <div class="container" style="display:flex; flex-direction:column; gap:20px;">
-            <div style="background:var(--light); padding:20px; border-radius:8px; display:flex; justify-content:space-between; align-items:center;">
-                <div>
-                    <span style="background:var(--primary); color:white; padding:4px 8px; border-radius:4px; font-size:0.8rem;">2026</span>
-                    <h3 style="color:var(--primary); margin:10px 0 5px 0;">Redox-Activated Smart Manganese-Based Contrast Agents</h3>
-                    <p style="color:var(--gray); font-size:0.9rem;">R. Mayilmurugan et al. | Journal of Biological Inorganic Chemistry</p>
-                </div>
-                <a href="#" class="btn btn-primary" style="padding:8px 16px;"><i class="fas fa-file-pdf"></i> PDF</a>
-            </div>
-        </div>
-    </section>
+    <div class="filter-controls glass-card">
+      <input type="text" id="pub-search" placeholder="Search publication title, authors, or journal..." class="search-input">
+      <div class="year-buttons" id="year-filters">
+        <button class="year-btn active" data-year="all">All</button>
+        <button class="year-btn" data-year="2026">2026</button>
+        <button class="year-btn" data-year="2025">2025</button>
+        <button class="year-btn" data-year="2024">2024</button>
+        <button class="year-btn" data-year="2023">2023</button>
+        <button class="year-btn" data-year="2022">2022</button>
+        <button class="year-btn" data-year="2021">2021</button>
+        <button class="year-btn" data-year="2020">2020</button>
+        <button class="year-btn" data-year="2019">2019</button>
+        <button class="year-btn" data-year="2018">2018</button>
+        <button class="year-btn" data-year="2017">2017</button>
+      </div>
+    </div>
 
-    <footer>
-        <div class="container footer-content">
-            <p>&copy; 2026 RMM Group, IIT Bhilai. All Rights Reserved.</p>
-            <p class="designer-credit">Designed by Vish Technologies</p>
+    <div class="pub-list" id="publications-container">
+      <!-- 2026 Latest Publications (Mapped to highest indices: pub-47.png & pub-46.png) -->
+      <div class="glass-card pub-item" data-year="2026">
+        <div class="pub-content">
+          <span class="year-tag">2026</span>
+          <h3 class="pub-title">Mn (II) and Fe (III) complexes as MRI contrast agents: exploration of the second sphere relaxation for contrast enhancement</h3>
+          <p class="pub-authors">Tharik Anwar Amanullah, Ashish Kumar Samal, Ramasamy Mayilmurugan</p>
+          <p class="pub-journal"><em>Coordination Chemistry Reviews</em> 563, 217913 (2026) | DOI: 10.1016/j.ccr.2026.217913</p>
         </div>
-    </footer>
-    <script src="script.js"></script>
+        <div class="pub-image-box">
+          <img src="images/pub-47.png" alt="Graphical Abstract" onerror="this.style.display='none'">
+        </div>
+      </div>
+
+      <div class="glass-card pub-item" data-year="2026">
+        <div class="pub-content">
+          <span class="year-tag">2026</span>
+          <h3 class="pub-title">Catalytic CO2 fixation into cyclic carbonates by copper (ii) complexes of N4 ligands under mild conditions</h3>
+          <p class="pub-authors">Muthuramalingam Sethuraman, Winaki P Sohtun, Marappan Velusamy, Ramasamy Mayilmurugan</p>
+          <p class="pub-journal"><em>Dalton Trans.</em>, 2026, 55, 7392 | DOI: 10.1039/D6DT00331A</p>
+        </div>
+        <div class="pub-image-box">
+          <img src="images/pub-46.png" alt="Structure Diagram" onerror="this.style.display='none'">
+        </div>
+      </div>
+
+      <!-- 2025 Publications -->
+      <div class="glass-card pub-item" data-year="2025">
+        <div class="pub-content">
+          <span class="year-tag">2025</span>
+          <h3 class="pub-title">Biotin Conjugated Fe(III)‐Triscatecholate Complex as Tumour Targeting T1 MRI Contrast Agent via Second Sphere Water Relaxation</h3>
+          <p class="pub-authors">M Duraiyarasu, S Senthil Kumaran, R Mayilmurugan</p>
+          <p class="pub-journal"><em>Chemistry–A European Journal</em>, 2025 | DOI: 10.1002/chem.202403619</p>
+          <span class="citation-badge">Citations: 3</span>
+        </div>
+        <div class="pub-image-box">
+          <img src="images/pub-44.png" alt="Graphical Abstract" onerror="this.style.display='none'">
+        </div>
+      </div>
+
+      <div class="glass-card pub-item" data-year="2025">
+        <div class="pub-content">
+          <span class="year-tag">2025</span>
+          <h3 class="pub-title">A bioinspired model for copper monooxygenase: direct aromatic hydroxylation using O2</h3>
+          <p class="pub-authors">R Ramasubramanian, K Anandababu, M Kumar, R Mayilmurugan</p>
+          <p class="pub-journal"><em>Dalton Transactions</em> 54 (22), 8788-8799 (2025)</p>
+          <span class="citation-badge">Citations: 3</span>
+        </div>
+        <div class="pub-image-box">
+          <img src="images/pub-45.png" alt="Publication Abstract" onerror="this.style.display='none'">
+        </div>
+      </div>
+
+      <!-- 2024 Publications -->
+      <div class="glass-card pub-item" data-year="2024">
+        <div class="pub-content">
+          <span class="year-tag">2024</span>
+          <h3 class="pub-title">Fe(III) Complexes as the Optical Imaging Probe for l-Arginine via the Redox Mechanism</h3>
+          <p class="pub-authors">Priyanga, S., Velusamy, M., Ramasubramanian, R. and Mayilmurugan, R.</p>
+          <p class="pub-journal"><em>Crystal Growth & Design</em> 2024, 25, 2, 182–190 | DOI: 10.1021/acs.cgd.4c00822</p>
+          <span class="citation-badge">Citations: 2</span>
+        </div>
+        <div class="pub-image-box">
+          <img src="images/pub-43.png" alt="Journal Cover" onerror="this.style.display='none'">
+        </div>
+      </div>
+
+      <!-- 2023 Publications -->
+      <div class="glass-card pub-item" data-year="2023">
+        <div class="pub-content">
+          <span class="year-tag">2023</span>
+          <h3 class="pub-title">Alkyl Chain Appended Fe(III) Catecholate Complex as a Dual-Modal T1 MRI–NIR Fluorescence Imaging Agent</h3>
+          <p class="pub-authors">Duraiyarasu Maheshwaran, S Senthil Kumaran, and Ramasamy Mayilmurugan</p>
+          <p class="pub-journal"><em>ACS Biomater. Sci. Eng.</em> 2023, 9, 3570-3580 | DOI: 10.1021/acsbiomaterials.3c00203</p>
+          <span class="citation-badge">Citations: 5</span>
+        </div>
+        <div class="pub-image-box">
+          <img src="images/pub-40.png" alt="Mechanism Abstract" onerror="this.style.display='none'">
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; Bioinorganic Chemistry and Chemical Biology Laboratory, IIT Bhilai.</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
