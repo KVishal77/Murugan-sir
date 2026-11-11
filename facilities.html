@@ -1,62 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab Facilities | RMM Group</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laboratory Facilities | RMM Lab</title>
+  <link rel="icon" href="images/fevicon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header class="navbar">
-        <div class="container nav-container">
-            <a href="index.html" class="logo-area">
-                <img src="assets/logo/logo.png" alt="Logo" class="site-logo">
-                <div class="logo-text"><span class="lab-name">RMM Group</span><span class="inst-name">IIT Bhilai</span></div>
-            </a>
-            <nav class="nav-links" id="navLinks">
-                <a href="index.html">Home</a>
-                <a href="about.html">About / PI</a>
-                <a href="research.html">Research</a>
-                <a href="publications.html">Publications</a>
-                <a href="members.html">Team</a>
-                <a href="facilities.html" class="active">Facilities</a>
-                <a href="contact.html" class="btn-contact">Contact Us</a>
-            </nav>
-            <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
-        </div>
-    </header>
+  <canvas id="molecule-canvas"></canvas>
 
-    <div class="page-header">
-        <h1>Lab Facilities & Infrastructure</h1>
-        <p>State-of-the-art equipment for synthesis and analysis</p>
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand">
+        <img src="images/site logo.png" alt="RMM Group Logo" class="site-logo" onerror="this.style.display='none'">
+        <span>Bioinorganic & Chemical Biology Lab</span>
+      </a>
+      <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="projects.html">Projects</a>
+        <a href="members.html">Members</a>
+        <a href="facilities.html" class="active">Facilities</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    <section class="section">
-        <div class="container" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(350px, 1fr)); gap:30px;">
-            <div style="background:var(--light); border-radius:8px; overflow:hidden;">
-                <img src="assets/facilities/fac1.jpg" alt="Lab" style="width:100%; height:200px; object-fit:cover;">
-                <div style="padding:20px;">
-                    <h3 style="color:var(--primary); margin-bottom:10px;">Advanced Synthesis Laboratory</h3>
-                    <p>Equipped with Schlenk lines, fume hoods, and glove boxes for air-sensitive compound synthesis.</p>
-                </div>
-            </div>
-            <div style="background:var(--light); border-radius:8px; overflow:hidden;">
-                <img src="assets/facilities/fac2.jpg" alt="Tools" style="width:100%; height:200px; object-fit:cover;">
-                <div style="padding:20px;">
-                    <h3 style="color:var(--primary); margin-bottom:10px;">Analytical Instrumentation</h3>
-                    <p>UV-Vis, FTIR, Fluorescence spectrometers, and electrochemical workstations.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <main class="container">
+    <div class="glass-card empty-state-box text-center">
+      <i class="fas fa-tools empty-icon"></i>
+      <h1>Laboratory & Instrumentation Facilities</h1>
+      <p>State-of-the-art synthetic chemistry setup, spectroscopic instruments, and cell culture facilities details will be updated soon.</p>
+    </div>
+  </main>
 
-    <footer>
-        <div class="container footer-content">
-            <p>&copy; 2026 RMM Group, IIT Bhilai. All Rights Reserved.</p>
-            <p class="designer-credit">Designed by Vish Technologies</p>
-        </div>
-    </footer>
-    <script src="script.js"></script>
+  <footer class="footer">
+    <p>&copy; Bioinorganic Chemistry and Chemical Biology Laboratory, IIT Bhilai.</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
