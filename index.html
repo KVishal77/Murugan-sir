@@ -7,19 +7,19 @@
   <link rel="icon" href="images/fevicon.png" type="image/png">
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Creative Dark Theme with Nuclear, DNA, Atoms, Electrons & Carbon Rings Background */
+    /* Creative Dark Theme with Rich Chemistry & Physics Background Elements */
     body {
       background-color: #060c1b;
       background-image: 
-        radial-gradient(rgba(56, 189, 248, 0.06) 1px, transparent 1px),
+        radial-gradient(rgba(56, 189, 248, 0.08) 1.5px, transparent 1.5px),
         linear-gradient(to bottom, #060c1b 0%, #0a1329 100%);
-      background-size: 32px 32px, 100% 100%;
+      background-size: 36px 36px, 100% 100%;
       position: relative;
       overflow-x: hidden;
       color: #f8fafc;
     }
     
-    /* Background Canvas Container for Complex Chemistry & Physics Elements */
+    /* Background Canvas Container */
     .bg-canvas-container {
       position: fixed;
       top: 0;
@@ -31,31 +31,31 @@
       overflow: hidden;
     }
 
-    /* Floating Atoms & Electrons Animations */
+    /* Floating Atoms & Orbiting Electrons */
     .floating-atom-node {
       position: absolute;
-      width: 120px;
-      height: 120px;
-      border: 1px dashed rgba(56, 189, 248, 0.2);
+      width: 100px;
+      height: 100px;
+      border: 1px dashed rgba(56, 189, 248, 0.25);
       border-radius: 50%;
-      animation: rotateAtom 25s infinite linear;
-      opacity: 0.4;
+      animation: rotateAtom 20s infinite linear;
+      opacity: 0.5;
     }
 
     .electron {
       position: absolute;
-      top: -5px;
+      top: -4px;
       left: 50%;
-      width: 8px;
-      height: 8px;
+      width: 7px;
+      height: 7px;
       background-color: #38bdf8;
       border-radius: 50%;
-      box-shadow: 0 0 10px #38bdf8, 0 0 20px #38bdf8;
+      box-shadow: 0 0 10px #38bdf8, 0 0 18px #38bdf8;
     }
 
     @keyframes rotateAtom {
       0% { transform: rotate(0deg) scale(1); }
-      50% { transform: rotate(180deg) scale(1.1); }
+      50% { transform: rotate(180deg) scale(1.08); }
       100% { transform: rotate(360deg) scale(1); }
     }
 
@@ -66,7 +66,7 @@
       padding: 0 2rem !important;
     }
 
-    /* Hero Section matching image header */
+    /* Hero Section */
     .hero-box {
       background: transparent !important;
       padding: 2.5rem 0 1.5rem 0;
@@ -162,33 +162,44 @@
     .pi-box h3 { color: #38bdf8 !important; }
     .pi-box p { color: #cbd5e1 !important; }
 
-    /* Research Cards Layout */
+    /* Research Cards Layout - Same Height & Perfect Alignment */
     .card-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 1.8rem;
       margin-bottom: 3rem;
+      align-items: stretch; /* Ensures all cards stretch to the same height */
     }
 
     .card {
       background: rgba(255, 255, 255, 0.96);
       backdrop-filter: blur(10px);
       color: #1e293b;
-      padding: 1.5rem 1.6rem;
+      padding: 1.6rem;
       border-radius: 12px;
       box-shadow: 0 4px 18px rgba(0,0,0,0.25);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 100%; /* Uniform height matching tallest card */
+    }
+
+    .card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.6rem;
     }
     
     .card p {
       color: #475569;
       font-size: 0.9rem;
       line-height: 1.55;
+      flex-grow: 1; /* Pushes content evenly */
     }
   </style>
 </head>
 <body>
 
-  <!-- Dynamic Animated Background: DNA, Carbon Rings, Nuclear Fusion & Orbiting Electrons -->
+  <!-- Rich Animated Background: DNA, Carbon Rings, Nuclear Fusion, Electrons & Molecular Nodes -->
   <div class="bg-canvas-container">
     <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
       <defs>
@@ -204,7 +215,7 @@
       </defs>
 
       <!-- 1. Left Side DNA Double Helix Structure[cite: 1] -->
-      <g opacity="0.35" transform="translate(30, 0)">
+      <g opacity="0.4" transform="translate(30, 0)">
         <path d="M 10,0 Q 80,150 10,300 T 10,600 T 10,900" fill="none" stroke="url(#dnaGrad)" stroke-width="3" />
         <path d="M 80,0 Q 10,150 80,300 T 80,600 T 80,900" fill="none" stroke="url(#dnaGrad)" stroke-width="3" />
         <line x1="25" y1="75" x2="65" y2="75" stroke="#ec4899" stroke-width="2"/>
@@ -212,35 +223,60 @@
         <line x1="25" y1="225" x2="65" y2="225" stroke="#3b82f6" stroke-width="2"/>
         <line x1="15" y1="375" x2="75" y2="375" stroke="#ec4899" stroke-width="2"/>
         <line x1="25" y1="525" x2="65" y2="525" stroke="#a855f7" stroke-width="2"/>
+        <line x1="20" y1="700" x2="70" y2="700" stroke="#3b82f6" stroke-width="2"/>
       </g>
 
-      <!-- 2. Carbon Rings / Benzene Hexagons (Organic Chemistry Structure) -->
-      <g opacity="0.3" transform="translate(750, 120)">
-        <polygon points="0,-40 35,-20 35,20 0,40 -35,20 -35,-20" fill="none" stroke="#38bdf8" stroke-width="2" />
-        <text x="-12" y="6" fill="#38bdf8" font-size="18" font-weight="bold">C</text>
+      <!-- 2. Multiple Carbon Rings / Benzene Hexagons -->
+      <g opacity="0.35" transform="translate(700, 90)">
+        <polygon points="0,-35 30,-18 30,18 0,35 -30,18 -30,-18" fill="none" stroke="#38bdf8" stroke-width="2" />
+        <text x="-10" y="5" fill="#38bdf8" font-size="15" font-weight="bold">C</text>
       </g>
-      <g opacity="0.25" transform="translate(850, 480)">
-        <polygon points="0,-50 43,-25 43,25 0,50 -43,25 -43,-25" fill="none" stroke="#10b981" stroke-width="2" />
-        <text x="-12" y="8" fill="#10b981" font-size="18" font-weight="bold">C6</text>
+      <g opacity="0.3" transform="translate(880, 420)">
+        <polygon points="0,-45 39,-22 39,22 0,45 -39,22 -39,-22" fill="none" stroke="#10b981" stroke-width="2" />
+        <text x="-12" y="6" fill="#10b981" font-size="15" font-weight="bold">C6</text>
+      </g>
+      <g opacity="0.3" transform="translate(450, 650)">
+        <polygon points="0,-35 30,-18 30,18 0,35 -30,18 -30,-18" fill="none" stroke="#ec4899" stroke-width="2" />
       </g>
 
-      <!-- 3. Nuclear Fusion Core & Energy Waves (Right Background) -->
-      <g opacity="0.4" transform="translate(920, 260)">
-        <circle cx="0" cy="0" r="90" fill="none" stroke="url(#fusionGrad)" stroke-width="1.5" stroke-dasharray="6,6" />
-        <circle cx="0" cy="0" r="50" fill="none" stroke="#f59e0b" stroke-width="2" />
-        <!-- Fusion Core Center -->
-        <circle cx="0" cy="0" r="18" fill="#ef4444" filter="drop-shadow(0 0 12px #f59e0b)" />
-        <line x1="-70" y1="0" x2="70" y2="0" stroke="#f59e0b" stroke-width="1"/>
-        <line x1="0" y1="-70" x2="0" y2="70" stroke="#f59e0b" stroke-width="1"/>
+      <!-- 3. Nuclear Fusion Core & Energy Waves -->
+      <g opacity="0.45" transform="translate(900, 200)">
+        <circle cx="0" cy="0" r="85" fill="none" stroke="url(#fusionGrad)" stroke-width="1.5" stroke-dasharray="5,5" />
+        <circle cx="0" cy="0" r="45" fill="none" stroke="#f59e0b" stroke-width="2" />
+        <circle cx="0" cy="0" r="15" fill="#ef4444" filter="drop-shadow(0 0 10px #f59e0b)" />
+        <line x1="-60" y1="0" x2="60" y2="0" stroke="#f59e0b" stroke-width="1"/>
+        <line x1="0" y1="-60" x2="0" y2="60" stroke="#f59e0b" stroke-width="1"/>
+      </g>
+
+      <!-- 4. Extra Molecular Connection Nodes (Filling empty spaces) -->
+      <g opacity="0.4" transform="translate(250, 450)">
+        <line x1="0" y1="0" x2="50" y2="-40" stroke="#38bdf8" stroke-width="1.5"/>
+        <line x1="50" y1="-40" x2="100" y2="-10" stroke="#38bdf8" stroke-width="1.5"/>
+        <circle cx="0" cy="0" r="6" fill="#38bdf8"/>
+        <circle cx="50" cy="-40" r="8" fill="#f59e0b"/>
+        <circle cx="100" cy="-10" r="6" fill="#10b981"/>
+      </g>
+      <g opacity="0.4" transform="translate(600, 720)">
+        <line x1="0" y1="0" x2="-60" y2="-30" stroke="#a855f7" stroke-width="1.5"/>
+        <line x1="0" y1="0" x2="50" y2="-50" stroke="#a855f7" stroke-width="1.5"/>
+        <circle cx="0" cy="0" r="7" fill="#a855f7"/>
+        <circle cx="-60" cy="-30" r="5" fill="#38bdf8"/>
+        <circle cx="50" cy="-50" r="6" fill="#ec4899"/>
       </g>
     </svg>
 
-    <!-- Floating Atom with Orbiting Electrons -->
-    <div class="floating-atom-node" style="top: 15%; left: 65%;">
+    <!-- Multiple Orbiting Atoms & Electrons across the background -->
+    <div class="floating-atom-node" style="top: 12%; left: 75%;">
       <div class="electron"></div>
     </div>
-    <div class="floating-atom-node" style="top: 65%; left: 78%; animation-duration: 18s;">
+    <div class="floating-atom-node" style="top: 55%; left: 82%; animation-duration: 16s;">
       <div class="electron" style="background-color: #ec4899; box-shadow: 0 0 10px #ec4899;"></div>
+    </div>
+    <div class="floating-atom-node" style="top: 72%; left: 18%; animation-duration: 24s;">
+      <div class="electron" style="background-color: #10b981; box-shadow: 0 0 10px #10b981;"></div>
+    </div>
+    <div class="floating-atom-node" style="top: 35%; left: 48%; width: 80px; height: 80px; animation-duration: 14s;">
+      <div class="electron" style="background-color: #f59e0b; box-shadow: 0 0 10px #f59e0b;"></div>
     </div>
   </div>
 
@@ -273,7 +309,7 @@
     <div class="hero-box">
       <p class="hero-subhead">Department of Chemistry and Department of Bioscience and Biomedical Engineering, IIT Bhilai[cite: 1]</p>
       <h1 class="hero-title"><span class="highlight">RMM</span> Research<br>Group</h1>
-      <p class="hero-desc">The RMM Group designs metal complexes that act as smart MRI and optical probes to see inside tumours, as theranostic and therapeutic agents that detect and treat cancer, and as bioinspired catalysts that activate oxygen and carbon dioxide.</p>
+      <p class="hero-desc">The RMM Group designs metal complexes that act as smart MRI and optical probes to see inside tumours, as theranostic and therapeutic agents that detect and treat cancer, and as bioinspired catalysts that activate oxygen and carbon dioxide[cite: 1].</p>
       
       <div class="hero-btns">
         <a href="#research" class="btn-yellow">Our research</a>
