@@ -7,16 +7,20 @@
   <link rel="icon" href="images/fevicon.png" type="image/png">
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Creative Chemistry Animated Background */
+    /* Dark Theme & Canvas Base */
     body {
-      background-color: #070b19;
-      background-image: none;
+      background-color: #060c1b;
+      background-image: 
+        radial-gradient(rgba(56, 189, 248, 0.08) 1px, transparent 1px),
+        linear-gradient(to bottom, #060c1b 0%, #0a1329 100%);
+      background-size: 32px 32px, 100% 100%;
       position: relative;
       overflow-x: hidden;
       color: #f8fafc;
     }
     
-    .chem-bg-animation {
+    /* Background Canvas Container */
+    .bg-canvas-container {
       position: fixed;
       top: 0;
       left: 0;
@@ -25,88 +29,156 @@
       z-index: -1;
       pointer-events: none;
       overflow: hidden;
-      background: radial-gradient(circle at 50% 50%, #0f172a 0%, #070b19 100%);
     }
 
-    /* Floating Symbols, Atoms, and Periodic Elements */
-    .floating-symbol {
+    /* Periodic Table Tile Stack (Right Fixed Visuals) */
+    .periodic-stack {
       position: absolute;
+      right: 20px;
+      top: 25%;
       display: flex;
+      flex-direction: column;
+      gap: 6px;
+      z-index: 1;
+      opacity: 0.85;
+    }
+
+    .p-tile {
+      width: 54px;
+      height: 54px;
+      background: rgba(15, 23, 42, 0.7);
+      border: 1.5 solid rgba(56, 189, 248, 0.4);
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      width: 48px;
-      height: 48px;
-      color: #38bdf8;
-      font-weight: 700;
+      color: #fff;
+      font-weight: bold;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 0 12px rgba(56, 189, 248, 0.15);
+      animation: pulseTile 4s infinite alternate ease-in-out;
+    }
+
+    .p-tile span.num {
+      font-size: 0.65rem;
+      color: #94a3b8;
+    }
+
+    .p-tile span.sym {
       font-size: 1.1rem;
-      background: rgba(56, 189, 248, 0.08);
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      border-radius: 50%;
-      animation: floatSymbol 18s infinite linear;
-      box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
-      backdrop-filter: blur(2px);
+      color: #38bdf8;
     }
 
-    @keyframes floatSymbol {
-      0% {
-        transform: translate(0, 0) rotate(0deg) scale(1);
-      }
-      33% {
-        transform: translate(90px, -110px) rotate(120deg) scale(1.1);
-      }
-      66% {
-        transform: translate(-70px, -190px) rotate(240deg) scale(0.9);
-      }
-      100% {
-        transform: translate(0, 0) rotate(360deg) scale(1);
-      }
+    @keyframes pulseTile {
+      0% { border-color: rgba(56, 189, 248, 0.3); transform: translateX(0); }
+      100% { border-color: rgba(245, 158, 11, 0.6); transform: translateX(-4px); }
     }
 
-    /* Main Container (Centered with Left & Right Padding Gap) */
+    /* Container Spacing */
     .container {
       max-width: 1150px !important;
       margin: 2rem auto !important;
       padding: 0 2rem !important;
     }
 
-    /* Transparent Hero Box */
+    /* Hero Section matching image header */
     .hero-box {
       background: transparent !important;
-      padding: 1.5rem 0;
+      padding: 2.5rem 0 1.5rem 0;
       margin-bottom: 2rem;
       box-shadow: none !important;
-      text-align: center;
-    }
-    .hero-box h1 {
-      color: #38bdf8 !important;
-    }
-    .hero-box p {
-      color: #cbd5e1 !important;
+      text-align: left;
     }
 
-    /* PI Profile Box: Original Size + Fully Transparent Glassmorphism */
+    .hero-subhead {
+      color: #cbd5e1;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.8rem;
+    }
+
+    .hero-title {
+      font-size: 3.8rem;
+      font-weight: 800;
+      line-height: 1.05;
+      color: #ffffff;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-title span.highlight {
+      background: #eab308;
+      color: #060c1b;
+      padding: 0 8px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+
+    .hero-desc {
+      font-size: 1.1rem;
+      color: #cbd5e1;
+      max-width: 620px;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    /* Custom Styled Buttons matching image */
+    .hero-btns {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .btn-yellow {
+      background-color: #f59e0b;
+      color: #060c1b;
+      font-weight: 700;
+      padding: 0.75rem 1.8rem;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-yellow:hover {
+      background-color: #d97706;
+      box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #ffffff;
+      border: 1.5px solid #ffffff;
+      font-weight: 600;
+      padding: 0.75rem 1.8rem;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: #38bdf8;
+      color: #38bdf8;
+    }
+
+    /* PI Profile Box (Glassmorphic & Transparent) */
     .pi-box {
-      background: rgba(15, 23, 42, 0.65) !important;
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(10px);
+      background: rgba(15, 23, 42, 0.7) !important;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(12px);
       color: #f8fafc !important;
       padding: 2.5rem;
-      border-radius: 12px;
+      border-radius: 14px;
       display: flex;
       gap: 2rem;
       align-items: flex-start;
       flex-wrap: wrap;
       margin-bottom: 3.5rem;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.4) !important;
+      box-shadow: 0 10px 32px rgba(0,0,0,0.4) !important;
     }
-    .pi-box h3 {
-      color: #38bdf8 !important;
-    }
-    .pi-box p {
-      color: #cbd5e1 !important;
-    }
+    .pi-box h3 { color: #38bdf8 !important; }
+    .pi-box p { color: #cbd5e1 !important; }
 
-    /* Research Cards */
+    /* Research Cards Layout */
     .card-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -120,24 +192,9 @@
       color: #1e293b;
       padding: 1.5rem 1.6rem;
       border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.25);
     }
     
-    .card .card-icon {
-      width: 42px;
-      height: 42px;
-      font-size: 1.25rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .card h3 {
-      font-size: 1.15rem;
-      margin-bottom: 0.5rem;
-    }
-
     .card p {
       color: #475569;
       font-size: 0.9rem;
@@ -147,8 +204,63 @@
 </head>
 <body>
 
-  <!-- Animated Chemistry Symbols & Icons Background -->
-  <div class="chem-bg-animation" id="chemBg"></div>
+  <!-- Dynamic Animated SVG Background (DNA, Bonds, Radar Circles, Hexagons) -->
+  <div class="bg-canvas-container">
+    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="dnaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#ec4899" />
+          <stop offset="50%" stop-color="#a855f7" />
+          <stop offset="100%" stop-color="#3b82f6" />
+        </linearGradient>
+      </defs>
+
+      <!-- Left Animated DNA Strand -->
+      <g opacity="0.35" transform="translate(40, 0)">
+        <path d="M 10,0 Q 80,150 10,300 T 10,600 T 10,900" fill="none" stroke="url(#dnaGrad)" stroke-width="3" />
+        <path d="M 80,0 Q 10,150 80,300 T 80,600 T 80,900" fill="none" stroke="url(#dnaGrad)" stroke-width="3" />
+        <!-- DNA Rungs -->
+        <line x1="25" y1="75" x2="65" y2="75" stroke="#ec4899" stroke-width="2"/>
+        <line x1="45" y1="150" x2="45" y2="150" stroke="#a855f7" stroke-width="2"/>
+        <line x1="25" y1="225" x2="65" y2="225" stroke="#3b82f6" stroke-width="2"/>
+        <line x1="15" y1="375" x2="75" y2="375" stroke="#ec4899" stroke-width="2"/>
+        <line x1="25" y1="525" x2="65" y2="525" stroke="#a855f7" stroke-width="2"/>
+      </g>
+
+      <!-- Right Radar Circle & Concentric Rings -->
+      <g opacity="0.3" transform="translate(850, 220)">
+        <circle cx="0" cy="0" r="160" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="4,4" />
+        <circle cx="0" cy="0" r="110" fill="none" stroke="#a855f7" stroke-width="1.5" />
+        <circle cx="0" cy="0" r="60" fill="none" stroke="#eab308" stroke-width="1" />
+        <!-- Radar Sweep Sector -->
+        <path d="M 0,0 L 140,-80 A 160 160 0 0 1 160,0 Z" fill="rgba(56, 189, 248, 0.15)" />
+        <!-- Hexagon Molecule Ring -->
+        <polygon points="0,-40 35,-20 35,20 0,40 -35,20 -35,-20" fill="none" stroke="#38bdf8" stroke-width="1.5" />
+      </g>
+
+      <!-- Floating Bond Nodes & Concentric Bubbles -->
+      <g opacity="0.45">
+        <circle cx="620" cy="480" r="28" fill="none" stroke="#ec4899" stroke-width="2" />
+        <circle cx="620" cy="480" r="14" fill="rgba(236, 72, 153, 0.2)" />
+        
+        <!-- Molecular Connection Cluster -->
+        <line x1="560" y1="520" x2="600" y2="490" stroke="#38bdf8" stroke-width="2"/>
+        <line x1="600" y1="490" x2="640" y2="530" stroke="#38bdf8" stroke-width="2"/>
+        <circle cx="560" cy="520" r="8" fill="#14b8a6"/>
+        <circle cx="640" cy="530" r="8" fill="#14b8a6"/>
+        <circle cx="600" cy="490" r="6" fill="#f59e0b"/>
+      </g>
+    </svg>
+  </div>
+
+  <!-- Periodic Table Tiles Stack (Right Side Visual) -->
+  <div class="periodic-stack">
+    <div class="p-tile"><span class="num">25</span><span class="sym">Mn</span></div>
+    <div class="p-tile"><span class="num">26</span><span class="sym">Fe</span></div>
+    <div class="p-tile"><span class="num">27</span><span class="sym">Co</span></div>
+    <div class="p-tile"><span class="num">28</span><span class="sym">Ni</span></div>
+    <div class="p-tile"><span class="num">29</span><span class="sym">Cu</span></div>
+  </div>
 
   <!-- Header & Navigation -->
   <header>
@@ -175,13 +287,19 @@
   </header>
 
   <div class="container">
-    <!-- Section 1: Hero Welcome -->
+    <!-- Section 1: Hero Welcome (Recreated from Image) -->
     <div class="hero-box">
-      <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">Welcome to the RMM Group!</h1>
-      <p style="font-size: 1.2rem; font-weight: 600;">Department of Chemistry, BioScience & Biomedical Engineering IIT Bhilai</p>
+      <p class="hero-subhead">Department of Chemistry and Department of Bioscience and Biomedical Engineering, IIT Bhilai</p>
+      <h1 class="hero-title"><span class="highlight">RMM</span> Research<br>Group</h1>
+      <p class="hero-desc">The RMM Group designs metal complexes that act as smart MRI and optical probes to see inside tumours, as theranostic and therapeutic agents that detect and treat cancer, and as bioinspired catalysts that activate oxygen and carbon dioxide.</p>
+      
+      <div class="hero-btns">
+        <a href="#research" class="btn-yellow">Our research</a>
+        <a href="contact.html" class="btn-outline">Join the group</a>
+      </div>
     </div>
 
-    <!-- Section 2: PI Profile (Transparent Box) -->
+    <!-- Section 2: PI Profile (Transparent Glass Box) -->
     <div class="pi-box">
       <div style="flex: 1; min-width: 260px; text-align: center;">
         <img src="images/Dr. R Mayilmurugan.png" alt="Dr. Ramasamy Mayilmurugan" style="width: 100%; max-width: 280px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
@@ -192,12 +310,6 @@
       <div style="flex: 2; min-width: 300px;">
         <p style="margin-bottom: 1rem; text-align: justify;">Our group focuses on <strong>"interdisciplinary research"</strong> that involves the design and synthesis of carefully tailored molecules to act as smart MRI and optical probes to target tumours and understand their mechanism. Our research aims to use biologically inspired metal complexes as probes to understand complex biochemical processes in tumours. We are using these bioinspired imaging probes and our chemistry knowledge to image and quantify the reactive oxygen species (ROS), reactive nitrogen species (RNS), and other mobilities produced via the redox process within the tumor cells. We are working to place these molecules in clinical trials as novel therapeutic or diagnostic agents in the near future.</p>
         <p style="margin-bottom: 1.5rem; text-align: justify;">On the other hand, we are synthesizing a library of architecturally designed bioinspired coordination complexes with interesting structural, spectral, redox, and biological properties. Many of these complexes are demonstrated as synthetic analogues of metalloenzymes or as bioinspired catalysts for activating small molecules such as dioxygen and carbon dioxide. In all our projects, we try to accomplish our objectives through an appropriate combination of design, synthesis, and validation. As a result, the research projects in the group tend to be highly interdisciplinary in nature, involving bioinorganic chemistry, biochemistry, spectroscopy, and multistep organic synthesis. We named our group <strong>"Bioinorganic Chemistry and Chemical Biology,"</strong> where chemists and biologists work together to address Health issues.</p>
-        
-        <!-- Action Buttons -->
-        <div class="btn-group">
-          <a href="#research" class="btn btn-primary">Our Research</a>
-          <a href="contact.html" class="btn btn-secondary">Join the Group</a>
-        </div>
       </div>
     </div>
 
@@ -258,29 +370,5 @@
   </footer>
 
   <script src="script.js"></script>
-  <script>
-    // Dynamic Chemistry Symbols, Atoms & Icons Background Generator
-    const chemBg = document.getElementById('chemBg');
-    const symbols = [
-      '⚗️', '⚛️', '🧬', '🧪', '🔬', '⬡', 
-      'Fe', 'Cu', 'Ni', 'Zn', 'Mn', 'O₂', 'CO₂', 'H₂O', 'MRI'
-    ];
-    
-    for (let i = 0; i < 24; i++) {
-      const sym = document.createElement('div');
-      sym.classList.add('floating-symbol');
-      sym.innerText = symbols[Math.floor(Math.random() * symbols.length)];
-      
-      // Random positioning across screen
-      sym.style.left = `${Math.random() * 92}%`;
-      sym.style.top = `${Math.random() * 92}%`;
-      
-      // Organic animation timing & delay
-      sym.style.animationDuration = `${Math.random() * 12 + 14}s`;
-      sym.style.animationDelay = `${Math.random() * 5}s`;
-      
-      chemBg.appendChild(sym);
-    }
-  </script>
 </body>
 </html>
