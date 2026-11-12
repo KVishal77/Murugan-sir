@@ -7,11 +7,11 @@
   <link rel="icon" href="images/fevicon.png" type="image/png">
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Dark Theme & Canvas Base */
+    /* Creative Dark Theme with Nuclear, DNA, Atoms, Electrons & Carbon Rings Background */
     body {
       background-color: #060c1b;
       background-image: 
-        radial-gradient(rgba(56, 189, 248, 0.08) 1px, transparent 1px),
+        radial-gradient(rgba(56, 189, 248, 0.06) 1px, transparent 1px),
         linear-gradient(to bottom, #060c1b 0%, #0a1329 100%);
       background-size: 32px 32px, 100% 100%;
       position: relative;
@@ -19,7 +19,7 @@
       color: #f8fafc;
     }
     
-    /* Background Canvas Container */
+    /* Background Canvas Container for Complex Chemistry & Physics Elements */
     .bg-canvas-container {
       position: fixed;
       top: 0;
@@ -31,48 +31,32 @@
       overflow: hidden;
     }
 
-    /* Periodic Table Tile Stack (Right Fixed Visuals) */
-    .periodic-stack {
+    /* Floating Atoms & Electrons Animations */
+    .floating-atom-node {
       position: absolute;
-      right: 20px;
-      top: 25%;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      z-index: 1;
-      opacity: 0.85;
+      width: 120px;
+      height: 120px;
+      border: 1px dashed rgba(56, 189, 248, 0.2);
+      border-radius: 50%;
+      animation: rotateAtom 25s infinite linear;
+      opacity: 0.4;
     }
 
-    .p-tile {
-      width: 54px;
-      height: 54px;
-      background: rgba(15, 23, 42, 0.7);
-      border: 1.5 solid rgba(56, 189, 248, 0.4);
-      border-radius: 6px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-weight: bold;
-      backdrop-filter: blur(6px);
-      box-shadow: 0 0 12px rgba(56, 189, 248, 0.15);
-      animation: pulseTile 4s infinite alternate ease-in-out;
+    .electron {
+      position: absolute;
+      top: -5px;
+      left: 50%;
+      width: 8px;
+      height: 8px;
+      background-color: #38bdf8;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #38bdf8, 0 0 20px #38bdf8;
     }
 
-    .p-tile span.num {
-      font-size: 0.65rem;
-      color: #94a3b8;
-    }
-
-    .p-tile span.sym {
-      font-size: 1.1rem;
-      color: #38bdf8;
-    }
-
-    @keyframes pulseTile {
-      0% { border-color: rgba(56, 189, 248, 0.3); transform: translateX(0); }
-      100% { border-color: rgba(245, 158, 11, 0.6); transform: translateX(-4px); }
+    @keyframes rotateAtom {
+      0% { transform: rotate(0deg) scale(1); }
+      50% { transform: rotate(180deg) scale(1.1); }
+      100% { transform: rotate(360deg) scale(1); }
     }
 
     /* Container Spacing */
@@ -122,7 +106,7 @@
       margin-bottom: 2rem;
     }
 
-    /* Custom Styled Buttons matching image */
+    /* Custom Styled Buttons */
     .hero-btns {
       display: flex;
       gap: 1rem;
@@ -160,7 +144,7 @@
       color: #38bdf8;
     }
 
-    /* PI Profile Box (Glassmorphic & Transparent) */
+    /* PI Profile Box (Transparent Glass Box) */
     .pi-box {
       background: rgba(15, 23, 42, 0.7) !important;
       border: 1px solid rgba(255, 255, 255, 0.12);
@@ -204,7 +188,7 @@
 </head>
 <body>
 
-  <!-- Dynamic Animated SVG Background (DNA, Bonds, Radar Circles, Hexagons) -->
+  <!-- Dynamic Animated Background: DNA, Carbon Rings, Nuclear Fusion & Orbiting Electrons -->
   <div class="bg-canvas-container">
     <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
       <defs>
@@ -213,13 +197,16 @@
           <stop offset="50%" stop-color="#a855f7" />
           <stop offset="100%" stop-color="#3b82f6" />
         </linearGradient>
+        <linearGradient id="fusionGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#f59e0b" />
+          <stop offset="100%" stop-color="#ef4444" />
+        </linearGradient>
       </defs>
 
-      <!-- Left Animated DNA Strand -->
-      <g opacity="0.35" transform="translate(40, 0)">
+      <!-- 1. Left Side DNA Double Helix Structure[cite: 1] -->
+      <g opacity="0.35" transform="translate(30, 0)">
         <path d="M 10,0 Q 80,150 10,300 T 10,600 T 10,900" fill="none" stroke="url(#dnaGrad)" stroke-width="3" />
         <path d="M 80,0 Q 10,150 80,300 T 80,600 T 80,900" fill="none" stroke="url(#dnaGrad)" stroke-width="3" />
-        <!-- DNA Rungs -->
         <line x1="25" y1="75" x2="65" y2="75" stroke="#ec4899" stroke-width="2"/>
         <line x1="45" y1="150" x2="45" y2="150" stroke="#a855f7" stroke-width="2"/>
         <line x1="25" y1="225" x2="65" y2="225" stroke="#3b82f6" stroke-width="2"/>
@@ -227,39 +214,34 @@
         <line x1="25" y1="525" x2="65" y2="525" stroke="#a855f7" stroke-width="2"/>
       </g>
 
-      <!-- Right Radar Circle & Concentric Rings -->
-      <g opacity="0.3" transform="translate(850, 220)">
-        <circle cx="0" cy="0" r="160" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="4,4" />
-        <circle cx="0" cy="0" r="110" fill="none" stroke="#a855f7" stroke-width="1.5" />
-        <circle cx="0" cy="0" r="60" fill="none" stroke="#eab308" stroke-width="1" />
-        <!-- Radar Sweep Sector -->
-        <path d="M 0,0 L 140,-80 A 160 160 0 0 1 160,0 Z" fill="rgba(56, 189, 248, 0.15)" />
-        <!-- Hexagon Molecule Ring -->
-        <polygon points="0,-40 35,-20 35,20 0,40 -35,20 -35,-20" fill="none" stroke="#38bdf8" stroke-width="1.5" />
+      <!-- 2. Carbon Rings / Benzene Hexagons (Organic Chemistry Structure) -->
+      <g opacity="0.3" transform="translate(750, 120)">
+        <polygon points="0,-40 35,-20 35,20 0,40 -35,20 -35,-20" fill="none" stroke="#38bdf8" stroke-width="2" />
+        <text x="-12" y="6" fill="#38bdf8" font-size="18" font-weight="bold">C</text>
+      </g>
+      <g opacity="0.25" transform="translate(850, 480)">
+        <polygon points="0,-50 43,-25 43,25 0,50 -43,25 -43,-25" fill="none" stroke="#10b981" stroke-width="2" />
+        <text x="-12" y="8" fill="#10b981" font-size="18" font-weight="bold">C6</text>
       </g>
 
-      <!-- Floating Bond Nodes & Concentric Bubbles -->
-      <g opacity="0.45">
-        <circle cx="620" cy="480" r="28" fill="none" stroke="#ec4899" stroke-width="2" />
-        <circle cx="620" cy="480" r="14" fill="rgba(236, 72, 153, 0.2)" />
-        
-        <!-- Molecular Connection Cluster -->
-        <line x1="560" y1="520" x2="600" y2="490" stroke="#38bdf8" stroke-width="2"/>
-        <line x1="600" y1="490" x2="640" y2="530" stroke="#38bdf8" stroke-width="2"/>
-        <circle cx="560" cy="520" r="8" fill="#14b8a6"/>
-        <circle cx="640" cy="530" r="8" fill="#14b8a6"/>
-        <circle cx="600" cy="490" r="6" fill="#f59e0b"/>
+      <!-- 3. Nuclear Fusion Core & Energy Waves (Right Background) -->
+      <g opacity="0.4" transform="translate(920, 260)">
+        <circle cx="0" cy="0" r="90" fill="none" stroke="url(#fusionGrad)" stroke-width="1.5" stroke-dasharray="6,6" />
+        <circle cx="0" cy="0" r="50" fill="none" stroke="#f59e0b" stroke-width="2" />
+        <!-- Fusion Core Center -->
+        <circle cx="0" cy="0" r="18" fill="#ef4444" filter="drop-shadow(0 0 12px #f59e0b)" />
+        <line x1="-70" y1="0" x2="70" y2="0" stroke="#f59e0b" stroke-width="1"/>
+        <line x1="0" y1="-70" x2="0" y2="70" stroke="#f59e0b" stroke-width="1"/>
       </g>
     </svg>
-  </div>
 
-  <!-- Periodic Table Tiles Stack (Right Side Visual) -->
-  <div class="periodic-stack">
-    <div class="p-tile"><span class="num">25</span><span class="sym">Mn</span></div>
-    <div class="p-tile"><span class="num">26</span><span class="sym">Fe</span></div>
-    <div class="p-tile"><span class="num">27</span><span class="sym">Co</span></div>
-    <div class="p-tile"><span class="num">28</span><span class="sym">Ni</span></div>
-    <div class="p-tile"><span class="num">29</span><span class="sym">Cu</span></div>
+    <!-- Floating Atom with Orbiting Electrons -->
+    <div class="floating-atom-node" style="top: 15%; left: 65%;">
+      <div class="electron"></div>
+    </div>
+    <div class="floating-atom-node" style="top: 65%; left: 78%; animation-duration: 18s;">
+      <div class="electron" style="background-color: #ec4899; box-shadow: 0 0 10px #ec4899;"></div>
+    </div>
   </div>
 
   <!-- Header & Navigation -->
@@ -287,11 +269,11 @@
   </header>
 
   <div class="container">
-    <!-- Section 1: Hero Welcome (Recreated from Image) -->
+    <!-- Section 1: Hero Welcome -->
     <div class="hero-box">
-      <p class="hero-subhead">Department of Chemistry and Department of Bioscience and Biomedical Engineering, IIT Bhilai</p>
+      <p class="hero-subhead">Department of Chemistry and Department of Bioscience and Biomedical Engineering, IIT Bhilai[cite: 1]</p>
       <h1 class="hero-title"><span class="highlight">RMM</span> Research<br>Group</h1>
-      <p class="hero-desc">The RMM Group designs metal complexes that act as smart MRI and optical probes to see inside tumours, as theranostic and therapeutic agents that detect and treat cancer, and as bioinspired catalysts that activate oxygen and carbon dioxide.</p>
+      <p class="hero-desc">The RMM Group designs metal complexes that act as smart MRI and optical probes to see inside tumours, as theranostic and therapeutic agents that detect and treat cancer, and as bioinspired catalysts that activate oxygen and carbon dioxide[cite: 1].</p>
       
       <div class="hero-btns">
         <a href="#research" class="btn-yellow">Our research</a>
