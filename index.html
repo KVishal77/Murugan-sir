@@ -1,92 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Ramasamy Mayilmurugan | RMM Research Group - IIT Bhilai</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - RMM Group, IIT Bhilai</title>
+  <link rel="icon" href="images/fevicon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="header">
-        <div class="top-bar">
-            <div class="container flex-between">
-                <div class="institution-branding">
-                    <span>Department of Chemistry & BioScience and Biomedical Engineering</span>
-                    <span class="divider">|</span>
-                    <span>IIT Bhilai</span>
-                </div>
-                <div class="top-contact">
-                    <a href="mailto:murugan@iitbhilai.ac.in"><i class="fa-solid fa-envelope"></i> murugan@iitbhilai.ac.in</a>
-                </div>
-            </div>
-        </div>
+  <!-- Header & Navigation -->
+  <header>
+    <div class="nav-container">
+      <div class="logo-section">
+        <img src="images/fevicon.png" alt="RMM Group Logo">
+        <h2>RMM Group</h2>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#research">Research</a></li>
+          <li><a href="facilities.html">Facilities</a></li>
+          <li><a href="publication.html">Publication</a></li>
+          <li><a href="project.html">Project</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="members.html">Members</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="visitors.html">Visitors</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- Section 1: Hero Welcome -->
+    <div style="background: white; padding: 2.5rem; border-radius: 12px; margin-bottom: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+      <h1 style="color: var(--primary-color); font-size: 2.5rem; margin-bottom: 0.5rem;">Welcome to the RMM Group!</h1>
+      <p style="font-size: 1.2rem; color: #475569; font-weight: 600;">Department of Chemistry, BioScience & Biomedical Engineering IIT Bhilai</p>
+    </div>
+
+    <!-- Section 2: PI Profile -->
+    <div style="background: white; padding: 2rem; border-radius: 12px; display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap; margin-bottom: 3rem;">
+      <div style="flex: 1; min-width: 260px; text-align: center;">
+        <img src="images/Dr. R Mayilmurugan.png" alt="Dr. Ramasamy Mayilmurugan" style="width: 100%; max-width: 280px; border-radius: 12px;">
+        <h3 style="margin-top: 1rem;">Dr. Ramasamy Mayilmurugan</h3>
+        <p style="color: #64748b; font-weight: 600;">Associate Professor</p>
+        <p style="color: #64748b; font-size: 0.9rem;">Department of Chemistry, IIT Bhilai</p>
+      </div>
+      <div style="flex: 2; min-width: 300px;">
+        <p style="margin-bottom: 1rem;">Our group focuses on <strong>"interdisciplinary research"</strong> that involves the design and synthesis of carefully tailored molecules to act as smart MRI and optical probes to target tumours and understand their mechanism. Our research aims to use biologically inspired metal complexes as probes to understand complex biochemical processes in tumours. We are using these bioinspired imaging probes and our chemistry knowledge to image and quantify the reactive oxygen species (ROS), reactive nitrogen species (RNS), and other mobilities produced via the redox process within the tumor cells. We are working to place these molecules in clinical trials as novel therapeutic or diagnostic agents in the near future.</p>
+        <p style="margin-bottom: 1.5rem;">On the other hand, we are synthesizing a library of architecturally designed bioinspired coordination complexes with interesting structural, spectral, redox, and biological properties. Many of these complexes are demonstrated as synthetic analogues of metalloenzymes or as bioinspired catalysts for activating small molecules such as dioxygen and carbon dioxide. In all our projects, we try to accomplish our objectives through an appropriate combination of design, synthesis, and validation. As a result, the research projects in the group tend to be highly interdisciplinary in nature, involving bioinorganic chemistry, biochemistry, spectroscopy, and multistep organic synthesis. We named our group <strong>"Bioinorganic Chemistry and Chemical Biology,"</strong> where chemists and biologists work together to address Health issues.</p>
         
-        <nav class="navbar">
-            <div class="container flex-between">
-                <a href="index.html" class="brand-logo">
-                    <span class="logo-highlight">RMM</span> Research Group
-                </a>
-                
-                <button class="mobile-menu-btn" aria-label="Toggle navigation">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-
-                <ul class="nav-links">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about.html">About PI</a></li>
-                    <li><a href="research.html">Research</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="publications.html">Publications</a></li>
-                    <li><a href="facilities.html">Facilities</a></li>
-                    <li><a href="members.html">Members</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact.html" class="nav-cta">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
-    <section class="hero-section">
-        <div class="container hero-container">
-            <div class="hero-content">
-                <span class="badge">Welcome to RMM Group</span>
-                <h1>Bioinorganic Chemistry & <span class="gradient-text">Chemical Biology Lab</span></h1>
-                <p class="hero-desc">
-                    Designing and synthesizing carefully tailored molecules as smart MRI and optical probes to target tumours, investigate biochemical redox processes, and develop bioinspired catalysts for small molecule activation.
-                </p>
-                <div class="hero-buttons">
-                    <a href="research.html" class="btn btn-primary">Explore Research <i class="fa-solid fa-arrow-right"></i></a>
-                    <a href="contact.html" class="btn btn-outline">Join Open Positions</a>
-                </div>
-            </div>
-            <div class="hero-card">
-                <div class="pi-quick-card">
-                    <img src="images/pi.jpg" alt="Dr. Ramasamy Mayilmurugan" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80'">
-                    <h3>Dr. Ramasamy Mayilmurugan</h3>
-                    <p>Associate Professor</p>
-                    <span class="dept-tag">Chemistry & BioScience and Biomedical Engineering</span>
-                    <div class="social-links">
-                        <a href="https://scholar.google.co.in/citations?user=-9ywDWAAAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
-                        <a href="https://orcid.org/0000-0002-5370-594X" target="_blank" title="ORCID"><i class="fa-brands fa-orcid"></i></a>
-                        <a href="mailto:murugan@iitbhilai.ac.in" title="Email"><i class="fa-solid fa-envelope"></i></a>
-                    </div>
-                </div>
-            </div>
+        <!-- Action Buttons -->
+        <div class="btn-group">
+          <a href="#research" class="btn btn-primary">Our Research</a>
+          <a href="contact.html" class="btn btn-secondary">Join the Group</a>
         </div>
-    </section>
+      </div>
+    </div>
 
-    <footer class="footer">
-        <div class="container flex-between">
-            <p>&copy; 2026 RMM Research Group, IIT Bhilai. All Rights Reserved.</p>
-            <p>Designed with precision for academic excellence.</p>
+    <!-- Section 3 & 4: Research Section -->
+    <div id="research" style="padding-top: 2rem;">
+      <div class="section-title">
+        <div class="title-bar"></div>
+        Research
+      </div>
+      <p class="section-subtitle">Chemists and biologists working together on health problems, combining design, synthesis and biological validation.</p>
+
+      <!-- Sub-theme 1: Bioinorganic Chemistry -->
+      <h3 style="margin-bottom: 1rem; color: var(--primary-color);">Bioinorganic chemistry</h3>
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-icon">🧪</div>
+          <h3>Smart MRI probes</h3>
+          <p>Fe(II) macrocycles as pH-responsive PARACEST agents, and Fe(III)-catecholate complexes as dual-modal T1 MRI and optical agents for nitric oxide and acidic tumour pH. Biotin conjugation raises the amount of agent delivered to tumours. Mn(II/III) complexes serve as redox-responsive agents sensitive to L-cysteine.</p>
         </div>
-    </footer>
+        <div class="card purple">
+          <div class="card-icon">🔬</div>
+          <h3>Oxygen activation</h3>
+          <p>Fe(II), Ni(II) and Cu(II) complexes as models for cysteine dioxygenase, diketone dioxygenase and copper monooxygenases, and as catalysts for aromatic C-H bond hydroxylation, studied with spectroscopy and computation.</p>
+        </div>
+        <div class="card pink">
+          <div class="card-icon">⚛️</div>
+          <h3>CO₂ activation</h3>
+          <p>Bioinspired Cu(II) and Ni(II) complexes that fix atmospheric CO₂ under mild conditions and convert it into cyclic carbonates and carboxylic acids, with crystal structures of the CO₂-derived intermediates.</p>
+        </div>
+      </div>
 
-    <script src="script.js"></script>
+      <!-- Sub-theme 2: Chemical Biology -->
+      <h3 style="margin-bottom: 1rem; color: var(--secondary-color);">Chemical biology</h3>
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-icon">💊</div>
+          <h3>Nanomedicine for targeted therapy</h3>
+          <p>The Cancer Biology Research Group is dedicated to advancing precision oncology through the development of innovative nanomedicine-based approaches for targeted cancer therapy. The group's research encompasses diverse biocompatible delivery platforms, including protein-based nanocages, engineered nanoparticles, liposomes, and hybrid nanostructures.</p>
+        </div>
+        <div class="card purple">
+          <div class="card-icon">🧬</div>
+          <h3>Ferroptosis and cancer models</h3>
+          <p>A major research focus involves metal-dependent regulated cell death, particularly ferroptosis, and its therapeutic exploitation against cancer. Research is conducted using cervical, breast, and colorectal cancer models, encompassing investigations from cellular viability and cytotoxicity to molecular mechanisms.</p>
+        </div>
+        <div class="card pink">
+          <div class="card-icon">🎯</div>
+          <h3>Cancer theranostics</h3>
+          <p>The group also explores cancer theranostics through the development of multifunctional molecules and nanoplatforms that integrate diagnostic imaging with therapeutic applications, enabling image-guided cancer intervention.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Common Footer -->
+  <footer>
+    <p>© 2026 RMM Group, IIT Bhilai. All Rights Reserved.</p>
+    <p class="designer">Designed by Vish Technologies</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
