@@ -1,70 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us | RMM Lab</title>
-  <link rel="icon" href="images/fevicon.png" type="image/png">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | RMM Research Group - IIT Bhilai</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <canvas id="molecule-canvas"></canvas>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand"><span class="dot"></span> RMM Research Group</a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Me</a>
+                <a href="research.html">Research</a>
+                <a href="publications.html">Publications</a>
+                <a href="facilities.html">Facilities</a>
+                <a href="members.html">Members</a>
+                <a href="contact.html" class="active nav-cta">Contact</a>
+            </nav>
+            <button class="menu-toggle" id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
 
-  <header class="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="brand">
-        <img src="images/site logo.png" alt="RMM Group Logo" class="site-logo" onerror="this.style.display='none'">
-        <span>Bioinorganic & Chemical Biology Lab</span>
-      </a>
-      <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="research.html">Research</a>
-        <a href="publications.html">Publications</a>
-        <a href="projects.html">Projects</a>
-        <a href="members.html">Members</a>
-        <a href="facilities.html">Facilities</a>
-        <a href="contact.html" class="active">Contact</a>
-      </nav>
-    </div>
-  </header>
+    <section class="section" style="background: var(--navy); color: white; min-height: 80vh;">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="color: white;">Contact & Visitors</h2>
+                <p style="color: #94a3b8;">Reach out for research collaborations or academic inquiries</p>
+            </div>
+            <div class="glass-card" style="background: var(--navy-light); color: white; display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+                <div>
+                    <h3 style="margin-bottom: 15px;">IIT Bhilai Address</h3>
+                    <p style="color: #94a3b8; margin-bottom: 10px;"><i class="fa-solid fa-location-dot" style="color: var(--teal); margin-right: 8px;"></i> Department of Chemistry / BSBE, IIT Bhilai, Kutelabata, Durg, Chhattisgarh - 491001</p>
+                    <p style="color: #94a3b8;"><i class="fa-solid fa-envelope" style="color: var(--teal); margin-right: 8px;"></i> rmayilmurugan@iitbhilai.ac.in</p>
+                </div>
+                <form onsubmit="event.preventDefault(); alert('Message Sent!');" style="display: flex; flex-direction: column; gap: 12px;">
+                    <input type="text" placeholder="Your Name" required style="padding: 10px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white;">
+                    <input type="email" placeholder="Your Email" required style="padding: 10px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white;">
+                    <textarea rows="4" placeholder="Your Message" required style="padding: 10px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white;"></textarea>
+                    <button type="submit" class="btn primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-  <main class="container">
-    <div class="grid-2col" style="margin-top: 30px;">
-      <div class="glass-card">
-        <h2>Contact Information</h2>
-        <p><strong>Dr. Ramasamy Mayilmurugan</strong></p>
-        <p>Associate Professor,<br>Department of Chemistry & Department of Bioscience and Biomedical Engineering</p>
-        <p><i class="fas fa-map-marker-alt"></i> Indian Institute of Technology (IIT) Bhilai,<br>Kutelabhata, Durg, Chhattisgarh - 491001, India</p>
-        <p><i class="fas fa-envelope"></i> Email: <code>murugan@iitbhilai.ac.in</code></p>
-      </div>
-
-      <div class="glass-card">
-        <h2>Get in Touch</h2>
-        <form onsubmit="event.preventDefault(); alert('Thank you! Message feature ready.');">
-          <div class="form-group">
-            <label>Name</label>
-            <input type="text" required class="search-input">
-          </div>
-          <div class="form-group" style="margin-top:10px;">
-            <label>Email</label>
-            <input type="email" required class="search-input">
-          </div>
-          <div class="form-group" style="margin-top:10px;">
-            <label>Message</label>
-            <textarea rows="4" required class="search-input" style="height: auto;"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary" style="margin-top: 15px; border:none; cursor:pointer;">Send Message</button>
-        </form>
-      </div>
-    </div>
-  </main>
-
-  <footer class="footer">
-    <p>&copy; Bioinorganic Chemistry and Chemical Biology Laboratory, IIT Bhilai.</p>
-  </footer>
-  <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2026 RMM Research Group, IIT Bhilai. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
