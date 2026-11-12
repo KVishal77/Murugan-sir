@@ -1,5 +1,5 @@
-// Mobile navigation toggle
 document.addEventListener('DOMContentLoaded', () => {
+    // Mobile navigation toggle
     const toggleBtn = document.getElementById('menu-toggle');
     const navLinks = document.querySelector('.nav-links');
 
