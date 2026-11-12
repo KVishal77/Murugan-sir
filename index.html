@@ -56,7 +56,7 @@
 
     /* Main Container (Centered with Left & Right Padding Gap) */
     .container {
-      max-width: 980px !important; /* Controlled width for centering */
+      max-width: 1150px !important;
       margin: 2rem auto !important;
       padding: 0 2rem !important;
     }
@@ -76,20 +76,20 @@
       color: #cbd5e1 !important;
     }
 
-    /* Fully Transparent PI Profile Box (No White Background) */
+    /* PI Profile Box: Original Previous Size + Transparent */
     .pi-box {
-      background: transparent !important;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(5px);
+      background: rgba(15, 23, 42, 0.65) !important;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
       color: #f8fafc !important;
-      padding: 2rem;
-      border-radius: 16px;
+      padding: 2.5rem;
+      border-radius: 12px;
       display: flex;
       gap: 2rem;
       align-items: flex-start;
       flex-wrap: wrap;
       margin-bottom: 3.5rem;
-      box-shadow: none !important;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3) !important;
     }
     .pi-box h3 {
       color: #38bdf8 !important;
@@ -98,25 +98,42 @@
       color: #cbd5e1 !important;
     }
 
-    /* Compact Research Cards Container & Grid */
+    /* Research Cards: Compact height alignment, full content preserved */
     .card-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.8rem;
       margin-bottom: 3rem;
     }
 
     .card {
-      background: rgba(255, 255, 255, 0.95);
+      background: rgba(255, 255, 255, 0.96);
       backdrop-filter: blur(10px);
       color: #1e293b;
-      padding: 1.5rem;
+      padding: 1.5rem 1.6rem;
       border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
     }
+    
+    .card .card-icon {
+      width: 42px;
+      height: 42px;
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.5rem;
+    }
+
     .card p {
       color: #475569;
-      font-size: 0.92rem;
-      line-height: 1.6;
+      font-size: 0.9rem;
+      line-height: 1.55;
     }
   </style>
 </head>
@@ -153,18 +170,18 @@
     <!-- Section 1: Hero Welcome (Transparent) -->
     <div class="hero-box">
       <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">Welcome to the RMM Group!</h1>
-      <p style="font-size: 1.15rem; font-weight: 600;">Department of Chemistry, BioScience & Biomedical Engineering IIT Bhilai</p>
+      <p style="font-size: 1.2rem; font-weight: 600;">Department of Chemistry, BioScience & Biomedical Engineering IIT Bhilai</p>
     </div>
 
-    <!-- Section 2: PI Profile (Fully Transparent Box) -->
+    <!-- Section 2: PI Profile (Original Size Restored & Transparent) -->
     <div class="pi-box">
-      <div style="flex: 1; min-width: 250px; text-align: center;">
-        <img src="images/Dr. R Mayilmurugan.png" alt="Dr. Ramasamy Mayilmurugan" style="width: 100%; max-width: 260px; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.3);">
+      <div style="flex: 1; min-width: 260px; text-align: center;">
+        <img src="images/Dr. R Mayilmurugan.png" alt="Dr. Ramasamy Mayilmurugan" style="width: 100%; max-width: 280px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.4);">
         <h3 style="margin-top: 1rem;">Dr. Ramasamy Mayilmurugan</h3>
         <p style="color: #94a3b8 !important; font-weight: 600;">Associate Professor</p>
         <p style="color: #94a3b8 !important; font-size: 0.9rem;">Department of Chemistry, IIT Bhilai</p>
       </div>
-      <div style="flex: 2; min-width: 280px;">
+      <div style="flex: 2; min-width: 300px;">
         <p style="margin-bottom: 1rem; text-align: justify;">Our group focuses on <strong>"interdisciplinary research"</strong> that involves the design and synthesis of carefully tailored molecules to act as smart MRI and optical probes to target tumours and understand their mechanism. Our research aims to use biologically inspired metal complexes as probes to understand complex biochemical processes in tumours. We are using these bioinspired imaging probes and our chemistry knowledge to image and quantify the reactive oxygen species (ROS), reactive nitrogen species (RNS), and other mobilities produced via the redox process within the tumor cells. We are working to place these molecules in clinical trials as novel therapeutic or diagnostic agents in the near future.</p>
         <p style="margin-bottom: 1.5rem; text-align: justify;">On the other hand, we are synthesizing a library of architecturally designed bioinspired coordination complexes with interesting structural, spectral, redox, and biological properties. Many of these complexes are demonstrated as synthetic analogues of metalloenzymes or as bioinspired catalysts for activating small molecules such as dioxygen and carbon dioxide. In all our projects, we try to accomplish our objectives through an appropriate combination of design, synthesis, and validation. As a result, the research projects in the group tend to be highly interdisciplinary in nature, involving bioinorganic chemistry, biochemistry, spectroscopy, and multistep organic synthesis. We named our group <strong>"Bioinorganic Chemistry and Chemical Biology,"</strong> where chemists and biologists work together to address Health issues.</p>
         
