@@ -54,12 +54,20 @@
       }
     }
 
+    /* Main Container (Centered with Left & Right Padding Gap) */
+    .container {
+      max-width: 980px !important; /* Controlled width for centering */
+      margin: 2rem auto !important;
+      padding: 0 2rem !important;
+    }
+
     /* Transparent Hero Box (No White Background) */
     .hero-box {
       background: transparent !important;
       padding: 1.5rem 0;
       margin-bottom: 2rem;
       box-shadow: none !important;
+      text-align: center;
     }
     .hero-box h1 {
       color: #38bdf8 !important;
@@ -68,21 +76,33 @@
       color: #cbd5e1 !important;
     }
 
-    /* PI Box & Research Cards */
+    /* Fully Transparent PI Profile Box (No White Background) */
     .pi-box {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      color: #1e293b;
+      background: transparent !important;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(5px);
+      color: #f8fafc !important;
+      padding: 2rem;
+      border-radius: 16px;
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-bottom: 3.5rem;
+      box-shadow: none !important;
+    }
+    .pi-box h3 {
+      color: #38bdf8 !important;
     }
     .pi-box p {
-      color: #334155;
+      color: #cbd5e1 !important;
     }
 
-    /* Card Grid layout for Research */
+    /* Compact Research Cards Container & Grid */
     .card-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 1.8rem;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 1.5rem;
       margin-bottom: 3rem;
     }
 
@@ -90,9 +110,13 @@
       background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(10px);
       color: #1e293b;
+      padding: 1.5rem;
+      border-radius: 12px;
     }
     .card p {
       color: #475569;
+      font-size: 0.92rem;
+      line-height: 1.6;
     }
   </style>
 </head>
@@ -126,21 +150,21 @@
   </header>
 
   <div class="container">
-    <!-- Section 1: Hero Welcome (Transparent / No White Background) -->
+    <!-- Section 1: Hero Welcome (Transparent) -->
     <div class="hero-box">
       <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">Welcome to the RMM Group!</h1>
-      <p style="font-size: 1.2rem; font-weight: 600;">Department of Chemistry, BioScience & Biomedical Engineering IIT Bhilai</p>
+      <p style="font-size: 1.15rem; font-weight: 600;">Department of Chemistry, BioScience & Biomedical Engineering IIT Bhilai</p>
     </div>
 
-    <!-- Section 2: PI Profile -->
-    <div class="pi-box" style="padding: 2rem; border-radius: 12px; display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap; margin-bottom: 3rem; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-      <div style="flex: 1; min-width: 260px; text-align: center;">
-        <img src="images/Dr. R Mayilmurugan.png" alt="Dr. Ramasamy Mayilmurugan" style="width: 100%; max-width: 280px; border-radius: 12px;">
-        <h3 style="margin-top: 1rem; color: #1e293b;">Dr. Ramasamy Mayilmurugan</h3>
-        <p style="color: #64748b; font-weight: 600;">Associate Professor</p>
-        <p style="color: #64748b; font-size: 0.9rem;">Department of Chemistry, IIT Bhilai</p>
+    <!-- Section 2: PI Profile (Fully Transparent Box) -->
+    <div class="pi-box">
+      <div style="flex: 1; min-width: 250px; text-align: center;">
+        <img src="images/Dr. R Mayilmurugan.png" alt="Dr. Ramasamy Mayilmurugan" style="width: 100%; max-width: 260px; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.3);">
+        <h3 style="margin-top: 1rem;">Dr. Ramasamy Mayilmurugan</h3>
+        <p style="color: #94a3b8 !important; font-weight: 600;">Associate Professor</p>
+        <p style="color: #94a3b8 !important; font-size: 0.9rem;">Department of Chemistry, IIT Bhilai</p>
       </div>
-      <div style="flex: 2; min-width: 300px;">
+      <div style="flex: 2; min-width: 280px;">
         <p style="margin-bottom: 1rem; text-align: justify;">Our group focuses on <strong>"interdisciplinary research"</strong> that involves the design and synthesis of carefully tailored molecules to act as smart MRI and optical probes to target tumours and understand their mechanism. Our research aims to use biologically inspired metal complexes as probes to understand complex biochemical processes in tumours. We are using these bioinspired imaging probes and our chemistry knowledge to image and quantify the reactive oxygen species (ROS), reactive nitrogen species (RNS), and other mobilities produced via the redox process within the tumor cells. We are working to place these molecules in clinical trials as novel therapeutic or diagnostic agents in the near future.</p>
         <p style="margin-bottom: 1.5rem; text-align: justify;">On the other hand, we are synthesizing a library of architecturally designed bioinspired coordination complexes with interesting structural, spectral, redox, and biological properties. Many of these complexes are demonstrated as synthetic analogues of metalloenzymes or as bioinspired catalysts for activating small molecules such as dioxygen and carbon dioxide. In all our projects, we try to accomplish our objectives through an appropriate combination of design, synthesis, and validation. As a result, the research projects in the group tend to be highly interdisciplinary in nature, involving bioinorganic chemistry, biochemistry, spectroscopy, and multistep organic synthesis. We named our group <strong>"Bioinorganic Chemistry and Chemical Biology,"</strong> where chemists and biologists work together to address Health issues.</p>
         
@@ -153,15 +177,15 @@
     </div>
 
     <!-- Section 3 & 4: Research Section -->
-    <div id="research" style="padding-top: 2rem;">
-      <div class="section-title" style="color: #f8fafc;">
+    <div id="research" style="padding-top: 1rem;">
+      <div class="section-title" style="color: #f8fafc; font-size: 1.8rem;">
         <div class="title-bar"></div>
         Research
       </div>
-      <p class="section-subtitle" style="color: #cbd5e1;">Chemists and biologists working together on health problems, combining design, synthesis and biological validation.</p>
+      <p class="section-subtitle" style="color: #cbd5e1; margin-bottom: 1.5rem;">Chemists and biologists working together on health problems, combining design, synthesis and biological validation.</p>
 
       <!-- Sub-theme 1: Bioinorganic Chemistry -->
-      <h3 style="margin-bottom: 1rem; color: #38bdf8;">Bioinorganic chemistry</h3>
+      <h3 style="margin-bottom: 1rem; color: #38bdf8; font-size: 1.3rem;">Bioinorganic chemistry</h3>
       <div class="card-grid">
         <div class="card">
           <div class="card-icon">🧪</div>
@@ -181,7 +205,7 @@
       </div>
 
       <!-- Sub-theme 2: Chemical Biology -->
-      <h3 style="margin-bottom: 1rem; color: #c084fc;">Chemical biology</h3>
+      <h3 style="margin-bottom: 1rem; color: #c084fc; font-size: 1.3rem;">Chemical biology</h3>
       <div class="card-grid">
         <div class="card">
           <div class="card-icon">💊</div>
