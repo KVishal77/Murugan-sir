@@ -1,115 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About PI | Dr. Ramasamy Mayilmurugan</title>
-  <link rel="icon" href="images/fevicon.png" type="image/png">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | RMM Research Group - IIT Bhilai</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <canvas id="molecule-canvas"></canvas>
-
-  <header class="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="brand">
-        <img src="images/site logo.png" alt="RMM Lab Logo" class="site-logo" onerror="this.style.display='none'">
-        <span class="brand-title">RMM Research Group</span>
-      </a>
-      <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html" class="active">About</a>
-        <a href="research.html">Research</a>
-        <a href="publications.html">Publications</a>
-        <a href="projects.html">Projects</a>
-        <a href="members.html">Members</a>
-        <a href="facilities.html">Facilities</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-    <section class="glass-card page-header animate-up">
-      <div class="about-hero-grid">
-        <div class="about-img-box">
-          <img src="images/sir2.png" alt="Dr. Ramasamy Mayilmurugan" class="profile-pic" onerror="this.style.display='none'">
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand"><span class="dot"></span> RMM Research Group</a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html" class="active">About Me</a>
+                <a href="research.html">Research</a>
+                <a href="publications.html">Publications</a>
+                <a href="facilities.html">Facilities</a>
+                <a href="members.html">Members</a>
+                <a href="contact.html" class="nav-cta">Contact</a>
+            </nav>
+            <button class="menu-toggle" id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
         </div>
-        <div>
-          <h1>Dr. Ramasamy Mayilmurugan</h1>
-          <h3>Associate Professor</h3>
-          <p>Department of Chemistry & Department of Bioscience and Biomedical Engineering<br>IIT Bhilai | Email: <code>murugan@iitbhilai.ac.in</code>[cite: 1, 2]</p>
-          <div class="profile-badges">
-            <a href="https://scholar.google.co.in/citations?user=-9ywDWAAAAAJ&hl=en" target="_blank" rel="noopener">
-              <img src="images/Google Scholar.png" alt="Google Scholar" class="badge-img" onerror="this.outerHTML='<span class=\"link-badge\"><i class=\"fas fa-graduation-cap\"></i> Google Scholar</span>'">
-            </a>
-            <a href="https://orcid.org/0000-0002-5370-594X" target="_blank" rel="noopener">
-              <img src="images/Orcid.png" alt="ORCID" class="badge-img" onerror="this.outerHTML='<span class=\"link-badge\"><i class=\"fas fa-id-badge\"></i> ORCID Profile</span>'">
-            </a>
-          </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>About the Principal Investigator</h2>
+                <p>Academic background, honors, and lab direction</p>
+            </div>
+
+            <!-- Stats Bar -->
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 40px; text-align: center;">
+                <div class="glass-card">
+                    <h3 style="color: var(--teal); font-size: 2rem;">15+</h3>
+                    <p style="color: var(--text-muted);">Years of Research</p>
+                </div>
+                <div class="glass-card">
+                    <h3 style="color: var(--teal); font-size: 2rem;">30+</h3>
+                    <p style="color: var(--text-muted);">Peer-Reviewed Publications</p>
+                </div>
+                <div class="glass-card">
+                    <h3 style="color: var(--teal); font-size: 2rem;">₹1.5Cr+</h3>
+                    <p style="color: var(--text-muted);">Grants Funded</p>
+                </div>
+            </div>
+
+            <div class="glass-card" style="margin-bottom: 30px;">
+                <h3 style="color: var(--navy); margin-bottom: 15px;">Full Biography</h3>
+                <p style="color: var(--text-muted); margin-bottom: 15px;">
+                    Dr. Ramasamy Mayilmurugan leads the Bioinorganic Chemistry and Chemical Biology research group at IIT Bhilai. His focus bridges inorganic chemistry with biological applications, targeting diagnostic MRI contrast agents and targeted metallodrug therapies.
+                </p>
+            </div>
+
+            <div class="glass-card">
+                <h3 style="color: var(--navy); margin-bottom: 15px;">Key Honors & Awards</h3>
+                <ul style="list-style: none; color: var(--text-muted);">
+                    <li style="margin-bottom: 10px;"><i class="fa-solid fa-award" style="color: var(--teal); margin-right: 10px;"></i> Institutional Research Excellence Recognition - IIT Bhilai</li>
+                    <li style="margin-bottom: 10px;"><i class="fa-solid fa-award" style="color: var(--teal); margin-right: 10px;"></i> DST-SERB Early Career Research Award</li>
+                </ul>
+            </div>
         </div>
-      </div>
     </section>
 
-    <section class="glass-card section-space animate-up" style="animation-delay: 0.2s;">
-      <h2>Biography & Academic Background</h2>
-      <p class="lead-text">Dr. R. Mayilmurugan received his Ph.D. from Bharathidasan University, Tiruchirapalli, under the supervision of distinguished bioinorganic chemist Prof. M. Palaniandavar, FNA, FASc, and M.Sc. from Madurai Kamaraj University (ANJA College), securing the <strong>Gold Medal / First Rank</strong>.</p>
-      <p>He completed Post-Doctoral Fellowships with Prof. Nadia C. Mösch-Zanetti (University of Graz, Austria) focusing on biomimetic chemistry of molybdenum oxotransferases, and with Prof. Janet Morrow (University at Buffalo, SUNY, USA) as a Fulbright Scholar working on iron-based PARACEST MRI contrast agents. He was also an INSA-DFG Visiting Scientist at Heidelberg University, Germany with Prof. Peter Comba. Prior to joining IIT Bhilai, he served as Assistant Professor at Madurai Kamaraj University.</p>
-    </section>
-
-    <section class="stats-grid animate-up" style="animation-delay: 0.3s;">
-      <div class="glass-card stat-box">
-        <i class="fas fa-graduation-cap"></i>
-        <h3>Ph.D. Thesis Supervised</h3>
-        <p>Completed: <strong>7</strong> | Ongoing: <strong>6</strong></p>
-      </div>
-      <div class="glass-card stat-box">
-        <i class="fas fa-user-graduate"></i>
-        <h3>M.Sc / M.Tech / M.Phil</h3>
-        <p>Completed: <strong>23</strong> | Ongoing: <strong>3</strong></p>
-      </div>
-      <div class="glass-card stat-box">
-        <i class="fas fa-chalkboard-teacher"></i>
-        <h3>Invited Talks Delivered</h3>
-        <p><strong>36 Lectures</strong> (USA, Austria, Sweden, Germany, Singapore)</p>
-      </div>
-    </section>
-
-    <section class="grid-2col animate-up" style="animation-delay: 0.4s;">
-      <div class="glass-card">
-        <h2>Awards & Recognitions</h2>
-        <ul class="styled-list">
-          <li>CRSI Bronze Medal (2020), Chemical Research Society of India</li>
-          <li>Fulbright Scholar Award (2014)</li>
-          <li>Council Member (2020-23), Chemical Research Society of India</li>
-          <li>Member, SERB-VORTEX for Inorganic Physical Chemistry (2020)</li>
-          <li>Convener, CRSI Tiruchy – Madurai Local Chapter</li>
-          <li>Fulbright Outreach Fund (2015)</li>
-          <li>DFG-INSA Visiting Fellowship to Germany (2014)</li>
-          <li>DST Young Scientist Award (2012)</li>
-          <li>Qualified UGC-CSIR Exam</li>
-        </ul>
-      </div>
-
-      <div class="glass-card">
-        <h2>Visiting Professorships</h2>
-        <ul class="styled-list">
-          <li>University at Buffalo, State University of New York, USA (2014-15)</li>
-          <li>Heidelberg University, Germany (2014)</li>
-          <li>Royal Institute of Technology, Stockholm, Sweden (2013)</li>
-          <li>Karl-Franzens-Universität Graz, Austria (2011, 2013)</li>
-        </ul>
-        <h2 style="margin-top: 20px;">Teaching</h2>
-        <p class="tag-cloud">Basic Inorganic Chemistry • Coordination Chemistry • Bioinorganic Chemistry • MRI Contrast Agents • EPR Spectroscopy • Biochemistry • Bioanalytical Methods • Advances in Cancer Biology</p>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p>&copy; 2026 Bioinorganic Chemistry and Chemical Biology Laboratory, IIT Bhilai.</p>
-  </footer>
-  <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2026 RMM Research Group, IIT Bhilai. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
