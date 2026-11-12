@@ -1,178 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Research Projects | RMM Group</title>
-  <link rel="icon" href="images/fevicon.png" type="image/png">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | RMM Research Group - IIT Bhilai</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <canvas id="molecule-canvas"></canvas>
 
-  <header class="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="brand">
-        <img src="images/site logo.png" alt="RMM Lab Logo" class="site-logo" onerror="this.style.display='none'">
-        <span class="brand-title">RMM Research Group</span>
-      </a>
-      <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="research.html">Research</a>
-        <a href="publications.html">Publications</a>
-        <a href="projects.html" class="active">Projects</a>
-        <a href="members.html">Members</a>
-        <a href="facilities.html">Facilities</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
+    <header class="header">
+        <div class="top-bar">
+            <div class="container flex-between">
+                <div class="institution-branding">
+                    <span>Department of Chemistry & BioScience and Biomedical Engineering</span>
+                    <span class="divider">|</span>
+                    <span>IIT Bhilai</span>
+                </div>
+                <div class="top-contact">
+                    <a href="mailto:murugan@iitbhilai.ac.in"><i class="fa-solid fa-envelope"></i> murugan@iitbhilai.ac.in</a>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="container flex-between">
+                <a href="index.html" class="brand-logo">
+                    <span class="logo-highlight">RMM</span> Research Group
+                </a>
+                
+                <button class="mobile-menu-btn" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
 
-  <main class="container">
-    <div class="page-title-box text-center animate-up">
-      <h1>Sponsored Research Projects</h1>
-      <p>Extramural funding grants from DST, SERB, DBT, BRNS, and Institutional Schemes</p>
-    </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About PI</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="facilities.html">Facilities</a></li>
+                    <li><a href="members.html">Members</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html" class="nav-cta">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-    <div class="project-tabs animate-up" style="animation-delay: 0.2s;">
-      <button class="tab-btn active" onclick="switchTab('ongoing')">Ongoing Projects</button>
-      <button class="tab-btn" onclick="switchTab('completed')">Completed Projects</button>
-    </div>
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sponsored Research Projects</h2>
+                <p>Active grants funded by premier national and institutional bodies</p>
+            </div>
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Project Title</th>
+                            <th>Funding Agency</th>
+                            <th>Grant Amount</th>
+                            <th>Duration</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Redox activated smart manganese-based MRI contrast agents</td>
+                            <td>SERB, New Delhi</td>
+                            <td>₹42.50 Lakhs</td>
+                            <td>2023 – 2026</td>
+                        </tr>
+                        <tr>
+                            <td>Optical imaging probe appended smart MRI contrast agents</td>
+                            <td>RIG, IIT Bhilai</td>
+                            <td>₹12.00 Lakhs</td>
+                            <td>2022 – 2025</td>
+                        </tr>
+                        <tr>
+                            <td>Healthcare and community medicine empowerment: biological validation of cancer and sickle cell anemia</td>
+                            <td>DST: IBITF, IIT Bhilai</td>
+                            <td>₹99.96 Lakhs</td>
+                            <td>2024 – 2026</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
 
-    <div id="ongoing-projects" class="project-panel active animate-up" style="animation-delay: 0.3s;">
-      <div class="glass-card table-responsive">
-        <table class="custom-table">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Project Title</th>
-              <th>Funding Agency</th>
-              <th>Grant Amount</th>
-              <th>Duration</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Bioinspired Copper and Nickel Complexes for Activation and Conversion of CO₂ into C1-Feedstock</td>
-              <td>SERB, New Delhi</td>
-              <td>₹ 51.82 Lakhs</td>
-              <td>2020-2023</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Redox Activated Smart Manganese-Based MRI-Contrast Agents</td>
-              <td>SERB, New Delhi</td>
-              <td>₹ 42.50 Lakhs</td>
-              <td>2023-2026</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Optical Imaging Probe Appended Smart MRI Contrast Agents</td>
-              <td>RIG, IIT Bhilai[cite: 1, 2]</td>
-              <td>₹ 12.00 Lakhs</td>
-              <td>2022-2025</td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>Healthcare and Community Medicine Empowerment of Underprivileged Tribal-Population: Biological Validation of Cancer and Sickle Cell Anemia</td>
-              <td>DST: IBITF IIT Bhilai[cite: 1, 2]</td>
-              <td>₹ 99.96 Lakhs</td>
-              <td>2024-2026</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+    <footer class="footer">
+        <div class="container flex-between">
+            <p>&copy; 2026 RMM Research Group, IIT Bhilai. All Rights Reserved.</p>
+            <p>Designed with precision for academic excellence.</p>
+        </div>
+    </footer>
 
-    <div id="completed-projects" class="project-panel">
-      <div class="glass-card table-responsive">
-        <table class="custom-table">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Project Title</th>
-              <th>Funding Agency</th>
-              <th>Grant Amount</th>
-              <th>Duration</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>5</td>
-              <td>Biological Thiol-Oxidation by Cysteine Dioxygenase Enzymes: Biomimetic Approach</td>
-              <td>DST, New Delhi</td>
-              <td>₹ 26.72 Lakhs</td>
-              <td>2012-2015</td>
-            </tr>
-            <tr>
-              <td>6</td>
-              <td>Dioxygen Activation by Non-Heme Iron: Insight into Catalytic and Mechanistic Aspects</td>
-              <td>UGC, New Delhi</td>
-              <td>₹ 13.62 Lakhs</td>
-              <td>2012-2015</td>
-            </tr>
-            <tr>
-              <td>7</td>
-              <td>Bioinspired Models for Unusual Tri Histidine Motif in Non-Heme Iron Enzymes</td>
-              <td>BRNS Mumbai</td>
-              <td>₹ 29.00 Lakhs</td>
-              <td>2013-2017</td>
-            </tr>
-            <tr>
-              <td>8</td>
-              <td>Mobility Project for International Collaboration</td>
-              <td>DST-OEAD Indo-Austrian</td>
-              <td>₹ 06.70 Lakhs</td>
-              <td>2013-2015</td>
-            </tr>
-            <tr>
-              <td>9</td>
-              <td>Development of Biocompatible Iron-Based ParaCEST MRI Contrast Agents</td>
-              <td>DBT, New Delhi</td>
-              <td>₹ 25.00 Lakhs</td>
-              <td>2015-2018</td>
-            </tr>
-            <tr>
-              <td>10</td>
-              <td>Development Biologically Viable Iron-Based MRI Contrast Agents</td>
-              <td>SERB, New Delhi</td>
-              <td>₹ 70.00 Lakhs</td>
-              <td>2017-2020</td>
-            </tr>
-            <tr>
-              <td>11</td>
-              <td>Molecular Design and Development of Imaging Agents and Inhibitors</td>
-              <td>RUSA, MHRD</td>
-              <td>₹ 358.00 Lakhs</td>
-              <td>2020-2022</td>
-            </tr>
-            <tr>
-              <td>12</td>
-              <td>Design and Development of Imaging Probes for Neurodegenerative Disorders</td>
-              <td>TANCHE, Govt. of Tamil Nadu</td>
-              <td>₹ 47.88 Lakhs</td>
-              <td>2020-2022</td>
-            </tr>
-            <tr>
-              <td>13</td>
-              <td>Bioinspired Copper Coordination Polymers as Filter for COVID-19</td>
-              <td>SERB Special COVID Grant</td>
-              <td>₹ 16.81 Lakhs</td>
-              <td>2020-2021</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </main>
-
-  <footer class="footer">
-    <p>&copy; 2026 Bioinorganic Chemistry and Chemical Biology Laboratory, IIT Bhilai.</p>
-  </footer>
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
