@@ -6,8 +6,81 @@
   <title>Home - RMM Group, IIT Bhilai</title>
   <link rel="icon" href="images/fevicon.png" type="image/png">
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Chemistry Animated Background Style */
+    body {
+      background-color: #0f172a;
+      background-image: none;
+      position: relative;
+      overflow-x: hidden;
+    }
+    
+    .chem-bg-animation {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      pointer-events: none;
+      opacity: 0.25;
+      background: radial-gradient(circle at 50% 50%, #1e293b 0%, #0f172a 100%);
+    }
+
+    .floating-atom {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #38bdf8;
+      font-weight: bold;
+      font-size: 0.85rem;
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      border-radius: 50%;
+      animation: floatAround 18s infinite linear;
+      box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
+    }
+
+    @keyframes floatAround {
+      0% {
+        transform: translate(0, 0) rotate(0deg);
+      }
+      50% {
+        transform: translate(60px, 80px) rotate(180deg);
+      }
+      100% {
+        transform: translate(0, 0) rotate(360deg);
+      }
+    }
+
+    /* Content styling override for enhanced readability over dark animated bg */
+    .hero-box, .pi-box, .research-container {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+    }
+
+    /* Compact Box Width Customization */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(280px, 1fr));
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto 3rem auto;
+    }
+
+    @media (max-width: 950px) {
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Chemistry Background Animation Container -->
+  <div class="chem-bg-animation" id="chemBg">
+    <!-- Dynamic Floating Elements will be injected via JS -->
+  </div>
 
   <!-- Header & Navigation -->
   <header>
@@ -35,13 +108,13 @@
 
   <div class="container">
     <!-- Section 1: Hero Welcome -->
-    <div style="background: white; padding: 2.5rem; border-radius: 12px; margin-bottom: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+    <div class="hero-box" style="padding: 2.5rem; border-radius: 12px; margin-bottom: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
       <h1 style="color: var(--primary-color); font-size: 2.5rem; margin-bottom: 0.5rem;">Welcome to the RMM Group!</h1>
       <p style="font-size: 1.2rem; color: #475569; font-weight: 600;">Department of Chemistry, BioScience & Biomedical Engineering IIT Bhilai</p>
     </div>
 
     <!-- Section 2: PI Profile -->
-    <div style="background: white; padding: 2rem; border-radius: 12px; display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap; margin-bottom: 3rem;">
+    <div class="pi-box" style="padding: 2rem; border-radius: 12px; display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap; margin-bottom: 3rem; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
       <div style="flex: 1; min-width: 260px; text-align: center;">
         <img src="images/Dr. R Mayilmurugan.png" alt="Dr. Ramasamy Mayilmurugan" style="width: 100%; max-width: 280px; border-radius: 12px;">
         <h3 style="margin-top: 1rem;">Dr. Ramasamy Mayilmurugan</h3>
@@ -49,10 +122,9 @@
         <p style="color: #64748b; font-size: 0.9rem;">Department of Chemistry, IIT Bhilai</p>
       </div>
       <div style="flex: 2; min-width: 300px;">
-        <p style="margin-bottom: 1rem;">Our group focuses on <strong>"interdisciplinary research"</strong> that involves the design and synthesis of carefully tailored molecules to act as smart MRI and optical probes to target tumours and understand their mechanism. Our research aims to use biologically inspired metal complexes as probes to understand complex biochemical processes in tumours. We are using these bioinspired imaging probes and our chemistry knowledge to image and quantify the reactive oxygen species (ROS), reactive nitrogen species (RNS), and other mobilities produced via the redox process within the tumor cells. We are working to place these molecules in clinical trials as novel therapeutic or diagnostic agents in the near future.</p>
-        <p style="margin-bottom: 1.5rem;">On the other hand, we are synthesizing a library of architecturally designed bioinspired coordination complexes with interesting structural, spectral, redox, and biological properties. Many of these complexes are demonstrated as synthetic analogues of metalloenzymes or as bioinspired catalysts for activating small molecules such as dioxygen and carbon dioxide. In all our projects, we try to accomplish our objectives through an appropriate combination of design, synthesis, and validation. As a result, the research projects in the group tend to be highly interdisciplinary in nature, involving bioinorganic chemistry, biochemistry, spectroscopy, and multistep organic synthesis. We named our group <strong>"Bioinorganic Chemistry and Chemical Biology,"</strong> where chemists and biologists work together to address Health issues.</p>
+        <p style="margin-bottom: 1rem; text-align: justify;">Our group focuses on <strong>"interdisciplinary research"</strong> that involves the design and synthesis of carefully tailored molecules to act as smart MRI and optical probes to target tumours and understand their mechanism. Our research aims to use biologically inspired metal complexes as probes to understand complex biochemical processes in tumours. We are using these bioinspired imaging probes and our chemistry knowledge to image and quantify reactive species produced via the redox process within tumor cells.</p>
+        <p style="margin-bottom: 1.5rem; text-align: justify;">We are synthesizing a library of architecturally designed bioinspired coordination complexes as synthetic analogues of metalloenzymes or as bioinspired catalysts for activating small molecules such as dioxygen and carbon dioxide. We named our group <strong>"Bioinorganic Chemistry and Chemical Biology,"</strong> where chemists and biologists work together to address health issues.</p>
         
-        <!-- Action Buttons -->
         <div class="btn-group">
           <a href="#research" class="btn btn-primary">Our Research</a>
           <a href="contact.html" class="btn btn-secondary">Join the Group</a>
@@ -62,49 +134,49 @@
 
     <!-- Section 3 & 4: Research Section -->
     <div id="research" style="padding-top: 2rem;">
-      <div class="section-title">
+      <div class="section-title" style="background: rgba(255,255,255,0.9); padding: 1rem; border-radius: 8px; width: fit-content; margin-bottom: 1rem;">
         <div class="title-bar"></div>
         Research
       </div>
-      <p class="section-subtitle">Chemists and biologists working together on health problems, combining design, synthesis and biological validation.</p>
+      <p class="section-subtitle" style="color: #e2e8f0; font-weight: 500; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Chemists and biologists working together on health problems, combining design, synthesis and biological validation.</p>
 
       <!-- Sub-theme 1: Bioinorganic Chemistry -->
-      <h3 style="margin-bottom: 1rem; color: var(--primary-color);">Bioinorganic chemistry</h3>
+      <h3 style="margin-bottom: 1rem; color: #38bdf8; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Bioinorganic chemistry</h3>
       <div class="card-grid">
         <div class="card">
           <div class="card-icon">🧪</div>
           <h3>Smart MRI probes</h3>
-          <p>Fe(II) macrocycles as pH-responsive PARACEST agents, and Fe(III)-catecholate complexes as dual-modal T1 MRI and optical agents for nitric oxide and acidic tumour pH. Biotin conjugation raises the amount of agent delivered to tumours. Mn(II/III) complexes serve as redox-responsive agents sensitive to L-cysteine.</p>
+          <p>Fe(II) macrocycles as pH-responsive PARACEST agents, and Fe(III)-catecholate complexes as dual-modal T1 MRI and optical agents for nitric oxide and acidic tumour pH.</p>
         </div>
         <div class="card purple">
           <div class="card-icon">🔬</div>
           <h3>Oxygen activation</h3>
-          <p>Fe(II), Ni(II) and Cu(II) complexes as models for cysteine dioxygenase, diketone dioxygenase and copper monooxygenases, and as catalysts for aromatic C-H bond hydroxylation, studied with spectroscopy and computation.</p>
+          <p>Fe(II), Ni(II) and Cu(II) complexes as models for cysteine dioxygenase, diketone dioxygenase and copper monooxygenases, studied with spectroscopy.</p>
         </div>
         <div class="card pink">
           <div class="card-icon">⚛️</div>
           <h3>CO₂ activation</h3>
-          <p>Bioinspired Cu(II) and Ni(II) complexes that fix atmospheric CO₂ under mild conditions and convert it into cyclic carbonates and carboxylic acids, with crystal structures of the CO₂-derived intermediates.</p>
+          <p>Bioinspired Cu(II) and Ni(II) complexes that fix atmospheric CO₂ under mild conditions and convert it into cyclic carbonates and carboxylic acids.</p>
         </div>
       </div>
 
       <!-- Sub-theme 2: Chemical Biology -->
-      <h3 style="margin-bottom: 1rem; color: var(--secondary-color);">Chemical biology</h3>
+      <h3 style="margin-bottom: 1rem; color: #c084fc; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Chemical biology</h3>
       <div class="card-grid">
         <div class="card">
           <div class="card-icon">💊</div>
           <h3>Nanomedicine for targeted therapy</h3>
-          <p>The Cancer Biology Research Group is dedicated to advancing precision oncology through the development of innovative nanomedicine-based approaches for targeted cancer therapy. The group's research encompasses diverse biocompatible delivery platforms, including protein-based nanocages, engineered nanoparticles, liposomes, and hybrid nanostructures.</p>
+          <p>Advancing precision oncology through innovative nanomedicine-based approaches, protein nanocages, engineered nanoparticles, and liposomes.</p>
         </div>
         <div class="card purple">
           <div class="card-icon">🧬</div>
           <h3>Ferroptosis and cancer models</h3>
-          <p>A major research focus involves metal-dependent regulated cell death, particularly ferroptosis, and its therapeutic exploitation against cancer. Research is conducted using cervical, breast, and colorectal cancer models, encompassing investigations from cellular viability and cytotoxicity to molecular mechanisms.</p>
+          <p>Metal-dependent regulated cell death, particularly ferroptosis, and its therapeutic exploitation against cervical, breast, and colorectal cancer models.</p>
         </div>
         <div class="card pink">
           <div class="card-icon">🎯</div>
           <h3>Cancer theranostics</h3>
-          <p>The group also explores cancer theranostics through the development of multifunctional molecules and nanoplatforms that integrate diagnostic imaging with therapeutic applications, enabling image-guided cancer intervention.</p>
+          <p>Multifunctional molecules and nanoplatforms integrating diagnostic imaging with therapeutic applications for image-guided intervention.</p>
         </div>
       </div>
     </div>
@@ -117,5 +189,29 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    // Generate Floating Chemistry Elements (Atoms/Elements) dynamically
+    const chemBg = document.getElementById('chemBg');
+    const elements = ['Fe', 'Cu', 'Ni', 'O₂', 'CO₂', 'H₂O', 'MRI', '🧬', '⚛️', '⚗️', 'Zn', 'Mn'];
+    
+    for (let i = 0; i < 20; i++) {
+      const el = document.createElement('div');
+      el.classList.add('floating-atom');
+      el.innerText = elements[Math.floor(Math.random() * elements.length)];
+      
+      // Random positioning and sizing
+      const size = Math.floor(Math.random() * 30) + 35;
+      el.style.width = `${size}px`;
+      el.style.height = `${size}px`;
+      el.style.left = `${Math.random() * 100}%`;
+      el.style.top = `${Math.random() * 100}%`;
+      
+      // Animation duration & delay variation
+      el.style.animationDuration = `${Math.random() * 15 + 10}s`;
+      el.style.animationDelay = `${Math.random() * 5}s`;
+      
+      chemBg.appendChild(el);
+    }
+  </script>
 </body>
 </html>
