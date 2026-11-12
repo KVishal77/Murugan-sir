@@ -1,47 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Laboratory Facilities | RMM Lab</title>
-  <link rel="icon" href="images/fevicon.png" type="image/png">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facilities | RMM Research Group - IIT Bhilai</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <canvas id="molecule-canvas"></canvas>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand"><span class="dot"></span> RMM Research Group</a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Me</a>
+                <a href="research.html">Research</a>
+                <a href="publications.html">Publications</a>
+                <a href="facilities.html" class="active">Facilities</a>
+                <a href="members.html">Members</a>
+                <a href="contact.html" class="nav-cta">Contact</a>
+            </nav>
+            <button class="menu-toggle" id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
 
-  <header class="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="brand">
-        <img src="images/site logo.png" alt="RMM Lab Logo" class="site-logo" onerror="this.style.display='none'">
-        <span class="brand-title">RMM Research Group</span>
-      </a>
-      <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="research.html">Research</a>
-        <a href="publications.html">Publications</a>
-        <a href="projects.html">Projects</a>
-        <a href="members.html">Members</a>
-        <a href="facilities.html" class="active">Facilities</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Lab Facilities & Instruments</h2>
+                <p>Infrastructure available at IIT Bhilai</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+                <div class="glass-card">
+                    <h3 style="color: var(--navy); margin-bottom: 10px;">Synthesis Instrumentation</h3>
+                    <p style="color: var(--text-muted);">Glovebox, Schlenk line setup, and rotary evaporators.</p>
+                </div>
+                <div class="glass-card">
+                    <h3 style="color: var(--navy); margin-bottom: 10px;">Analytical Equipment</h3>
+                    <p style="color: var(--text-muted);">UV-Vis spectrophotometers and electrochemical workstations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <main class="container">
-    <div class="glass-card empty-state-box text-center animate-up">
-      <i class="fas fa-tools empty-icon"></i>
-      <h1>Laboratory & Instrumentation Facilities</h1>
-      <p>State-of-the-art synthetic chemistry setup, spectroscopic instruments, and cell culture facilities details will be updated soon.</p>
-    </div>
-  </main>
-
-  <footer class="footer">
-    <p>&copy; 2026 Bioinorganic Chemistry and Chemical Biology Laboratory, IIT Bhilai.</p>
-  </footer>
-  <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2026 RMM Research Group, IIT Bhilai. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
