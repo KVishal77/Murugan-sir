@@ -3,11 +3,180 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Facilities - RMM Group</title>
+  <title>Facilities - RMM Group, IIT Bhilai</title>
   <link rel="icon" href="images/fevicon.png" type="image/png">
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Dark Theme & Background Chemistry Animation */
+    body {
+      background-color: #060c1b;
+      background-image: 
+        radial-gradient(rgba(56, 189, 248, 0.08) 1.5px, transparent 1.5px),
+        linear-gradient(to bottom, #060c1b 0%, #0a1329 100%);
+      background-size: 36px 36px, 100% 100%;
+      position: relative;
+      overflow-x: hidden;
+      color: #f8fafc;
+    }
+    
+    .bg-canvas-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .floating-atom-node {
+      position: absolute;
+      width: 90px;
+      height: 90px;
+      border: 1px dashed rgba(56, 189, 248, 0.3);
+      border-radius: 50%;
+      animation: rotateAtom 18s infinite linear;
+      opacity: 0.6;
+    }
+
+    .electron {
+      position: absolute;
+      top: -4px;
+      left: 50%;
+      width: 7px;
+      height: 7px;
+      background-color: #38bdf8;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #38bdf8, 0 0 18px #38bdf8;
+    }
+
+    @keyframes rotateAtom {
+      0% { transform: rotate(0deg) scale(1); }
+      50% { transform: rotate(180deg) scale(1.1); }
+      100% { transform: rotate(360deg) scale(1); }
+    }
+
+    /* Container Spacing */
+    .container {
+      max-width: 1250px !important;
+      margin: 2rem auto !important;
+      padding: 0 2rem !important;
+    }
+
+    /* 4 Items Per Row Grid Layout */
+    .member-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr) !important;
+      gap: 1.8rem;
+      margin-bottom: 3rem;
+      align-items: stretch;
+    }
+
+    @media (max-width: 1050px) {
+      .member-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .member-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
+    /* Equipment Card Styling */
+    .member-card {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      padding: 1.2rem;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.25);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .member-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(56, 189, 248, 0.3);
+    }
+
+    .member-img-box {
+      width: 100%;
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-radius: 8px;
+      background: #f1f5f9;
+      margin-bottom: 1rem;
+    }
+
+    .member-img-box img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    .member-info h4 {
+      color: #1e293b;
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-align: center;
+      margin: 0;
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Background Chemistry Elements Animation -->
+  <div class="bg-canvas-container">
+    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="dnaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#ec4899" />
+          <stop offset="50%" stop-color="#a855f7" />
+          <stop offset="100%" stop-color="#3b82f6" />
+        </linearGradient>
+        <linearGradient id="fusionGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#f59e0b" />
+          <stop offset="100%" stop-color="#ef4444" />
+        </linearGradient>
+      </defs>
+
+      <!-- DNA Strand Left -->
+      <g opacity="0.4" transform="translate(20, 0)">
+        <path d="M 10,0 Q 80,150 10,300 T 10,600 T 10,900 T 10,1200" fill="none" stroke="url(#dnaGrad)" stroke-width="3" />
+        <path d="M 80,0 Q 10,150 80,300 T 80,600 T 80,900 T 80,1200" fill="none" stroke="url(#dnaGrad)" stroke-width="3" />
+      </g>
+
+      <!-- Benzene Rings & Elements -->
+      <g opacity="0.35" transform="translate(750, 90)">
+        <polygon points="0,-35 30,-18 30,18 0,35 -30,18 -30,-18" fill="none" stroke="#38bdf8" stroke-width="2" />
+        <text x="-10" y="5" fill="#38bdf8" font-size="15" font-weight="bold">C</text>
+      </g>
+      <g opacity="0.35" transform="translate(920, 450)">
+        <polygon points="0,-40 35,-20 35,20 0,40 -35,20 -35,-20" fill="none" stroke="#f59e0b" stroke-width="2" />
+        <text x="-9" y="5" fill="#f59e0b" font-size="14" font-weight="bold">Fe</text>
+      </g>
+    </svg>
+
+    <!-- Orbiting Electrons Background -->
+    <div class="floating-atom-node" style="top: 15%; left: 80%;">
+      <div class="electron"></div>
+    </div>
+    <div class="floating-atom-node" style="top: 60%; left: 88%; animation-duration: 15s;">
+      <div class="electron" style="background-color: #ec4899; box-shadow: 0 0 10px #ec4899;"></div>
+    </div>
+    <div class="floating-atom-node" style="top: 75%; left: 10%; animation-duration: 22s;">
+      <div class="electron" style="background-color: #10b981; box-shadow: 0 0 10px #10b981;"></div>
+    </div>
+  </div>
+
+  <!-- Header & Navigation -->
   <header>
     <div class="nav-container">
       <div class="logo-section">
@@ -32,37 +201,129 @@
   </header>
 
   <div class="container">
-    <div class="section-title">
+    <div class="section-title" style="color: #f8fafc; font-size: 1.8rem;">
       <div class="title-bar"></div>
       Facilities
     </div>
-    <p class="section-subtitle">The Group strongly believes that state-of-the-art research facilities are essential to carry out quality research work.</p>
+    <p class="section-subtitle" style="color: #cbd5e1; margin-bottom: 2rem;">The Group strongly believes that state-of-the-art research facilities are essential to carry out quality research work.</p>
 
+    <!-- 4 Items Per Row Grid containing all items from IK.png -->
     <div class="member-grid">
+      
+      <!-- 1. Invitrogen Automated Cell Counter -->
       <div class="member-card">
-        <div class="member-img-box"><img src="images/Relaxometer.png" alt="Relaxometer"></div>
-        <div class="member-info"><h4>Relaxometer</h4></div>
+        <div class="member-img-box"><img src="images/Invitrogen Automated Cell Counter.png" alt="Invitrogen Automated Cell Counter"></div>
+        <div class="member-info"><h4>Invitrogen Automated Cell Counter</h4></div>
       </div>
+
+      <!-- 2. Centrifuge machine -->
       <div class="member-card">
-        <div class="member-img-box"><img src="images/Electrochemical workstation.png" alt="Electrochemical workstation"></div>
+        <div class="member-img-box"><img src="images/Centrifuge machine.png" alt="Centrifuge machine"></div>
+        <div class="member-info"><h4>Centrifuge Machine</h4></div>
+      </div>
+
+      <!-- 3. Microspin Mini Centrifuge -->
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/Microspin Mini Centrifuge.png" alt="Microspin Mini Centrifuge"></div>
+        <div class="member-info"><h4>Microspin Mini Centrifuge</h4></div>
+      </div>
+
+      <!-- 4. Electrochemical workstation -->
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/electrochemical workstation.png" alt="Electrochemical workstation"></div>
         <div class="member-info"><h4>Electrochemical Workstation</h4></div>
       </div>
-      <div class="member-card">
-        <div class="member-img-box"><img src="images/UV-Visible spectrophotometer.png" alt="UV-Visible spectrophotometer"></div>
-        <div class="member-info"><h4>UV-Visible Spectrophotometer</h4></div>
-      </div>
+
+      <!-- 5. CO2 Incubator -->
       <div class="member-card">
         <div class="member-img-box"><img src="images/CO2 Incubator.png" alt="CO2 Incubator"></div>
         <div class="member-info"><h4>CO2 Incubator</h4></div>
       </div>
+
+      <!-- 6. Potentmetric titrator -->
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/Potentmetric titrator.png" alt="Potentmetric titrator"></div>
+        <div class="member-info"><h4>Potentiometric Titrator</h4></div>
+      </div>
+
+      <!-- 7. Bio safety Cabinet Class II -->
       <div class="member-card">
         <div class="member-img-box"><img src="images/Bio safety Cabinet Class II.png" alt="Bio safety Cabinet Class II"></div>
         <div class="member-info"><h4>Bio Safety Cabinet Class II</h4></div>
       </div>
+
+      <!-- 8. UV-Visible spectrophotometer -->
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/UV-Visible spectrophotometer.png" alt="UV-Visible spectrophotometer"></div>
+        <div class="member-info"><h4>UV-Visible Spectrophotometer</h4></div>
+      </div>
+
+      <!-- 9. Serological Pipettes and pipettes -->
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/Serological Pipettes and pipettes.png" alt="Serological Pipettes and pipettes"></div>
+        <div class="member-info"><h4>Serological Pipettes & Pipettes</h4></div>
+      </div>
+
+      <!-- 10. Relaxometer -->
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/Relaxometer.png" alt="Relaxometer"></div>
+        <div class="member-info"><h4>Relaxometer</h4></div>
+      </div>
+
+      <!-- 11. Microwave Oven -->
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/Microwave Oven.png" alt="Microwave Oven"></div>
+        <div class="member-info"><h4>Microwave Oven</h4></div>
+      </div>
+
+      <!-- 12. Liquid Nitrogen Tank -->
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/Liquid Nitrogen Tank.png" alt="Liquid Nitrogen Tank"></div>
+        <div class="member-info"><h4>Liquid Nitrogen Tank</h4></div>
+      </div>
+
+      <!-- 13. Vertex -->
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/Vertex.png" alt="Vertex"></div>
+        <div class="member-info"><h4>Vortex / Vertex</h4></div>
+      </div>
+
+      <!-- 14. Nikon Inverted Microscope -->
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/Nikon Inverted Microscope.png" alt="Nikon Inverted Microscope"></div>
+        <div class="member-info"><h4>Nikon Inverted Microscope</h4></div>
+      </div>
+
+      <!-- 15. pH meter -->
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/pH meter.png" alt="pH meter"></div>
+        <div class="member-info"><h4>pH Meter</h4></div>
+      </div>
+
+      <!-- 16. Work station -->
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/Work station.png" alt="Work station"></div>
+        <div class="member-info"><h4>Work Station</h4></div>
+      </div>
+
+      <!-- 17. UV Chamber -->
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/UV Chamber.png" alt="UV Chamber"></div>
+        <div class="member-info"><h4>UV Chamber</h4></div>
+      </div>
+
+      <!-- 18. Vaccum pump -->
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/Vaccum pump.png" alt="Vaccum pump"></div>
+        <div class="member-info"><h4>Vacuum Pump</h4></div>
+      </div>
+
+      <!-- 19. Rotary evaporator -->
       <div class="member-card">
         <div class="member-img-box"><img src="images/Rotary evaporator.png" alt="Rotary evaporator"></div>
         <div class="member-info"><h4>Rotary Evaporator</h4></div>
       </div>
+
     </div>
   </div>
 
@@ -70,5 +331,7 @@
     <p>© 2026 RMM Group, IIT Bhilai. All Rights Reserved.</p>
     <p class="designer">Designed by Vish Technologies</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
