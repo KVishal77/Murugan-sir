@@ -29,9 +29,8 @@ body {
 .navbar {
     position: sticky;
     top: 0;
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border-color);
     z-index: 1000;
 }
@@ -64,7 +63,7 @@ body {
 
 .nav-links {
     display: flex;
-    gap: 18px;
+    gap: 15px;
     align-items: center;
 }
 
@@ -72,9 +71,9 @@ body {
     text-decoration: none;
     color: var(--text-dark);
     font-weight: 500;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     transition: all 0.2s;
-    padding: 6px 12px;
+    padding: 6px 10px;
     border-radius: 6px;
 }
 
@@ -101,9 +100,9 @@ body {
     color: var(--navy);
 }
 
-/* Page Headers & Structure */
+/* Layout Elements */
 .section {
-    padding: 70px 20px;
+    padding: 80px 20px;
 }
 
 .bg-light {
@@ -117,13 +116,13 @@ body {
 
 .section-title {
     text-align: center;
-    margin-bottom: 45px;
+    margin-bottom: 40px;
 }
 
 .section-title h2 {
-    font-size: 2.25rem;
+    font-size: 2.2rem;
     color: var(--navy);
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .section-title p {
@@ -131,17 +130,14 @@ body {
     font-size: 1.05rem;
 }
 
-/* Glassmorphism Cards */
 .glass-card {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(8px);
+    background: var(--white);
     border: 1px solid var(--border-color);
     border-radius: var(--radius);
     padding: 30px;
     box-shadow: var(--shadow);
 }
 
-/* Buttons */
 .btn {
     display: inline-block;
     padding: 12px 24px;
@@ -162,18 +158,15 @@ body {
     background: var(--teal-hover);
 }
 
-/* Footer */
 footer {
     background: #090d16;
     color: #64748b;
     text-align: center;
     padding: 25px 20px;
     font-size: 0.9rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .nav-links {
         display: none;
         flex-direction: column;
