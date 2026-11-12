@@ -1,55 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Members | RMM Research Group - IIT Bhilai</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Members - RMM Group</title>
+  <link rel="icon" href="images/fevicon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="brand"><span class="dot"></span> RMM Research Group</a>
-            <nav class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="about.html">About Me</a>
-                <a href="research.html">Research</a>
-                <a href="publications.html">Publications</a>
-                <a href="facilities.html">Facilities</a>
-                <a href="members.html" class="active">Members</a>
-                <a href="contact.html" class="nav-cta">Contact</a>
-            </nav>
-            <button class="menu-toggle" id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
-        </div>
-    </header>
+  <header>
+    <div class="nav-container">
+      <div class="logo-section">
+        <img src="images/fevicon.png" alt="RMM Group Logo">
+        <h2>RMM Group</h2>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#research">Research</a></li>
+          <li><a href="facilities.html">Facilities</a></li>
+          <li><a href="publication.html">Publication</a></li>
+          <li><a href="project.html">Project</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="members.html" class="active">Members</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="visitors.html">Visitors</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <section class="section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Research Group Members</h2>
-                <p>Faculty, researchers, and technical staff at IIT Bhilai</p>
-            </div>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
-                <div class="glass-card" style="text-align: center;">
-                    <div style="width: 70px; height: 70px; background: rgba(13, 148, 136, 0.1); color: var(--teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 auto 15px;">RM</div>
-                    <h4 style="color: var(--navy);">Dr. Ramasamy Mayilmurugan</h4>
-                    <p style="color: var(--teal); font-size: 0.9rem;">Principal Investigator</p>
-                    <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 5px;">Department of Chemistry</p>
-                </div>
-                <div class="glass-card" style="text-align: center;">
-                    <div style="width: 70px; height: 70px; background: rgba(13, 148, 136, 0.1); color: var(--teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 auto 15px;">VJ</div>
-                    <h4 style="color: var(--navy);">K Vishal Johnson</h4>
-                    <p style="color: var(--teal); font-size: 0.9rem;">Technical Assistant</p>
-                    <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 5px;">Dept. of Bioscience and Biomedical Engineering</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <div class="container">
+    <div class="section-title">
+      <div class="title-bar"></div>
+      Group Members
+    </div>
+    <p class="section-subtitle">Meet our team of researchers, scholars, and alumni working together on advanced chemical biology.</p>
 
-    <footer>
-        <p>&copy; 2026 RMM Research Group, IIT Bhilai. All rights reserved.</p>
-    </footer>
-    <script src="script.js"></script>
+    <!-- Principal Investigator -->
+    <h3 style="margin-bottom: 1rem; color: var(--secondary-color);">● Principal Investigator</h3>
+    <div class="member-grid" style="grid-template-columns: minmax(280px, 350px);">
+      <div class="member-card">
+        <div class="member-img-box">
+          <img src="images/Dr. R Mayilmurugan.png" alt="Dr. Ramasamy Mayilmurugan">
+        </div>
+        <div class="member-info">
+          <h4>Dr. Ramasamy Mayilmurugan</h4>
+          <p class="designation">Associate Professor, Department of Chemistry & BSBE</p>
+          <p class="email">murugan@iitbhilai.ac.in</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PhD Scholars, Chemistry -->
+    <h3 style="margin: 2rem 0 1rem; color: var(--primary-color);">● PhD Scholars (Chemistry)</h3>
+    <div class="member-grid">
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/Suraj Ram.png" alt="Suraj Ram"></div>
+        <div class="member-info">
+          <h4>Suraj Ram</h4>
+          <p class="designation">PhD Scholar</p>
+          <p class="email">surajr@iitbhilai.ac.in</p>
+        </div>
+      </div>
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/Saurabh Mishra.png" alt="Saurabh Mishra"></div>
+        <div class="member-info">
+          <h4>Saurabh Mishra</h4>
+          <p class="designation">PhD Scholar</p>
+          <p class="email">saurabhm@iitbhilai.ac.in</p>
+        </div>
+      </div>
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/Ashish Kumar Samal.png" alt="Ashish Kumar Samal"></div>
+        <div class="member-info">
+          <h4>Ashish Kumar Samal</h4>
+          <p class="designation">PhD Scholar</p>
+          <p class="email">ashishks@iitbhilai.ac.in</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PhD Scholars, BSBE -->
+    <h3 style="margin: 2rem 0 1rem; color: var(--accent-pink);">● PhD Scholars (Bioscience & Biomedical Engineering)</h3>
+    <div class="member-grid">
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/Ashutosh Sahoo.png" alt="Ashutosh Sahoo"></div>
+        <div class="member-info">
+          <h4>Ashutosh Sahoo</h4>
+          <p class="designation">PhD Scholar</p>
+          <p class="email">ashutoshso@iitbhilai.ac.in</p>
+        </div>
+      </div>
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/Umashankar Gayakwad.png" alt="UmaShankar Gayakward"></div>
+        <div class="member-info">
+          <h4>UmaShankar Gayakward</h4>
+          <p class="designation">PhD Scholar</p>
+          <p class="email">ushankar@iitbhilai.ac.in</p>
+        </div>
+      </div>
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/Parag Bashichandra.png" alt="Parag Bashichandra"></div>
+        <div class="member-info">
+          <h4>Parag Bashichandra</h4>
+          <p class="designation">PhD Scholar</p>
+          <p class="email">paragb@iitbhilai.ac.in</p>
+        </div>
+      </div>
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/Debabrata Behera.png" alt="Debabrata Behera"></div>
+        <div class="member-info">
+          <h4>Debabrata Behera</h4>
+          <p class="designation">PhD Scholar</p>
+          <p class="email">debabratab@iitbhilai.ac.in</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Staff -->
+    <h3 style="margin: 2rem 0 1rem; color: var(--primary-color);">● Project Staff</h3>
+    <div class="member-grid">
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/Prince Christofer F.png" alt="Prince Christofer F"></div>
+        <div class="member-info">
+          <h4>Prince Christofer F</h4>
+          <p class="designation">Junior Research Fellow</p>
+          <p class="email">princec@iitbhilai.ac.in</p>
+        </div>
+      </div>
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/A. Sanjay.png" alt="A. Sanjay"></div>
+        <div class="member-info">
+          <h4>A. Sanjay</h4>
+          <p class="designation">Project Assistant</p>
+          <p class="email">sanjaya@iitbhilai.ac.in</p>
+        </div>
+      </div>
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/Tharik Anwar A.png" alt="Tharik Anwar A"></div>
+        <div class="member-info">
+          <h4>Tharik Anwar A</h4>
+          <p class="designation">Project Associate</p>
+          <p class="email">tharik@iitbhilai.ac.in</p>
+        </div>
+      </div>
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/K Vishal Johnson.png" alt="K Vishal Johnson"></div>
+        <div class="member-info">
+          <h4>K Vishal Johnson</h4>
+          <p class="designation">Software Engineer</p>
+          <p class="email">Kvishal@iitbhilai.ac.in</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 RMM Group, IIT Bhilai. All Rights Reserved.</p>
+    <p class="designer">Designed by Vish Technologies</p>
+  </footer>
 </body>
 </html>
