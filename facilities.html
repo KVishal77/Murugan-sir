@@ -7,60 +7,19 @@
   <link rel="icon" href="images/fevicon.png" type="image/png">
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Dark Theme & Background Chemistry Animation */
+    /* Simple & Clean Dark Theme Background */
     body {
-      background-color: #060c1b;
-      background-image: 
-        radial-gradient(rgba(56, 189, 248, 0.08) 1.5px, transparent 1.5px),
-        linear-gradient(to bottom, #060c1b 0%, #0a1329 100%);
-      background-size: 36px 36px, 100% 100%;
-      position: relative;
-      overflow-x: hidden;
+      background-color: #0b1120;
       color: #f8fafc;
-    }
-    
-    .bg-canvas-container {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      pointer-events: none;
-      overflow: hidden;
-    }
-
-    .floating-atom-node {
-      position: absolute;
-      width: 90px;
-      height: 90px;
-      border: 1px dashed rgba(56, 189, 248, 0.3);
-      border-radius: 50%;
-      animation: rotateAtom 18s infinite linear;
-      opacity: 0.6;
-    }
-
-    .electron {
-      position: absolute;
-      top: -4px;
-      left: 50%;
-      width: 7px;
-      height: 7px;
-      background-color: #38bdf8;
-      border-radius: 50%;
-      box-shadow: 0 0 10px #38bdf8, 0 0 18px #38bdf8;
-    }
-
-    @keyframes rotateAtom {
-      0% { transform: rotate(0deg) scale(1); }
-      50% { transform: rotate(180deg) scale(1.1); }
-      100% { transform: rotate(360deg) scale(1); }
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
     }
 
     /* Container Spacing */
     .container {
       max-width: 1250px !important;
-      margin: 2rem auto !important;
+      margin: 2.5rem auto !important;
       padding: 0 2rem !important;
     }
 
@@ -68,7 +27,7 @@
     .member-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr) !important;
-      gap: 1.8rem;
+      gap: 2rem;
       margin-bottom: 3rem;
       align-items: stretch;
     }
@@ -85,13 +44,13 @@
       }
     }
 
-    /* Equipment Card Styling */
+    /* Clean Equipment Card Styling (No Heavy Borders, Only Image & Text Highlight) */
     .member-card {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
+      background: #111827;
+      border: none;
       border-radius: 12px;
       padding: 1.2rem;
-      box-shadow: 0 4px 18px rgba(0,0,0,0.25);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -100,7 +59,7 @@
 
     .member-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(56, 189, 248, 0.3);
+      box-shadow: 0 8px 25px rgba(56, 189, 248, 0.2);
     }
 
     .member-img-box {
@@ -111,70 +70,32 @@
       justify-content: center;
       overflow: hidden;
       border-radius: 8px;
-      background: #f1f5f9;
+      background: #1f2937;
       margin-bottom: 1rem;
+      padding: 0.5rem;
     }
 
     .member-img-box img {
       max-width: 100%;
       max-height: 100%;
       object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+
+    .member-card:hover .member-img-box img {
+      transform: scale(1.05);
     }
 
     .member-info h4 {
-      color: #1e293b;
+      color: #38bdf8;
       font-size: 1.05rem;
-      font-weight: 700;
+      font-weight: 600;
       text-align: center;
       margin: 0;
     }
   </style>
 </head>
 <body>
-
-  <!-- Background Chemistry Elements Animation -->
-  <div class="bg-canvas-container">
-    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="dnaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stop-color="#ec4899" />
-          <stop offset="50%" stop-color="#a855f7" />
-          <stop offset="100%" stop-color="#3b82f6" />
-        </linearGradient>
-        <linearGradient id="fusionGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#f59e0b" />
-          <stop offset="100%" stop-color="#ef4444" />
-        </linearGradient>
-      </defs>
-
-      <!-- DNA Strand Left -->
-      <g opacity="0.4" transform="translate(20, 0)">
-        <path d="M 10,0 Q 80,150 10,300 T 10,600 T 10,900 T 10,1200" fill="none" stroke="url(#dnaGrad)" stroke-width="3" />
-        <path d="M 80,0 Q 10,150 80,300 T 80,600 T 80,900 T 80,1200" fill="none" stroke="url(#dnaGrad)" stroke-width="3" />
-      </g>
-
-      <!-- Benzene Rings & Elements -->
-      <g opacity="0.35" transform="translate(750, 90)">
-        <polygon points="0,-35 30,-18 30,18 0,35 -30,18 -30,-18" fill="none" stroke="#38bdf8" stroke-width="2" />
-        <text x="-10" y="5" fill="#38bdf8" font-size="15" font-weight="bold">C</text>
-      </g>
-      <g opacity="0.35" transform="translate(920, 450)">
-        <polygon points="0,-40 35,-20 35,20 0,40 -35,20 -35,-20" fill="none" stroke="#f59e0b" stroke-width="2" />
-        <text x="-9" y="5" fill="#f59e0b" font-size="14" font-weight="bold">Fe</text>
-      </g>
-    </svg>
-
-    <!-- Orbiting Electrons Background -->
-    <div class="floating-atom-node" style="top: 15%; left: 80%;">
-      <div class="electron"></div>
-    </div>
-    <div class="floating-atom-node" style="top: 60%; left: 88%; animation-duration: 15s;">
-      <div class="electron" style="background-color: #ec4899; box-shadow: 0 0 10px #ec4899;"></div>
-    </div>
-    <div class="floating-atom-node" style="top: 75%; left: 10%; animation-duration: 22s;">
-      <div class="electron" style="background-color: #10b981; box-shadow: 0 0 10px #10b981;"></div>
-    </div>
-  </div>
 
   <!-- Header & Navigation -->
   <header>
@@ -207,7 +128,7 @@
     </div>
     <p class="section-subtitle" style="color: #cbd5e1; margin-bottom: 2rem;">The Group strongly believes that state-of-the-art research facilities are essential to carry out quality research work.</p>
 
-    <!-- 4 Items Per Row Grid containing all items from IK.png -->
+    <!-- 4 Items Per Row Grid containing all items -->
     <div class="member-grid">
       
       <!-- 1. Invitrogen Automated Cell Counter -->
