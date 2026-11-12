@@ -1,76 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bioinorganic Chemistry & Chemical Biology Lab | IIT Bhilai</title>
-  <link rel="icon" href="images/fevicon.png" type="image/png">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | RMM Research Group - IIT Bhilai</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <canvas id="molecule-canvas"></canvas>
-
-  <!-- Creative Header -->
-  <header class="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="brand">
-        <img src="images/site logo.png" alt="RMM Lab Logo" class="site-logo" onerror="this.style.display='none'">
-        <span class="brand-title">RMM Research Group</span>
-      </a>
-      <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
-      <nav class="nav-links">
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About</a>
-        <a href="research.html">Research</a>
-        <a href="publications.html">Publications</a>
-        <a href="projects.html">Projects</a>
-        <a href="members.html">Members</a>
-        <a href="facilities.html">Facilities</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-    <section class="hero-section glass-card animate-up">
-      <div class="hero-grid">
-        <div class="hero-img-box">
-          <img src="images/sir1.png" alt="Dr. Ramasamy Mayilmurugan" class="pi-hero-image" onerror="this.style.display='none'">
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand"><span class="dot"></span> RMM Research Group</a>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About Me</a>
+                <a href="research.html">Research</a>
+                <a href="publications.html">Publications</a>
+                <a href="facilities.html">Facilities</a>
+                <a href="members.html">Members</a>
+                <a href="contact.html" class="nav-cta">Contact</a>
+            </nav>
+            <button class="menu-toggle" id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
         </div>
-        <div class="hero-text">
-          <span class="badge">Principal Investigator</span>
-          <h1 class="animated-heading">Dr. Ramasamy Mayilmurugan</h1>
-          <h3>Associate Professor</h3>
-          <p>Department of Chemistry & Department of Bioscience and Biomedical Engineering<br><strong>Indian Institute of Technology (IIT) Bhilai</strong>[cite: 1, 2]</p>
-          <div class="hero-contact-info">
-            <p><i class="fas fa-envelope"></i> murugan@iitbhilai.ac.in</p>
-          </div>
-          <div class="btn-group">
-            <a href="about.html" class="btn btn-primary">Read Full Profile</a>
-            <a href="research.html" class="btn btn-outline">Explore Research</a>
-          </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="section" style="background: var(--navy); color: white; min-height: 80vh; display: flex; align-items: center;">
+        <div class="container" style="text-align: center;">
+            <div style="background: rgba(13, 148, 136, 0.2); color: #2dd4bf; display: inline-block; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 20px;">
+                Department of Bioscience & Biomedical Engineering • IIT Bhilai
+            </div>
+            <h1 style="font-size: 3rem; margin-bottom: 20px; line-height: 1.2;">Bioinorganic Chemistry & Chemical Biology Lab</h1>
+            <p style="font-size: 1.15rem; color: #94a3b8; max-width: 750px; margin: 0 auto 30px;">
+                We design redox-activated smart transition metal complexes and molecular probes for targeted biomedical applications and diagnostics.
+            </p>
+            <div style="display: flex; gap: 15px; justify-content: center;">
+                <a href="research.html" class="btn primary">Explore Research</a>
+                <a href="about.html" class="btn" style="border: 1px solid rgba(255,255,255,0.3); color: white;">PI Profile</a>
+            </div>
         </div>
-      </div>
     </section>
 
-    <section class="intro-grid">
-      <div class="glass-card info-card animate-up" style="animation-delay: 0.2s;">
-        <i class="fas fa-flask card-icon"></i>
-        <h2>Bioinorganic Chemistry</h2>
-        <p>Designing biomimetic models for enzyme active sites, C-H bond activation, oxygen activation, atmospheric CO₂ fixation, and smart MRI contrast probes.</p>
-      </div>
-      <div class="glass-card info-card animate-up" style="animation-delay: 0.4s;">
-        <i class="fas fa-dna card-icon"></i>
-        <h2>Chemical Biology</h2>
-        <p>Advancing targeted nanomedicine for precision oncology, molecular mechanisms of ferroptosis, and image-guided cancer theranostics.</p>
-      </div>
+    <!-- Brief PI Highlight -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="glass-card" style="display: grid; grid-template-columns: 1fr 2fr; gap: 30px; align-items: center;">
+                <div style="text-align: center;">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Dr. Ramasamy Mayilmurugan" style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover;">
+                </div>
+                <div>
+                    <h3 style="color: var(--navy); font-size: 1.5rem;">Dr. Ramasamy Mayilmurugan</h3>
+                    <p style="color: var(--teal); font-weight: 600;">Associate Professor & Lab Head</p>
+                    <p style="color: var(--text-muted); margin: 10px 0 15px;">Department of Chemistry, IIT Bhilai</p>
+                    <a href="about.html" style="color: var(--teal); text-decoration: none; font-weight: 600;">Read Full Biography & Awards →</a>
+                </div>
+            </div>
+        </div>
     </section>
-  </main>
 
-  <footer class="footer">
-    <p>&copy; 2026 Bioinorganic Chemistry and Chemical Biology Laboratory, IIT Bhilai. All Rights Reserved.</p>
-  </footer>
-  <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2026 RMM Research Group, IIT Bhilai. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
