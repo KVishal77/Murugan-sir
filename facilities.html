@@ -1,72 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facilities | RMM Research Group - IIT Bhilai</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facilities - RMM Group</title>
+  <link rel="icon" href="images/fevicon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header>
+    <div class="nav-container">
+      <div class="logo-section">
+        <img src="images/fevicon.png" alt="RMM Group Logo">
+        <h2>RMM Group</h2>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#research">Research</a></li>
+          <li><a href="facilities.html" class="active">Facilities</a></li>
+          <li><a href="publication.html">Publication</a></li>
+          <li><a href="project.html">Project</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="members.html">Members</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="visitors.html">Visitors</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <header class="header">
-        <div class="top-bar">
-            <div class="container flex-between">
-                <div class="institution-branding">
-                    <span>Department of Chemistry & BioScience and Biomedical Engineering</span>
-                    <span class="divider">|</span>
-                    <span>IIT Bhilai</span>
-                </div>
-                <div class="top-contact">
-                    <a href="mailto:murugan@iitbhilai.ac.in"><i class="fa-solid fa-envelope"></i> murugan@iitbhilai.ac.in</a>
-                </div>
-            </div>
-        </div>
-        
-        <nav class="navbar">
-            <div class="container flex-between">
-                <a href="index.html" class="brand-logo">
-                    <span class="logo-highlight">RMM</span> Research Group
-                </a>
-                
-                <button class="mobile-menu-btn" aria-label="Toggle navigation">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
+  <div class="container">
+    <div class="section-title">
+      <div class="title-bar"></div>
+      Facilities
+    </div>
+    <p class="section-subtitle">The Group strongly believes that state-of-the-art research facilities are essential to carry out quality research work.</p>
 
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About PI</a></li>
-                    <li><a href="research.html">Research</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="publications.html">Publications</a></li>
-                    <li><a href="facilities.html" class="active">Facilities</a></li>
-                    <li><a href="members.html">Members</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact.html" class="nav-cta">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <div class="member-grid">
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/Relaxometer.png" alt="Relaxometer"></div>
+        <div class="member-info"><h4>Relaxometer</h4></div>
+      </div>
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/Electrochemical workstation.png" alt="Electrochemical workstation"></div>
+        <div class="member-info"><h4>Electrochemical Workstation</h4></div>
+      </div>
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/UV-Visible spectrophotometer.png" alt="UV-Visible spectrophotometer"></div>
+        <div class="member-info"><h4>UV-Visible Spectrophotometer</h4></div>
+      </div>
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/CO2 Incubator.png" alt="CO2 Incubator"></div>
+        <div class="member-info"><h4>CO2 Incubator</h4></div>
+      </div>
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/Bio safety Cabinet Class II.png" alt="Bio safety Cabinet Class II"></div>
+        <div class="member-info"><h4>Bio Safety Cabinet Class II</h4></div>
+      </div>
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/Rotary evaporator.png" alt="Rotary evaporator"></div>
+        <div class="member-info"><h4>Rotary Evaporator</h4></div>
+      </div>
+    </div>
+  </div>
 
-    <section class="section bg-light">
-        <div class="container">
-            <div class="section-title">
-                <h2>Laboratory Facilities</h2>
-                <p>Advanced instrumentation supporting chemical synthesis and characterization</p>
-            </div>
-            <div class="facilities-grid">
-                <div class="facility-item">
-                    <i class="fa-solid fa-microscope"></i>
-                    <h3>Advanced Synthesis & Characterization</h3>
-                    <p>State-of-the-art Schlenk line setups, gloveboxes, and spectroscopic instrumentation for air-sensitive bioinorganic coordination chemistry.</p>
-                </div>
-                <div class="facility-item">
-                    <i class="fa-solid fa-computer"></i>
-                    <h3>Computational & Spectroscopic Tools</h3>
-                    <p>Integration with central instrumental facilities at IIT Bhilai including NMR, UV-Vis-NIR, Fluorescence spectrometers, and Mass spectrometry.</p>
-                </div>
-            </div>
-        </div>
+  <footer>
+    <p>© 2026 RMM Group, IIT Bhilai. All Rights Reserved.</p>
+    <p class="designer">Designed by Vish Technologies</p>
+  </footer>
+</body>
+</html>
