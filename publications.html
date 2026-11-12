@@ -5,67 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publications | RMM Research Group - IIT Bhilai</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .filter-bar { display: flex; gap: 10px; justify-content: center; margin-bottom: 30px; }
-        .filter-btn { padding: 8px 18px; border: 1px solid var(--border-color); background: white; border-radius: 20px; cursor: pointer; font-weight: 500; }
-        .filter-btn.active { background: var(--teal); color: white; border-color: var(--teal); }
-        .pub-item { display: flex; gap: 20px; align-items: center; margin-bottom: 15px; }
-    </style>
 </head>
 <body>
-    <header class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="brand"><span class="dot"></span> RMM Research Group</a>
-            <nav class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="about.html">About Me</a>
-                <a href="research.html">Research</a>
-                <a href="publications.html" class="active">Publications</a>
-                <a href="facilities.html">Facilities</a>
-                <a href="members.html">Members</a>
-                <a href="contact.html" class="nav-cta">Contact</a>
-            </nav>
-            <button class="menu-toggle" id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+
+    <header class="header">
+        <div class="top-bar">
+            <div class="container flex-between">
+                <div class="institution-branding">
+                    <span>Department of Chemistry & BioScience and Biomedical Engineering</span>
+                    <span class="divider">|</span>
+                    <span>IIT Bhilai</span>
+                </div>
+                <div class="top-contact">
+                    <a href="mailto:murugan@iitbhilai.ac.in"><i class="fa-solid fa-envelope"></i> murugan@iitbhilai.ac.in</a>
+                </div>
+            </div>
         </div>
+        
+        <nav class="navbar">
+            <div class="container flex-between">
+                <a href="index.html" class="brand-logo">
+                    <span class="logo-highlight">RMM</span> Research Group
+                </a>
+                
+                <button class="mobile-menu-btn" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About PI</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="publications.html" class="active">Publications</a></li>
+                    <li><a href="facilities.html">Facilities</a></li>
+                    <li><a href="members.html">Members</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html" class="nav-cta">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
 
     <section class="section">
         <div class="container">
             <div class="section-title">
-                <h2>Publications</h2>
-                <p>Year-wise publication list with interactive filter bar</p>
+                <h2>Selected Publications</h2>
+                <p>Peer-reviewed contributions in leading international journals</p>
             </div>
-
-            <!-- Filter Bar -->
-            <div class="filter-bar">
-                <button class="filter-btn active" data-year="all">All</button>
-                <button class="filter-btn" data-year="2026">2026</button>
-                <button class="filter-btn" data-year="2025">2025</button>
-            </div>
-
-            <div id="pub-container">
-                <div class="glass-card pub-item" data-year="2026">
-                    <span style="background: var(--navy); color: white; padding: 6px 12px; border-radius: 6px; font-weight: bold;">2026</span>
-                    <div>
-                        <h4 style="color: var(--navy);">Redox-Activated Smart Manganese-Based Contrast Agents</h4>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">RMM Research Group • <em>Inorganic Chemistry</em></p>
-                    </div>
-                </div>
-                <div class="glass-card pub-item" data-year="2025">
-                    <span style="background: var(--navy); color: white; padding: 6px 12px; border-radius: 6px; font-weight: bold;">2025</span>
-                    <div>
-                        <h4 style="color: var(--navy);">Targeted Metallodrugs and Biological Probes</h4>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">RMM Research Group • <em>Dalton Transactions</em></p>
-                    </div>
-                </div>
+            <div class="pub-placeholder-card">
+                <p><i class="fa-solid fa-book-open-reader"></i> Comprehensive publication listings and citation metrics are continually updated via Google Scholar and ORCID profiles.</p>
+                <a href="https://scholar.google.co.in/citations?user=-9ywDWAAAAAJ&hl=en" target="_blank" class="btn btn-primary">View Full Publication List on Google Scholar</a>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 RMM Research Group, IIT Bhilai. All rights reserved.</p>
+    <footer class="footer">
+        <div class="container flex-between">
+            <p>&copy; 2026 RMM Research Group, IIT Bhilai. All Rights Reserved.</p>
+            <p>Designed with precision for academic excellence.</p>
+        </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
