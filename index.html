@@ -7,9 +7,9 @@
   <link rel="icon" href="images/fevicon.png" type="image/png">
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Chemistry Animated Background Style */
+    /* Unique Chemistry & Bioinorganic Animated Background */
     body {
-      background-color: #0f172a;
+      background-color: #070b19;
       background-image: none;
       position: relative;
       overflow-x: hidden;
@@ -24,33 +24,41 @@
       height: 100%;
       z-index: -1;
       pointer-events: none;
-      opacity: 0.25;
-      background: radial-gradient(circle at 50% 50%, #1e293b 0%, #0f172a 100%);
+      overflow: hidden;
+      background: radial-gradient(circle at 50% 50%, #0f172a 0%, #070b19 100%);
     }
 
-    .floating-atom {
+    /* Floating Atoms, Periodic Elements, & Keywords */
+    .floating-node {
       position: absolute;
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 6px 12px;
       color: #38bdf8;
-      font-weight: bold;
+      font-weight: 700;
       font-size: 0.85rem;
-      border: 1px solid rgba(56, 189, 248, 0.4);
-      border-radius: 50%;
-      animation: floatAround 18s infinite linear;
-      box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 20px;
+      animation: floatNode 20s infinite linear;
+      box-shadow: 0 0 15px rgba(56, 189, 248, 0.15);
+      backdrop-filter: blur(2px);
+      white-space: nowrap;
     }
 
-    @keyframes floatAround {
+    @keyframes floatNode {
       0% {
-        transform: translate(0, 0) rotate(0deg);
+        transform: translate(0, 0) rotate(0deg) scale(1);
       }
-      50% {
-        transform: translate(60px, 80px) rotate(180deg);
+      33% {
+        transform: translate(80px, -100px) rotate(120deg) scale(1.05);
+      }
+      66% {
+        transform: translate(-50px, -180px) rotate(240deg) scale(0.95);
       }
       100% {
-        transform: translate(0, 0) rotate(360deg);
+        transform: translate(0, 0) rotate(360deg) scale(1);
       }
     }
 
@@ -61,7 +69,7 @@
       padding: 0 2rem !important;
     }
 
-    /* Transparent Hero Box (No White Background) */
+    /* Transparent Hero Box */
     .hero-box {
       background: transparent !important;
       padding: 1.5rem 0;
@@ -76,11 +84,11 @@
       color: #cbd5e1 !important;
     }
 
-    /* PI Profile Box: Original Previous Size + Transparent */
+    /* PI Profile Box: Original Size + Transparent */
     .pi-box {
-      background: rgba(15, 23, 42, 0.65) !important;
+      background: rgba(15, 23, 42, 0.75) !important;
       border: 1px solid rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(8px);
+      backdrop-filter: blur(10px);
       color: #f8fafc !important;
       padding: 2.5rem;
       border-radius: 12px;
@@ -89,7 +97,7 @@
       align-items: flex-start;
       flex-wrap: wrap;
       margin-bottom: 3.5rem;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.3) !important;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.4) !important;
     }
     .pi-box h3 {
       color: #38bdf8 !important;
@@ -112,7 +120,7 @@
       color: #1e293b;
       padding: 1.5rem 1.6rem;
       border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
@@ -139,7 +147,7 @@
 </head>
 <body>
 
-  <!-- Chemistry Background Animation Container -->
+  <!-- Unique Chemistry & Bioinorganic Background Animation Container -->
   <div class="chem-bg-animation" id="chemBg"></div>
 
   <!-- Header & Navigation -->
@@ -167,16 +175,16 @@
   </header>
 
   <div class="container">
-    <!-- Section 1: Hero Welcome (Transparent) -->
+    <!-- Section 1: Hero Welcome -->
     <div class="hero-box">
       <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">Welcome to the RMM Group!</h1>
       <p style="font-size: 1.2rem; font-weight: 600;">Department of Chemistry, BioScience & Biomedical Engineering IIT Bhilai</p>
     </div>
 
-    <!-- Section 2: PI Profile (Original Size Restored & Transparent) -->
+    <!-- Section 2: PI Profile -->
     <div class="pi-box">
       <div style="flex: 1; min-width: 260px; text-align: center;">
-        <img src="images/Dr. R Mayilmurugan.png" alt="Dr. Ramasamy Mayilmurugan" style="width: 100%; max-width: 280px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.4);">
+        <img src="images/Dr. R Mayilmurugan.png" alt="Dr. Ramasamy Mayilmurugan" style="width: 100%; max-width: 280px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
         <h3 style="margin-top: 1rem;">Dr. Ramasamy Mayilmurugan</h3>
         <p style="color: #94a3b8 !important; font-weight: 600;">Associate Professor</p>
         <p style="color: #94a3b8 !important; font-size: 0.9rem;">Department of Chemistry, IIT Bhilai</p>
@@ -251,25 +259,28 @@
 
   <script src="script.js"></script>
   <script>
-    // Generate Floating Chemistry Elements dynamically
+    // Dynamic Chemistry Keyword & Periodic Elements Background Nodes
     const chemBg = document.getElementById('chemBg');
-    const elements = ['Fe', 'Cu', 'Ni', 'O₂', 'CO₂', 'H₂O', 'MRI', '🧬', '⚛️', '⚗️', 'Zn', 'Mn'];
+    const keywordNodes = [
+      'Metal Complexes', 'Bioinorganic', 'Optical Probes', 'Catalysts', 
+      'Coordination', 'MRI', 'DNA', 'Bioscience', 'Atoms (Fe, Cu, Ni)', 
+      'Bonds ⚛️', 'Periodic Table', 'O₂ Activation', 'CO₂ Fixation', 'Nanomedicine'
+    ];
     
-    for (let i = 0; i < 20; i++) {
-      const el = document.createElement('div');
-      el.classList.add('floating-atom');
-      el.innerText = elements[Math.floor(Math.random() * elements.length)];
+    for (let i = 0; i < 22; i++) {
+      const node = document.createElement('div');
+      node.classList.add('floating-node');
+      node.innerText = keywordNodes[Math.floor(Math.random() * keywordNodes.length)];
       
-      const size = Math.floor(Math.random() * 30) + 35;
-      el.style.width = `${size}px`;
-      el.style.height = `${size}px`;
-      el.style.left = `${Math.random() * 100}%`;
-      el.style.top = `${Math.random() * 100}%`;
+      // Random positioning across viewport
+      node.style.left = `${Math.random() * 90}%`;
+      node.style.top = `${Math.random() * 90}%`;
       
-      el.style.animationDuration = `${Math.random() * 15 + 10}s`;
-      el.style.animationDelay = `${Math.random() * 5}s`;
+      // Animation timing variations for organic floating effect
+      node.style.animationDuration = `${Math.random() * 15 + 15}s`;
+      node.style.animationDelay = `${Math.random() * 5}s`;
       
-      chemBg.appendChild(el);
+      chemBg.appendChild(node);
     }
   </script>
 </body>
