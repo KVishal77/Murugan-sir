@@ -7,29 +7,45 @@
   <link rel="icon" href="images/fevicon.png" type="image/png">
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Complete Image Box Layout matching your requirement */
+    /* Enhanced Card Design with Left Accent Glow & Balanced Images */
+    .member-card {
+      position: relative;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+      border-left: 5px solid #38bdf8; /* Sleek left side design accent */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .member-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(56, 189, 248, 0.35);
+      border-left-color: #0284c7;
+    }
+
     .member-img-box {
       width: 100%;
-      height: 340px;
+      height: 280px; /* Balanced height for standard members */
       border-radius: 8px !important;
       overflow: hidden;
       margin-bottom: 1.2rem;
-      border: none !important;
       background: #f8fafc;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
+    /* Slightly optimized size for PI image box */
+    .pi-card .member-img-box {
+      height: 310px; 
+    }
+
     .member-img-box img {
       width: 100%;
       height: 100%;
-      object-fit: cover; /* Shows complete image properly framed */
+      object-fit: cover;
       object-position: center top;
-    }
-
-    .pi-card .member-img-box {
-      height: 380px;
     }
 
     .member-info .qualification {
