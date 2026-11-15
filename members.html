@@ -22,18 +22,12 @@
     }
 
     /* Category-matched Top Accent Borders */
-    .pi-section .member-card {
-      border-top: 3px solid var(--secondary-color, #0284c7);
-    }
-    .chem-section .member-card {
-      border-top: 3px solid var(--primary-color, #2563eb);
-    }
-    .bsbe-section .member-card {
-      border-top: 3px solid var(--accent-pink, #db2777);
-    }
-    .staff-section .member-card {
-      border-top: 3px solid var(--primary-color, #2563eb);
-    }
+    .pi-section .member-card { border-top: 3px solid #0284c7; }
+    .chem-section .member-card { border-top: 3px solid #2563eb; }
+    .bsbe-section .member-card { border-top: 3px solid #db2777; }
+    .mtech-section .member-card { border-top: 3px solid #0d9488; }
+    .staff-section .member-card { border-top: 3px solid #2563eb; }
+    .alumni-section .member-card { border-top: 3px solid #64748b; }
 
     .member-card:hover {
       transform: translateY(-4px);
@@ -150,7 +144,7 @@
 
     <!-- Principal Investigator -->
     <div class="pi-section">
-      <h3 style="margin-bottom: 1rem; color: var(--secondary-color);">● Principal Investigator</h3>
+      <h3 style="margin-bottom: 1rem; color: #0284c7;">● Principal Investigator</h3>
       <div class="member-grid pi-card" style="grid-template-columns: minmax(280px, 340px);">
         <div class="member-card">
           <div class="member-img-box">
@@ -169,7 +163,7 @@
 
     <!-- PhD Scholars, Chemistry -->
     <div class="chem-section">
-      <h3 style="margin: 2rem 0 1rem; color: var(--primary-color);">● PhD Scholars (Chemistry)</h3>
+      <h3 style="margin: 2rem 0 1rem; color: #2563eb;">● PhD Scholars (Chemistry)</h3>
       <div class="member-grid">
         <div class="member-card">
           <div class="member-img-box"><img src="images/Suraj Ram.png" alt="Suraj Ram"></div>
@@ -206,7 +200,7 @@
 
     <!-- PhD Scholars, BSBE -->
     <div class="bsbe-section">
-      <h3 style="margin: 2rem 0 1rem; color: var(--accent-pink);">● PhD Scholars (Bioscience & Biomedical Engineering)</h3>
+      <h3 style="margin: 2rem 0 1rem; color: #db2777;">● PhD Scholars (Bioscience & Biomedical Engineering)</h3>
       <div class="member-grid">
         <div class="member-card">
           <div class="member-img-box"><img src="images/Ashutosh Sahoo.png" alt="Ashutosh Sahoo"></div>
@@ -251,9 +245,34 @@
       </div>
     </div>
 
+    <!-- M.Tech Students -->
+    <div class="mtech-section">
+      <h3 style="margin: 2rem 0 1rem; color: #0d9488;">● M.Tech Students</h3>
+      <div class="member-grid">
+        <div class="member-card">
+          <div class="member-img-box"><img src="images/Pushkar Chaudhari.png" alt="Pushkar Chaudhari" onerror="this.src='images/fevicon.png'"></div>
+          <div class="member-info">
+            <h4>Pushkar Chaudhari</h4>
+            <p class="designation">M.Tech Bioengineering Student</p>
+            <p class="qualification">B.Pharm, R C Patel Institute of Pharmaceutical Education and Research, Shirpur</p>
+            <p class="research-interest"><b>Department:</b> Bioscience and Biomedical Engineering, IIT Bhilai</p>
+          </div>
+        </div>
+        <div class="member-card">
+          <div class="member-img-box"><img src="images/Thanuja Kaisarla.png" alt="Thanuja Kaisarla" onerror="this.src='images/fevicon.png'"></div>
+          <div class="member-info">
+            <h4>Thanuja Kaisarla</h4>
+            <p class="designation">M.Tech Biomedical Devices Student</p>
+            <p class="qualification">B.Pharm, Adikavi Nannaya University College of Pharmaceutical Sciences</p>
+            <p class="research-interest"><b>Department:</b> Bioscience and Biomedical Engineering, IIT Bhilai</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Project Staff -->
     <div class="staff-section">
-      <h3 style="margin: 2rem 0 1rem; color: var(--primary-color);">● Project Staff</h3>
+      <h3 style="margin: 2rem 0 1rem; color: #2563eb;">● Project Staff</h3>
       <div class="member-grid">
         <div class="member-card">
           <div class="member-img-box"><img src="images/Prince Christofer F.png" alt="Prince Christofer F"></div>
@@ -293,6 +312,69 @@
             <p class="qualification">B.Tech / BCA (Vish Technologies)</p>
             <p class="research-interest"><b>Role:</b> Web Development & Group Portal Maintenance</p>
             <p class="email">Kvishal@iitbhilai.ac.in</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Alumni -->
+    <div class="alumni-section">
+      <h3 style="margin: 2rem 0 1rem; color: #64748b;">● Alumni</h3>
+      <div class="member-grid">
+        <div class="member-card">
+          <div class="member-img-box"><img src="images/Suchismita Mallick.png" alt="Suchismita Mallick" onerror="this.src='images/fevicon.png'"></div>
+          <div class="member-info">
+            <h4>Suchismita Mallick</h4>
+            <p class="designation">M.Tech Bioengineering Student</p>
+            <p class="qualification">B.Pharm, College of Pharmaceutical Sciences, Berhampur</p>
+            <p class="research-interest"><b>Department:</b> Bioscience and Biomedical Engineering, IIT Bhilai</p>
+          </div>
+        </div>
+        <div class="member-card">
+          <div class="member-img-box"><img src="images/Abhishek Kumar.png" alt="Abhishek Kumar" onerror="this.src='images/fevicon.png'"></div>
+          <div class="member-info">
+            <h4>Abhishek Kumar</h4>
+            <p class="designation">M.Tech Bioengineering Student</p>
+            <p class="qualification">B.Tech Biotechnology, Shoolini University</p>
+            <p class="research-interest"><b>Research Interest:</b> Developing biomarkers for early detection of breast cancer</p>
+            <p class="email" style="color: #0284c7; font-weight: 600;">Now at: PhD student, University of Toronto, Canada</p>
+          </div>
+        </div>
+        <div class="member-card">
+          <div class="member-img-box"><img src="images/Satyaki Pahari.png" alt="Satyaki Pahari" onerror="this.src='images/fevicon.png'"></div>
+          <div class="member-info">
+            <h4>Satyaki Pahari</h4>
+            <p class="designation">M.Tech Bioengineering Student</p>
+            <p class="qualification">B.Tech Biotechnology, Haldia Institute of Technology</p>
+            <p class="research-interest"><b>Research Interest:</b> Cancer biology</p>
+            <p class="email" style="color: #0284c7; font-weight: 600;">Now at: PhD student, IIT Kharagpur, West Bengal</p>
+          </div>
+        </div>
+        <div class="member-card">
+          <div class="member-img-box"><img src="images/Reshma Sao.png" alt="Dr. Reshma Sao" onerror="this.src='images/fevicon.png'"></div>
+          <div class="member-info">
+            <h4>Dr. Reshma Sao</h4>
+            <p class="designation">Research Associate (Project)</p>
+            <p class="qualification">M.Sc. and Ph.D. Life Sciences, JNU, New Delhi</p>
+            <p class="research-interest"><b>Research Interest:</b> Molecular and cellular biology, cancer biology</p>
+          </div>
+        </div>
+        <div class="member-card">
+          <div class="member-img-box"><img src="images/Kaushal Kumar.png" alt="Kaushal Kumar" onerror="this.src='images/fevicon.png'"></div>
+          <div class="member-info">
+            <h4>Kaushal Kumar</h4>
+            <p class="designation">Technical Assistant (Project)</p>
+            <p class="qualification">B.Sc. Biology; Diploma in Medical Lab Technology</p>
+            <p class="research-interest"><b>Project:</b> Healthcare and Community Medicine Empowerment of Underprivileged Tribal Population: Biological Validation of Cancer and Sickle Cell Anemia</p>
+          </div>
+        </div>
+        <div class="member-card">
+          <div class="member-img-box"><img src="images/Ajay Kumar.png" alt="Ajay Kumar" onerror="this.src='images/fevicon.png'"></div>
+          <div class="member-info">
+            <h4>Ajay Kumar</h4>
+            <p class="designation">M.Sc. Chemistry Student (2023 to 2025)</p>
+            <p class="qualification">M.Sc. Chemistry, IIT Bhilai</p>
+            <p class="research-interest"><b>Laboratory:</b> Bioinorganic and Chemical Biology Laboratory</p>
           </div>
         </div>
       </div>
