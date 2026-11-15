@@ -7,10 +7,10 @@
   <link rel="icon" href="images/fevicon.png" type="image/png">
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Rectangular Image Box without circular rounding */
+    /* Complete Image Box Layout matching your requirement */
     .member-img-box {
       width: 100%;
-      height: 220px;
+      height: 340px;
       border-radius: 8px !important;
       overflow: hidden;
       margin-bottom: 1.2rem;
@@ -24,11 +24,12 @@
     .member-img-box img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      object-fit: cover; /* Shows complete image properly framed */
+      object-position: center top;
     }
 
     .pi-card .member-img-box {
-      height: 260px;
+      height: 380px;
     }
 
     .member-info .qualification {
@@ -200,7 +201,7 @@
       </div>
       <div class="member-card">
         <div class="member-img-box"><img src="images/Tharik Anwar A.png" alt="Tharik Anwar A"></div>
-        <div class="model-info member-info">
+        <div class="member-info">
           <h4>Tharik Anwar A</h4>
           <p class="designation">Project Associate</p>
           <p class="qualification">M.Sc. Chemistry</p>
