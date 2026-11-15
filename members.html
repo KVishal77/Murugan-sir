@@ -3,27 +3,167 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Members - RMM Group</title>
+  <title>Members - RMM Group, IIT Bhilai</title>
   <link rel="icon" href="images/fevicon.png" type="image/png">
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Additional inline adjustments for detailed text in cards */
-    .member-info .qualification {
-      color: #334155;
-      font-size: 0.88rem;
-      font-weight: 600;
-      margin: 0.3rem 0;
+    /* Professional Scientific Dark Theme Background */
+    body {
+      background-color: #060c1b;
+      background-image: 
+        radial-gradient(rgba(56, 189, 248, 0.08) 1.5px, transparent 1.5px),
+        linear-gradient(to bottom, #060c1b 0%, #0a1329 100%);
+      background-size: 36px 36px, 100% 100%;
+      color: #ffffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
     }
+
+    /* Container Spacing */
+    .container {
+      max-width: 1250px !important;
+      margin: 2.5rem auto !important;
+      padding: 0 2rem !important;
+    }
+
+    /* Section Subheadings */
+    .section-category {
+      color: #38bdf8;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin: 2.5rem 0 1.5rem 0;
+      border-left: 4px solid #38bdf8;
+      padding-left: 12px;
+    }
+
+    /* Member Grid Layout */
+    .member-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)) !important;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      align-items: stretch;
+    }
+
+    /* PI Featured Centered Layout */
+    .pi-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2.5rem;
+    }
+
+    /* Clean Card Design */
+    .member-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 1.8rem 1.2rem;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .pi-card {
+      max-width: 420px;
+      width: 100%;
+      border: 2px solid rgba(56, 189, 248, 0.4);
+      box-shadow: 0 10px 30px rgba(56, 189, 248, 0.2);
+    }
+
+    .member-card:hover, .pi-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(56, 189, 248, 0.35);
+    }
+
+    /* Fixed Image Box & Perfect Face Framing */
+    .member-img-box {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-bottom: 1.2rem;
+      border: 3px solid #38bdf8;
+      background: #f1f5f9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .pi-img-box {
+      width: 170px;
+      height: 170px;
+      border-color: #0284c7;
+    }
+
+    .member-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.3s ease;
+    }
+
+    .member-card:hover .member-img-box img {
+      transform: scale(1.06);
+    }
+
+    /* Member Info Typography */
+    .member-info {
+      width: 100%;
+    }
+
+    .member-info h4 {
+      color: #0f172a;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin: 0 0 0.4rem 0;
+    }
+
+    .member-info .designation {
+      color: #2563eb;
+      font-size: 0.92rem;
+      font-weight: 600;
+      margin: 0 0 0.4rem 0;
+    }
+
+    .member-info .qualification {
+      color: #475569;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin: 0 0 0.5rem 0;
+    }
+
     .member-info .research-interest {
       color: #0284c7;
-      font-size: 0.85rem;
+      font-size: 0.83rem;
       font-style: italic;
-      margin: 0.4rem 0;
-      line-height: 1.3;
+      margin: 0.5rem 0;
+      line-height: 1.35;
+      background: #f8fafc;
+      padding: 0.5rem;
+      border-radius: 6px;
+      border-left: 3px solid #0284c7;
+      text-align: left;
+    }
+
+    .member-info .email {
+      color: #64748b;
+      font-size: 0.82rem;
+      font-weight: 500;
+      margin-top: 0.6rem;
+      word-break: break-all;
     }
   </style>
 </head>
 <body>
+
+  <!-- Header & Navigation -->
   <header>
     <div class="nav-container">
       <div class="logo-section">
@@ -48,17 +188,17 @@
   </header>
 
   <div class="container">
-    <div class="section-title">
+    <div class="section-title" style="color: #ffffff; font-size: 1.8rem;">
       <div class="title-bar"></div>
       Group Members
     </div>
-    <p class="section-subtitle">Meet our team of researchers, scholars, and alumni working together on advanced chemical biology.</p>
+    <p class="section-subtitle" style="color: #cbd5e1; margin-bottom: 2rem;">Meet our team of researchers, scholars, and staff working together on advanced chemical biology.</p>
 
     <!-- Principal Investigator -->
-    <h3 style="margin-bottom: 1rem; color: var(--secondary-color);">● Principal Investigator</h3>
-    <div class="member-grid" style="grid-template-columns: minmax(280px, 380px);">
-      <div class="member-card">
-        <div class="member-img-box">
+    <h3 class="section-category">Principal Investigator</h3>
+    <div class="pi-container">
+      <div class="member-card pi-card">
+        <div class="member-img-box pi-img-box">
           <img src="images/Dr. R Mayilmurugan.png" alt="Dr. Ramasamy Mayilmurugan">
         </div>
         <div class="member-info">
@@ -72,7 +212,7 @@
     </div>
 
     <!-- PhD Scholars, Chemistry -->
-    <h3 style="margin: 2rem 0 1rem; color: var(--primary-color);">● PhD Scholars (Chemistry)</h3>
+    <h3 class="section-category">PhD Scholars (Chemistry)</h3>
     <div class="member-grid">
       <div class="member-card">
         <div class="member-img-box"><img src="images/Suraj Ram.png" alt="Suraj Ram"></div>
@@ -107,7 +247,7 @@
     </div>
 
     <!-- PhD Scholars, BSBE -->
-    <h3 style="margin: 2rem 0 1rem; color: var(--accent-pink);">● PhD Scholars (Bioscience & Biomedical Engineering)</h3>
+    <h3 class="section-category">PhD Scholars (Bioscience & Biomedical Engineering)</h3>
     <div class="member-grid">
       <div class="member-card">
         <div class="member-img-box"><img src="images/Ashutosh Sahoo.png" alt="Ashutosh Sahoo"></div>
@@ -144,62 +284,4 @@
         <div class="member-info">
           <h4>Debabrata Behera</h4>
           <p class="designation">PhD Scholar (BSBE)</p>
-          <p class="qualification">M.Sc. in Life Sciences</p>
-          <p class="research-interest"><b>Research Area:</b> Targeted Cancer Theranostics</p>
-          <p class="email">debabratab@iitbhilai.ac.in</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Project Staff -->
-    <h3 style="margin: 2rem 0 1rem; color: var(--primary-color);">● Project Staff</h3>
-    <div class="member-grid">
-      <div class="member-card">
-        <div class="member-img-box"><img src="images/Prince Christofer F.png" alt="Prince Christofer F"></div>
-        <div class="member-info">
-          <h4>Prince Christofer F</h4>
-          <p class="designation">Junior Research Fellow</p>
-          <p class="qualification">M.Sc. Chemistry</p>
-          <p class="research-interest"><b>Role:</b> Experimental Synthesis & Characterization</p>
-          <p class="email">princec@iitbhilai.ac.in</p>
-        </div>
-      </div>
-      <div class="member-card">
-        <div class="member-img-box"><img src="images/A. Sanjay.png" alt="A. Sanjay"></div>
-        <div class="member-info">
-          <h4>A. Sanjay</h4>
-          <p class="designation">Project Assistant</p>
-          <p class="qualification">B.Sc. / M.Sc. Science</p>
-          <p class="research-interest"><b>Role:</b> Laboratory Administration & Assays</p>
-          <p class="email">sanjaya@iitbhilai.ac.in</p>
-        </div>
-      </div>
-      <div class="member-card">
-        <div class="member-img-box"><img src="images/Tharik Anwar A.png" alt="Tharik Anwar A"></div>
-        <div class="member-info">
-          <h4>Tharik Anwar A</h4>
-          <p class="designation">Project Associate</p>
-          <p class="qualification">M.Sc. Chemistry</p>
-          <p class="research-interest"><b>Role:</b> Advanced MRI Contrast Agent Development</p>
-          <p class="email">tharik@iitbhilai.ac.in</p>
-        </div>
-      </div>
-      <div class="member-card">
-        <div class="member-img-box"><img src="images/K Vishal Johnson.png" alt="K Vishal Johnson"></div>
-        <div class="member-info">
-          <h4>K Vishal Johnson</h4>
-          <p class="designation">Software Engineer</p>
-          <p class="qualification">B.Tech / BCA (Vish Technologies)</p>
-          <p class="research-interest"><b>Role:</b> Web Development & Group Portal Maintenance</p>
-          <p class="email">Kvishal@iitbhilai.ac.in</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <footer>
-    <p>© 2026 RMM Group, IIT Bhilai. All Rights Reserved.</p>
-    <p class="designer">Designed by Vish Technologies</p>
-  </footer>
-</body>
-</html>
+          <p class
