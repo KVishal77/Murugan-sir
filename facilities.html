@@ -49,63 +49,54 @@
       }
     }
 
-    /* Creative Sleek Equipment Card Design */
+    /* Minimal & Sleek Card Design (No Heavy Borders) */
     .member-card {
       background: #ffffff;
-      border-radius: 16px;
-      padding: 0.8rem;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      border: none !important;
+      border-radius: 12px;
+      padding: 1rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-      position: relative;
-      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .member-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 15px 35px rgba(56, 189, 248, 0.35);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(56, 189, 248, 0.3);
     }
 
-    /* Large Prominent Image Display Container */
+    /* Image Display Container (Border-free) */
     .member-img-box {
       width: 100%;
-      height: 240px;
+      height: 220px;
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      border-radius: 12px;
+      border-radius: 8px;
       background: #f8fafc;
-      padding: 0.8rem;
-      box-sizing: border-box;
+      padding: 0.5rem;
+      margin-bottom: 0.8rem;
+      border: none !important;
     }
 
     .member-img-box img {
       max-width: 100%;
       max-height: 100%;
       object-fit: contain;
-      transition: transform 0.4s ease;
+      transition: transform 0.3s ease;
     }
 
     .member-card:hover .member-img-box img {
-      transform: scale(1.08);
+      transform: scale(1.05);
     }
 
-    /* Divider Accent Line */
-    .card-divider {
-      height: 3px;
-      width: 100%;
-      background: linear-gradient(90deg, #38bdf8 0%, #3b82f6 100%);
-      margin: 0.75rem 0 0.5rem 0;
-      border-radius: 2px;
-    }
-
-    /* Clean Highlighted Title Section */
+    /* Clean Dark Text Under Image */
     .member-info {
       text-align: center;
-      padding: 0.4rem 0.2rem 0.2rem 0.2rem;
+      padding: 0.2rem 0;
     }
 
     .member-info h4 {
@@ -114,7 +105,6 @@
       font-weight: 700;
       margin: 0;
       line-height: 1.35;
-      letter-spacing: -0.2px;
     }
   </style>
 </head>
@@ -157,133 +147,114 @@
       <!-- 1. Invitrogen Automated Cell Counter -->
       <div class="member-card">
         <div class="member-img-box"><img src="images/Invitrogen Automated Cell Counter.png" alt="Invitrogen Automated Cell Counter"></div>
-        <div class="card-divider"></div>
         <div class="member-info"><h4>Invitrogen Automated Cell Counter</h4></div>
       </div>
 
       <!-- 2. Centrifuge machine -->
       <div class="member-card">
         <div class="member-img-box"><img src="images/Centrifuge machine.png" alt="Centrifuge machine"></div>
-        <div class="card-divider"></div>
         <div class="member-info"><h4>Centrifuge Machine</h4></div>
       </div>
 
       <!-- 3. Microspin Mini Centrifuge -->
       <div class="member-card">
         <div class="member-img-box"><img src="images/Microspin Mini Centrifuge.png" alt="Microspin Mini Centrifuge"></div>
-        <div class="card-divider"></div>
         <div class="member-info"><h4>Microspin Mini Centrifuge</h4></div>
       </div>
 
       <!-- 4. Electrochemical workstation -->
       <div class="member-card">
         <div class="member-img-box"><img src="images/electrochemical workstation.png" alt="Electrochemical workstation"></div>
-        <div class="card-divider"></div>
         <div class="member-info"><h4>Electrochemical Workstation</h4></div>
       </div>
 
       <!-- 5. CO2 Incubator -->
       <div class="member-card">
         <div class="member-img-box"><img src="images/CO2 Incubator.png" alt="CO2 Incubator"></div>
-        <div class="card-divider"></div>
         <div class="member-info"><h4>CO2 Incubator</h4></div>
       </div>
 
       <!-- 6. Potentmetric titrator -->
       <div class="member-card">
         <div class="member-img-box"><img src="images/Potentmetric titrator.png" alt="Potentmetric titrator"></div>
-        <div class="card-divider"></div>
         <div class="member-info"><h4>Potentiometric Titrator</h4></div>
       </div>
 
       <!-- 7. Bio safety Cabinet Class II -->
       <div class="member-card">
         <div class="member-img-box"><img src="images/Bio safety Cabinet Class II.png" alt="Bio safety Cabinet Class II"></div>
-        <div class="card-divider"></div>
         <div class="member-info"><h4>Bio Safety Cabinet Class II</h4></div>
       </div>
 
       <!-- 8. UV-Visible spectrophotometer -->
       <div class="member-card">
         <div class="member-img-box"><img src="images/UV-Visible spectrophotometer.png" alt="UV-Visible spectrophotometer"></div>
-        <div class="card-divider"></div>
         <div class="member-info"><h4>UV-Visible Spectrophotometer</h4></div>
       </div>
 
       <!-- 9. Serological Pipettes and pipettes -->
       <div class="member-card">
         <div class="member-img-box"><img src="images/Serological Pipettes and pipettes.png" alt="Serological Pipettes and pipettes"></div>
-        <div class="card-divider"></div>
         <div class="member-info"><h4>Serological Pipettes & Pipettes</h4></div>
       </div>
 
       <!-- 10. Relaxometer -->
       <div class="member-card">
         <div class="member-img-box"><img src="images/Relaxometer.png" alt="Relaxometer"></div>
-        <div class="card-divider"></div>
         <div class="member-info"><h4>Relaxometer</h4></div>
       </div>
 
       <!-- 11. Microwave Oven -->
       <div class="member-card">
         <div class="member-img-box"><img src="images/Microwave Oven.png" alt="Microwave Oven"></div>
-        <div class="card-divider"></div>
         <div class="member-info"><h4>Microwave Oven</h4></div>
       </div>
 
       <!-- 12. Liquid Nitrogen Tank -->
       <div class="member-card">
         <div class="member-img-box"><img src="images/Liquid Nitrogen Tank.png" alt="Liquid Nitrogen Tank"></div>
-        <div class="card-divider"></div>
         <div class="member-info"><h4>Liquid Nitrogen Tank</h4></div>
       </div>
 
       <!-- 13. Vertex -->
       <div class="member-card">
         <div class="member-img-box"><img src="images/Vertex.png" alt="Vertex"></div>
-        <div class="card-divider"></div>
         <div class="member-info"><h4>Vortex / Vertex</h4></div>
       </div>
 
       <!-- 14. Nikon Inverted Microscope -->
       <div class="member-card">
         <div class="member-img-box"><img src="images/Nikon Inverted Microscope.png" alt="Nikon Inverted Microscope"></div>
-        <div class="card-divider"></div>
         <div class="member-info"><h4>Nikon Inverted Microscope</h4></div>
       </div>
 
       <!-- 15. pH meter -->
       <div class="member-card">
         <div class="member-img-box"><img src="images/pH meter.png" alt="pH meter"></div>
-        <div class="card-divider"></div>
         <div class="member-info"><h4>pH Meter</h4></div>
       </div>
 
       <!-- 16. Work station -->
       <div class="member-card">
         <div class="member-img-box"><img src="images/Work station.png" alt="Work station"></div>
-        <div class="card-divider"></div>
         <div class="member-info"><h4>Work Station</h4></div>
       </div>
 
       <!-- 17. UV Chamber -->
       <div class="member-card">
         <div class="member-img-box"><img src="images/UV Chamber.png" alt="UV Chamber"></div>
-        <div class="card-divider"></div>
         <div class="member-info"><h4>UV Chamber</h4></div>
       </div>
 
       <!-- 18. Vaccum pump -->
       <div class="member-card">
         <div class="member-img-box"><img src="images/Vaccum pump.png" alt="Vaccum pump"></div>
-        <div class="card-divider"></div>
         <div class="member-info"><h4>Vacuum Pump</h4></div>
       </div>
 
       <!-- 19. Rotary evaporator -->
       <div class="member-card">
         <div class="member-img-box"><img src="images/Rotary evaporator.png" alt="Rotary evaporator"></div>
-        <div class="card-divider"></div>
         <div class="member-info"><h4>Rotary Evaporator</h4></div>
       </div>
 
