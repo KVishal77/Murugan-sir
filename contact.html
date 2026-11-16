@@ -1,54 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | RMM Research Group - IIT Bhilai</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - RMM Group</title>
+  <link rel="icon" href="images/fevicon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Professional Scientific Dark Theme Background */
+    body {
+      background-color: #060c1b;
+      background-image: 
+        radial-gradient(rgba(56, 189, 248, 0.08) 1.5px, transparent 1.5px),
+        linear-gradient(to bottom, #060c1b 0%, #0a1329 100%);
+      background-size: 36px 36px, 100% 100%;
+      color: #ffffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .container {
+      max-width: 1000px !important;
+      margin: 2.5rem auto !important;
+      padding: 0 2rem !important;
+      flex: 1;
+    }
+
+    /* Contact Grid Layout */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    /* Contact Card Styling */
+    .contact-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+      border-top: 4px solid #38bdf8;
+      color: #0f172a;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(56, 189, 248, 0.35);
+      border-top-color: #0284c7;
+    }
+
+    .contact-card h3 {
+      color: #0284c7;
+      font-size: 1.3rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .contact-card p, .contact-card li {
+      color: #334155;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 0.8rem;
+    }
+
+    .contact-card ul {
+      padding-left: 1.2rem;
+      margin: 0.5rem 0;
+    }
+
+    .contact-card a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-card a:hover {
+      text-decoration: underline;
+    }
+
+    .email-box {
+      background: #f0f9ff;
+      border-left: 3px solid #38bdf8;
+      padding: 0.8rem 1rem;
+      border-radius: 6px;
+      margin-top: 1rem;
+    }
+  </style>
 </head>
 <body>
-    <header class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="brand"><span class="dot"></span> RMM Research Group</a>
-            <nav class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="about.html">About Me</a>
-                <a href="research.html">Research</a>
-                <a href="publications.html">Publications</a>
-                <a href="facilities.html">Facilities</a>
-                <a href="members.html">Members</a>
-                <a href="contact.html" class="active nav-cta">Contact</a>
-            </nav>
-            <button class="menu-toggle" id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
-        </div>
-    </header>
 
-    <section class="section" style="background: var(--navy); color: white; min-height: 80vh;">
-        <div class="container">
-            <div class="section-title">
-                <h2 style="color: white;">Contact & Visitors</h2>
-                <p style="color: #94a3b8;">Get in touch for academic collaborations or inquiries</p>
-            </div>
-            <div class="glass-card" style="background: var(--navy-light); color: white; display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
-                <div>
-                    <h3 style="margin-bottom: 15px;">IIT Bhilai Address</h3>
-                    <p style="color: #94a3b8; margin-bottom: 12px;"><i class="fa-solid fa-location-dot" style="color: var(--teal); margin-right: 8px;"></i> Department of Chemistry, Indian Institute of Technology Bhilai, Kutelabata, Durg, Chhattisgarh - 491001</p>
-                    <p style="color: #94a3b8;"><i class="fa-solid fa-envelope" style="color: var(--teal); margin-right: 8px;"></i> rmayilmurugan@iitbhilai.ac.in</p>
-                </div>
-                <form onsubmit="event.preventDefault(); alert('Message Sent Successfully!');" style="display: flex; flex-direction: column; gap: 12px;">
-                    <input type="text" placeholder="Your Name" required style="padding: 12px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white; outline: none;">
-                    <input type="email" placeholder="Your Email" required style="padding: 12px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white; outline: none;">
-                    <textarea rows="4" placeholder="Your Message" required style="padding: 12px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white; outline: none;"></textarea>
-                    <button type="submit" class="btn primary">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
+  <!-- Header & Navigation -->
+  <header>
+    <div class="nav-container">
+      <div class="logo-section">
+        <img src="images/fevicon.png" alt="RMM Group Logo">
+        <h2>RMM Group</h2>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#research">Research</a></li>
+          <li><a href="facilities.html">Facilities</a></li>
+          <li><a href="publication.html">Publication</a></li>
+          <li><a href="project.html">Project</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="members.html">Members</a></li>
+          <li><a href="contact.html" class="active">Contact Us</a></li>
+          <li><a href="visitors.html">Visitors</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <footer>
-        <p>&copy; 2026 RMM Research Group, IIT Bhilai. All rights reserved.</p>
-    </footer>
-    <script src="script.js"></script>
+  <div class="container">
+    <div class="section-title" style="color: #ffffff; font-size: 1.8rem;">
+      <div class="title-bar"></div>
+      Contact and Openings
+    </div>
+    <p class="section-subtitle" style="color: #cbd5e1; margin-bottom: 2rem;">Get in touch with us or join our research team.</p>
+
+    <div class="contact-grid">
+      <!-- Find Us & Openings Card -->
+      <div class="contact-card">
+        <h3>📍 Find Us</h3>
+        <p><b>Department of Chemistry and Department of Bioscience and Biomedical Engineering</b></p>
+        <p>Indian Institute of Technology (IIT) Bhilai, Chhattisgarh, India</p>
+        
+        <h3 style="margin-top: 1.8rem; color: #db2777;">🎓 Join Openings</h3>
+        <p>Join us as:</p>
+        <ul>
+          <li>PhD Scholars</li>
+          <li>Project Staff</li>
+          <li>Postdocs</li>
+          <li>Interns</li>
+        </ul>
+      </div>
+
+      <!-- Write to Us Card -->
+      <div class="contact-card">
+        <h3>✉️ Write to Us</h3>
+        <p>We are always looking for passionate researchers and students to join our laboratory.</p>
+        <div class="email-box">
+          <p style="margin: 0; font-size: 0.9rem; color: #64748b;">Email Address:</p>
+          <a href="mailto:murugan@iitbhilai.ac.in" style="font-size: 1.05rem; font-weight: 700;">murugan@iitbhilai.ac.in</a>
+        </div>
+        <p style="margin-top: 1.2rem;"><b>Instructions:</b> Email your CV and a short note on what you want to work on.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Common Footer -->
+  <footer>
+    <p>© 2026 RMM Group, IIT Bhilai. All Rights Reserved.</p>
+    <p class="designer">Designed by Vish Technologies</p>
+  </footer>
+
 </body>
 </html>
