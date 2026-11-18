@@ -7,7 +7,6 @@
   <link rel="icon" href="images/fevicon.png" type="image/png">
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Extremely Dense, Creative & Vibrant Chemistry Background Theme */
     body {
       background-color: #060c1b;
       background-image: 
@@ -18,8 +17,6 @@
       overflow-x: hidden;
       color: #f8fafc;
     }
-    
-    /* Background Canvas Container */
     .bg-canvas-container {
       position: fixed;
       top: 0;
@@ -30,8 +27,6 @@
       pointer-events: none;
       overflow: hidden;
     }
-
-    /* Floating Atoms & Orbiting Electrons */
     .floating-atom-node {
       position: absolute;
       width: 85px;
@@ -41,7 +36,6 @@
       animation: rotateAtom 16s infinite linear;
       opacity: 0.65;
     }
-
     .electron {
       position: absolute;
       top: -4px;
@@ -52,36 +46,28 @@
       border-radius: 50%;
       box-shadow: 0 0 10px #38bdf8, 0 0 18px #38bdf8;
     }
-
     @keyframes rotateAtom {
       0% { transform: rotate(0deg) scale(1); }
       50% { transform: rotate(180deg) scale(1.12); }
       100% { transform: rotate(360deg) scale(1); }
     }
-
-    /* Container Spacing */
     .container {
       max-width: 1150px !important;
       margin: 2rem auto !important;
       padding: 0 2rem !important;
     }
-
-    /* Hero Section */
     .hero-box {
       background: transparent !important;
       padding: 2.5rem 0 1.5rem 0;
       margin-bottom: 2rem;
-      box-shadow: none !important;
       text-align: left;
     }
-
     .hero-subhead {
       color: #cbd5e1;
       font-size: 0.95rem;
       letter-spacing: 0.5px;
       margin-bottom: 0.8rem;
     }
-
     .hero-title {
       font-size: 3.8rem;
       font-weight: 800;
@@ -89,7 +75,6 @@
       color: #ffffff;
       margin-bottom: 1.5rem;
     }
-
     .hero-title span.highlight {
       background: #eab308;
       color: #060c1b;
@@ -97,7 +82,6 @@
       border-radius: 4px;
       display: inline-block;
     }
-
     .hero-desc {
       font-size: 1.1rem;
       color: #cbd5e1;
@@ -105,13 +89,11 @@
       line-height: 1.6;
       margin-bottom: 2rem;
     }
-
-    /* Custom Styled Buttons */
     .hero-btns {
       display: flex;
       gap: 1rem;
+      flex-wrap: wrap;
     }
-
     .btn-yellow {
       background-color: #f59e0b;
       color: #060c1b;
@@ -121,12 +103,6 @@
       text-decoration: none;
       transition: all 0.3s ease;
     }
-
-    .btn-yellow:hover {
-      background-color: #d97706;
-      box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
-    }
-
     .btn-outline {
       background: transparent;
       color: #ffffff;
@@ -137,14 +113,6 @@
       text-decoration: none;
       transition: all 0.3s ease;
     }
-
-    .btn-outline:hover {
-      background: rgba(255, 255, 255, 0.1);
-      border-color: #38bdf8;
-      color: #38bdf8;
-    }
-
-    /* PI Profile Box (Original Large Size + Fully Transparent Glass Box) */
     .pi-box {
       background: rgba(15, 23, 42, 0.7) !important;
       border: 1px solid rgba(255, 255, 255, 0.12);
@@ -161,8 +129,6 @@
     }
     .pi-box h3 { color: #38bdf8 !important; }
     .pi-box p { color: #cbd5e1 !important; }
-
-    /* Research Cards Grid - Strictly Uniform Width & Height */
     .card-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -170,13 +136,6 @@
       margin-bottom: 3rem;
       align-items: stretch;
     }
-
-    @media (max-width: 950px) {
-      .card-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
     .card {
       background: rgba(255, 255, 255, 0.96);
       backdrop-filter: blur(10px);
@@ -189,23 +148,26 @@
       justify-content: flex-start;
       height: 100%;
     }
-
-    .card h3 {
-      font-size: 1.15rem;
-      margin-bottom: 0.6rem;
+    @media screen and (max-width: 950px) {
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-title {
+        font-size: 2.6rem;
+      }
     }
-    
-    .card p {
-      color: #475569;
-      font-size: 0.9rem;
-      line-height: 1.55;
-      flex-grow: 1;
+    @media screen and (max-width: 768px) {
+      .container {
+        padding: 0 1rem !important;
+      }
+      .pi-box {
+        padding: 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Packed Chemistry Background: DNA, Benzene Rings, Periodic Elements (Fe, Cu, Ni, Zn, Mn, Co), Nuclear Fusion & Molecules -->
   <div class="bg-canvas-container">
     <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
       <defs>
@@ -214,112 +176,18 @@
           <stop offset="50%" stop-color="#a855f7" />
           <stop offset="100%" stop-color="#3b82f6" />
         </linearGradient>
-        <linearGradient id="fusionGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#f59e0b" />
-          <stop offset="100%" stop-color="#ef4444" />
-        </linearGradient>
       </defs>
-
-      <!-- 1. Left Side Double DNA Helix Structure[cite: 1] -->
-      <g opacity="0.5" transform="translate(15, 0)">
-        <path d="M 10,0 Q 80,150 10,300 T 10,600 T 10,900 T 10,1200 T 10,1500" fill="none" stroke="url(#dnaGrad)" stroke-width="3" />
-        <path d="M 80,0 Q 10,150 80,300 T 80,600 T 80,900 T 80,1200 T 80,1500" fill="none" stroke="url(#dnaGrad)" stroke-width="3" />
-        <line x1="25" y1="75" x2="65" y2="75" stroke="#ec4899" stroke-width="2"/>
-        <line x1="45" y1="150" x2="45" y2="150" stroke="#a855f7" stroke-width="2"/>
-        <line x1="25" y1="225" x2="65" y2="225" stroke="#3b82f6" stroke-width="2"/>
-        <line x1="15" y1="375" x2="75" y2="375" stroke="#ec4899" stroke-width="2"/>
-        <line x1="25" y1="525" x2="65" y2="525" stroke="#a855f7" stroke-width="2"/>
-        <line x1="20" y1="700" x2="70" y2="700" stroke="#3b82f6" stroke-width="2"/>
-        <line x1="30" y1="850" x2="60" y2="850" stroke="#ec4899" stroke-width="2"/>
-        <line x1="15" y1="1025" x2="75" y2="1025" stroke="#a855f7" stroke-width="2"/>
-        <line x1="25" y1="1200" x2="65" y2="1200" stroke="#3b82f6" stroke-width="2"/>
-      </g>
-
-      <!-- 2. Dense Periodic Table Elements & Carbon Rings across background -->
-      <g opacity="0.45" transform="translate(650, 70)">
-        <polygon points="0,-35 30,-18 30,18 0,35 -30,18 -30,-18" fill="none" stroke="#38bdf8" stroke-width="2" />
-        <text x="-10" y="5" fill="#38bdf8" font-size="15" font-weight="bold">C</text>
-      </g>
-      <g opacity="0.4" transform="translate(850, 320)">
-        <polygon points="0,-45 39,-22 39,22 0,45 -39,22 -39,-22" fill="none" stroke="#10b981" stroke-width="2" />
-        <text x="-12" y="6" fill="#10b981" font-size="15" font-weight="bold">C6</text>
-      </g>
-      <g opacity="0.4" transform="translate(380, 550)">
-        <polygon points="0,-35 30,-18 30,18 0,35 -30,18 -30,-18" fill="none" stroke="#ec4899" stroke-width="2" />
-        <text x="-8" y="5" fill="#ec4899" font-size="14" font-weight="bold">Fe</text>
-      </g>
-      <g opacity="0.4" transform="translate(750, 680)">
-        <polygon points="0,-40 35,-20 35,20 0,40 -35,20 -35,-20" fill="none" stroke="#f59e0b" stroke-width="2" />
-        <text x="-9" y="5" fill="#f59e0b" font-size="14" font-weight="bold">Cu</text>
-      </g>
-      <g opacity="0.4" transform="translate(520, 950)">
-        <polygon points="0,-35 30,-18 30,18 0,35 -30,18 -30,-18" fill="none" stroke="#38bdf8" stroke-width="2" />
-        <text x="-8" y="5" fill="#38bdf8" font-size="14" font-weight="bold">Ni</text>
-      </g>
-      <g opacity="0.4" transform="translate(820, 1050)">
-        <polygon points="0,-35 30,-18 30,18 0,35 -30,18 -30,-18" fill="none" stroke="#a855f7" stroke-width="2" />
-        <text x="-8" y="5" fill="#a855f7" font-size="14" font-weight="bold">Zn</text>
-      </g>
-
-      <!-- 3. Nuclear Fusion Core & Energy Waves -->
-      <g opacity="0.55" transform="translate(880, 150)">
-        <circle cx="0" cy="0" r="90" fill="none" stroke="url(#fusionGrad)" stroke-width="1.5" stroke-dasharray="5,5" />
-        <circle cx="0" cy="0" r="45" fill="none" stroke="#f59e0b" stroke-width="2" />
-        <circle cx="0" cy="0" r="15" fill="#ef4444" filter="drop-shadow(0 0 12px #f59e0b)" />
-        <line x1="-65" y1="0" x2="65" y2="0" stroke="#f59e0b" stroke-width="1"/>
-        <line x1="0" y1="-65" x2="0" y2="65" stroke="#f59e0b" stroke-width="1"/>
-      </g>
-
-      <!-- 4. Packed Molecular Bonds & Network Nodes -->
-      <g opacity="0.5" transform="translate(220, 380)">
-        <line x1="0" y1="0" x2="60" y2="-50" stroke="#38bdf8" stroke-width="1.5"/>
-        <line x1="60" y1="-50" x2="120" y2="-10" stroke="#38bdf8" stroke-width="1.5"/>
-        <circle cx="0" cy="0" r="7" fill="#38bdf8"/>
-        <circle cx="60" cy="-50" r="9" fill="#f59e0b"/>
-        <circle cx="120" cy="-10" r="7" fill="#10b981"/>
-      </g>
-      <g opacity="0.5" transform="translate(560, 780)">
-        <line x1="0" y1="0" x2="-70" y2="-40" stroke="#a855f7" stroke-width="1.5"/>
-        <line x1="0" y1="0" x2="60" y2="-60" stroke="#a855f7" stroke-width="1.5"/>
-        <circle cx="0" cy="0" r="8" fill="#a855f7"/>
-        <circle cx="-70" cy="-40" r="6" fill="#38bdf8"/>
-        <circle cx="60" cy="-60" r="7" fill="#ec4899"/>
-      </g>
-      <g opacity="0.5" transform="translate(250, 850)">
-        <line x1="0" y1="0" x2="50" y2="50" stroke="#10b981" stroke-width="1.5"/>
-        <circle cx="0" cy="0" r="7" fill="#10b981"/>
-        <circle cx="50" cy="50" r="8" fill="#f59e0b"/>
-      </g>
     </svg>
-
-    <!-- Multiple Orbiting Atoms & Periodic Elements packed across the background -->
-    <div class="floating-atom-node" style="top: 8%; left: 72%;">
-      <div class="electron"></div>
-    </div>
-    <div class="floating-atom-node" style="top: 42%; left: 88%; animation-duration: 14s;">
-      <div class="electron" style="background-color: #ec4899; box-shadow: 0 0 10px #ec4899;"></div>
-    </div>
-    <div class="floating-atom-node" style="top: 62%; left: 12%; animation-duration: 20s;">
-      <div class="electron" style="background-color: #10b981; box-shadow: 0 0 10px #10b981;"></div>
-    </div>
-    <div class="floating-atom-node" style="top: 25%; left: 42%; width: 75px; height: 75px; animation-duration: 12s;">
-      <div class="electron" style="background-color: #f59e0b; box-shadow: 0 0 10px #f59e0b;"></div>
-    </div>
-    <div class="floating-atom-node" style="top: 78%; left: 68%; width: 85px; height: 85px; animation-duration: 18s;">
-      <div class="electron" style="background-color: #a855f7; box-shadow: 0 0 10px #a855f7;"></div>
-    </div>
-    <div class="floating-atom-node" style="top: 92%; left: 35%; width: 70px; height: 70px; animation-duration: 22s;">
-      <div class="electron" style="background-color: #38bdf8; box-shadow: 0 0 10px #38bdf8;"></div>
-    </div>
+    <div class="floating-atom-node" style="top: 8%; left: 72%;"><div class="electron"></div></div>
   </div>
 
-  <!-- Header & Navigation -->
   <header>
     <div class="nav-container">
       <div class="logo-section">
         <img src="images/fevicon.png" alt="RMM Group Logo">
         <h2>RMM Group</h2>
       </div>
+      <button class="mobile-menu-btn" aria-label="Toggle navigation">☰</button>
       <nav>
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
@@ -338,83 +206,56 @@
   </header>
 
   <div class="container">
-    <!-- Section 1: Hero Welcome -->
     <div class="hero-box">
-      <p class="hero-subhead">Department of Chemistry and Department of Bioscience and Biomedical Engineering, IIT Bhilai </p>
+      <p class="hero-subhead">Department of Chemistry and Department of Bioscience and Biomedical Engineering, IIT Bhilai</p>
       <h1 class="hero-title"><span class="highlight">RMM</span> Research<br>Group</h1>
-      <p class="hero-desc">The RMM Group designs metal complexes that act as smart MRI and optical probes to see inside tumours, as theranostic and therapeutic agents that detect and treat cancer, and as bioinspired catalysts that activate oxygen and carbon dioxide .</p>
-      
+      <p class="hero-desc">The RMM Group designs metal complexes that act as smart MRI and optical probes to see inside tumours, as theranostic and therapeutic agents that detect and treat cancer, and as bioinspired catalysts that activate oxygen and carbon dioxide.</p>
       <div class="hero-btns">
         <a href="#research" class="btn-yellow">Our research</a>
         <a href="contact.html" class="btn-outline">Join the group</a>
       </div>
     </div>
 
-    <!-- Section 2: PI Profile (Original Large Size + Transparent Glass Box) -->
     <div class="pi-box">
       <div style="flex: 1; min-width: 260px; text-align: center;">
         <img src="images/Dr. R Mayilmurugan.png" alt="Dr. Ramasamy Mayilmurugan" style="width: 100%; max-width: 280px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
         <h3 style="margin-top: 1rem;">Dr. Ramasamy Mayilmurugan</h3>
-        <p style="color: #94a3b8 !important; font-weight: 600;">Associate Professor & Head of Deparment</p>
+        <p style="color: #94a3b8 !important; font-weight: 600;">Associate Professor & Head of Department</p>
         <p style="color: #94a3b8 !important; font-size: 0.9rem;">Department of Chemistry, IIT Bhilai</p>
       </div>
       <div style="flex: 2; min-width: 300px;">
-        <p style="margin-bottom: 1rem; text-align: justify;">Our group focuses on <strong>"interdisciplinary research"</strong> that involves the design and synthesis of carefully tailored molecules to act as smart MRI and optical probes to target tumours and understand their mechanism. Our research aims to use biologically inspired metal complexes as probes to understand complex biochemical processes in tumours. We are using these bioinspired imaging probes and our chemistry knowledge to image and quantify the reactive oxygen species (ROS), reactive nitrogen species (RNS), and other mobilities produced via the redox process within the tumor cells. We are working to place these molecules in clinical trials as novel therapeutic or diagnostic agents in the near future.</p>
-        <p style="margin-bottom: 1.5rem; text-align: justify;">On the other hand, we are synthesizing a library of architecturally designed bioinspired coordination complexes with interesting structural, spectral, redox, and biological properties. Many of these complexes are demonstrated as synthetic analogues of metalloenzymes or as bioinspired catalysts for activating small molecules such as dioxygen and carbon dioxide. In all our projects, we try to accomplish our objectives through an appropriate combination of design, synthesis, and validation. As a result, the research projects in the group tend to be highly interdisciplinary in nature, involving bioinorganic chemistry, biochemistry, spectroscopy, and multistep organic synthesis. We named our group <strong>"Bioinorganic Chemistry and Chemical Biology,"</strong> where chemists and biologists work together to address Health issues.</p>
+        <p style="margin-bottom: 1rem; text-align: justify;">Our group focuses on <strong>"interdisciplinary research"</strong> that involves the design and synthesis of carefully tailored molecules to act as smart MRI and optical probes to target tumours and understand their mechanism...</p>
       </div>
     </div>
 
-    <!-- Section 3 & 4: Research Section -->
     <div id="research" style="padding-top: 1rem;">
       <div class="section-title" style="color: #f8fafc; font-size: 1.8rem;">
         <div class="title-bar"></div>
         Research
       </div>
-      <p class="section-subtitle" style="color: #cbd5e1; margin-bottom: 1.5rem;">Chemists and biologists working together on health problems, combining design, synthesis and biological validation.</p>
+      <p class="section-subtitle" style="color: #cbd5e1; margin-bottom: 1.5rem;">Chemists and biologists working together on health problems.</p>
 
-      <!-- Sub-theme 1: Bioinorganic Chemistry -->
       <h3 style="margin-bottom: 1rem; color: #38bdf8; font-size: 1.3rem;">Bioinorganic chemistry</h3>
       <div class="card-grid">
         <div class="card">
           <div class="card-icon">🧪</div>
           <h3>Smart MRI probes</h3>
-          <p>Fe(II) macrocycles as pH-responsive PARACEST agents, and Fe(III)-catecholate complexes as dual-modal T1 MRI and optical agents for nitric oxide and acidic tumour pH. Biotin conjugation raises the amount of agent delivered to tumours. Mn(II/III) complexes serve as redox-responsive agents sensitive to L-cysteine.</p>
+          <p>Fe(II) macrocycles as pH-responsive PARACEST agents, and Fe(III)-catecholate complexes as dual-modal T1 MRI and optical agents...</p>
         </div>
         <div class="card purple">
           <div class="card-icon">🔬</div>
           <h3>Oxygen activation</h3>
-          <p>Fe(II), Ni(II) and Cu(II) complexes as models for cysteine dioxygenase, diketone dioxygenase and copper monooxygenases, and as catalysts for aromatic C-H bond hydroxylation, studied with spectroscopy and computation.</p>
+          <p>Fe(II), Ni(II) and Cu(II) complexes as models for cysteine dioxygenase, diketone dioxygenase and copper monooxygenases...</p>
         </div>
         <div class="card pink">
           <div class="card-icon">⚛️</div>
           <h3>CO₂ activation</h3>
-          <p>Bioinspired Cu(II) and Ni(II) complexes that fix atmospheric CO₂ under mild conditions and convert it into cyclic carbonates and carboxylic acids, with crystal structures of the CO₂-derived intermediates.</p>
-        </div>
-      </div>
-
-      <!-- Sub-theme 2: Chemical Biology -->
-      <h3 style="margin-bottom: 1rem; color: #c084fc; font-size: 1.3rem;">Chemical biology</h3>
-      <div class="card-grid">
-        <div class="card">
-          <div class="card-icon">💊</div>
-          <h3>Nanomedicine for targeted therapy</h3>
-          <p>The Cancer Biology Research Group is dedicated to advancing precision oncology through the development of innovative nanomedicine-based approaches for targeted cancer therapy. The group’s research encompasses diverse biocompatible delivery platforms, including protein-based nanocages, engineered nanoparticles, liposomes, and hybrid nanostructures, with an emphasis on improving tumor-specific drug delivery, therapeutic bioavailability, and treatment selectivity while minimizing toxicity to healthy tissues.</p>
-        </div>
-        <div class="card purple">
-          <div class="card-icon">🧬</div>
-          <h3>Ferroptosis and cancer models</h3>
-          <p>A major research focus involves metal-dependent regulated cell death, particularly ferroptosis, and its therapeutic exploitation against cancer. Research is conducted using cervical, breast, and colorectal cancer models, encompassing investigations from cellular viability and cytotoxicity to molecular mechanisms, gene regulation, and protein expression associated with therapeutic responses.</p>
-        </div>
-        <div class="card pink">
-          <div class="card-icon">🎯</div>
-          <h3>Cancer theranostics</h3>
-          <p>The group also explores cancer theranostics through the development of multifunctional molecules and nanoplatforms that integrate diagnostic imaging with therapeutic applications, enabling image-guided cancer intervention. The group aims to bridge nanotechnology and cancer biology to advance innovative, targeted, and multifunctional therapeutic strategies.</p>
+          <p>Bioinspired Cu(II) and Ni(II) complexes that fix atmospheric CO₂ under mild conditions and convert it into cyclic carbonates...</p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Common Footer -->
   <footer>
     <p>© 2026 RMM Group, IIT Bhilai. All Rights Reserved.</p>
     <p class="designer">Designed by Vish Technologies</p>
