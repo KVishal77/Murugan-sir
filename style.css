@@ -43,7 +43,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.5rem;
-  position: relative;
+  position: relative !important; /* Forces absolute children like toggle to lock to header right */
 }
 
 .logo-section {
@@ -90,7 +90,7 @@ nav a:hover, nav a.active {
   background-color: #f1f5f9;
 }
 
-/* Mobile Hamburger Toggle Button - Locked to Right Corner */
+/* Mobile Hamburger Toggle Button - Globally Locked to Exact Right Corner on All Pages */
 .mobile-toggle {
   display: none;
   background: transparent;
@@ -99,10 +99,10 @@ nav a:hover, nav a.active {
   color: var(--primary-color);
   cursor: pointer;
   z-index: 1200;
-  position: absolute;
-  right: 1.5rem;
-  top: 50%;
-  transform: translateY(-50%);
+  position: absolute !important;
+  right: 1.5rem !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
 }
 
 /* Main Container */
@@ -188,7 +188,7 @@ nav a:hover, nav a.active {
   font-size: 0.95rem;
 }
 
-/* Member Cards - Original Desktop View Restored */
+/* Member Cards - Original Desktop View Unchanged */
 .member-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -213,7 +213,7 @@ nav a:hover, nav a.active {
 
 .member-img-box {
   width: 100%;
-  height: 260px; /* Original Desktop Height */
+  height: 260px;
   background-color: #e2e8f0;
   overflow: hidden;
 }
@@ -221,7 +221,7 @@ nav a:hover, nav a.active {
 .member-img-box img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Original Desktop Image Fit */
+  object-fit: cover;
 }
 
 .member-info {
@@ -333,7 +333,7 @@ footer .designer {
   font-weight: 600;
 }
 
-/* Mobile Responsive Header, Compact Floating Dropdown & Mobile-Only Image Fix */
+/* Mobile Responsive Header, Compact Floating Dropdown & Right Corner Toggle */
 @media (max-width: 950px) {
   .mobile-toggle {
     display: block !important;
@@ -347,7 +347,7 @@ footer .designer {
     width: auto !important;
   }
   
-  /* Strict Compact Floating Dropdown Menu (Fixed Width 220px) */
+  /* Compact Floating Dropdown Menu (Fixed Width 220px) */
   header nav ul, header .nav-links, .nav-container nav ul {
     display: none !important;
     flex-direction: column !important;
@@ -400,7 +400,6 @@ footer .designer {
     grid-template-columns: 1fr !important;
     gap: 1.2rem !important;
   }
-  /* Only apply contain object-fit on mobile screens so desktop remains untouched */
   .member-img-box img {
     object-fit: contain !important;
     padding: 6px !important;
