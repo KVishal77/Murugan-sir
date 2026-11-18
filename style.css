@@ -43,7 +43,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.5rem;
-  position: relative !important; /* Forces absolute children like toggle to lock to header right */
+  position: relative !important;
 }
 
 .logo-section {
@@ -90,7 +90,7 @@ nav a:hover, nav a.active {
   background-color: #f1f5f9;
 }
 
-/* Mobile Hamburger Toggle Button - Globally Locked to Exact Right Corner on All Pages */
+/* Mobile Hamburger Toggle Button - Locked to Exact Right Corner */
 .mobile-toggle {
   display: none;
   background: transparent;
@@ -110,6 +110,7 @@ nav a:hover, nav a.active {
   max-width: 1200px;
   margin: 2rem auto;
   padding: 0 1.5rem;
+  width: 100%;
 }
 
 .section-title {
@@ -287,20 +288,22 @@ nav a:hover, nav a.active {
   background-color: #6d28d9;
 }
 
-/* Table Styling */
-.table-container {
-  overflow-x: auto;
-  margin: 1.5rem 0;
+/* Table Styling & Overflow Fix for Projects/Publications */
+.table-responsive, .table-container {
   width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1.5rem 0;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-table {
+table, .project-table {
   width: 100%;
   border-collapse: collapse;
   background: white;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  min-width: 600px; /* Forces smooth horizontal scrolling instead of breaking layout */
 }
 
 th, td {
@@ -333,7 +336,7 @@ footer .designer {
   font-weight: 600;
 }
 
-/* Mobile Responsive Header, Compact Floating Dropdown & Right Corner Toggle */
+/* Mobile Responsive Header, Compact Dropdown & Heading Resizing */
 @media (max-width: 950px) {
   .mobile-toggle {
     display: block !important;
@@ -392,30 +395,63 @@ footer .designer {
   .container {
     padding: 0 1rem !important;
     margin: 1rem auto !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
   }
+
+  /* Resized Headings for Mobile View */
   .section-title {
-    font-size: 1.6rem !important;
+    font-size: 1.4rem !important;
   }
-  .card-grid, .member-grid {
+
+  h1 { font-size: 1.6rem !important; }
+  h2 { font-size: 1.35rem !important; }
+  h3 { font-size: 1.15rem !important; }
+
+  .section-subtitle {
+    font-size: 0.9rem !important;
+    margin-bottom: 1.2rem !important;
+  }
+
+  .card-grid, .member-grid, .contact-grid, .research-grid {
     grid-template-columns: 1fr !important;
     gap: 1.2rem !important;
   }
+
+  .card, .contact-card {
+    padding: 1.2rem !important;
+  }
+
   .member-img-box img {
     object-fit: contain !important;
     padding: 6px !important;
   }
+
   .btn-group {
     flex-direction: column !important;
   }
+
   .btn {
     text-align: center !important;
     width: 100% !important;
+    padding: 0.65rem 1rem !important;
+    font-size: 0.9rem !important;
   }
-  .table-container {
+
+  /* Perfect Table Scrolling without breaking screen width */
+  .table-responsive, .table-container {
+    width: 100% !important;
     overflow-x: auto !important;
+    display: block !important;
+    border-radius: 8px !important;
   }
-  table th, table td {
+
+  table, .project-table {
+    min-width: 550px !important;
+  }
+
+  table th, table td, .project-table th, .project-table td {
     padding: 8px 10px !important;
-    font-size: 0.82rem !important;
+    font-size: 0.8rem !important;
   }
 }
