@@ -7,7 +7,7 @@
   <link rel="icon" href="images/fevicon.png" type="image/png">
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Mobile Toggle Button (Hidden on Desktop) */
+    /* Strict Mobile Dropdown Fix for About Page */
     .mobile-toggle {
       display: none;
       background: transparent;
@@ -18,7 +18,6 @@
       z-index: 1200;
     }
 
-    /* Mobile Responsive Optimizations for About Page */
     @media (max-width: 950px) {
       .mobile-toggle {
         display: block !important;
@@ -26,36 +25,44 @@
       .nav-container {
         flex-wrap: wrap !important;
         padding: 0.8rem 1rem !important;
+        position: relative !important;
       }
-      /* Clean Dropdown Menu - Not full screen */
       nav {
-        width: 100% !important;
+        width: auto !important;
       }
-      nav ul {
+      header nav ul, .nav-container nav ul {
         display: none !important;
         flex-direction: column !important;
-        width: 100% !important;
+        width: 220px !important;
+        max-width: 220px !important;
         background: #ffffff !important;
         position: absolute !important;
         top: 100% !important;
-        left: 0 !important;
-        padding: 0.8rem 0 !important;
-        box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important;
+        right: 15px !important;
+        left: auto !important;
+        padding: 8px 0 !important;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.2) !important;
+        border-radius: 8px !important;
         z-index: 1100 !important;
-        margin: 0 !important;
+        margin-top: 5px !important;
       }
-      nav ul.active {
+      header nav ul.active, .nav-container nav ul.active {
         display: flex !important;
       }
-      nav ul li {
+      header nav ul li, .nav-container nav ul li {
         width: 100% !important;
         text-align: left !important;
       }
-      nav ul li a {
+      header nav ul li a, .nav-container nav ul li a {
         display: block !important;
-        padding: 0.7rem 1.2rem !important;
-        font-size: 1rem !important;
+        padding: 0.55rem 1rem !important;
+        font-size: 0.9rem !important;
+        color: #1e293b !important;
         border-radius: 0 !important;
+      }
+      header nav ul li a:hover, .nav-container nav ul li a:hover {
+        background-color: #f1f5f9 !important;
+        color: #0d9488 !important;
       }
     }
 
@@ -64,7 +71,6 @@
         padding: 0 1rem !important;
         margin: 1rem auto !important;
       }
-      /* Stack PI Profile Header on mobile */
       .container > div[style*="display: flex"] {
         flex-direction: column !important;
         padding: 1.2rem !important;
@@ -93,14 +99,12 @@
   </style>
 </head>
 <body>
-  <!-- Common Navigation Header with Built-in Toggle -->
   <header style="position: sticky; top: 0; z-index: 1000; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(8px); box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
     <div class="nav-container" style="max-width: 1250px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; position: relative;">
       <div class="logo-section" style="display: flex; align-items: center; gap: 12px;">
         <img src="images/fevicon.png" alt="RMM Group Logo" style="height: 45px;">
         <h2 style="font-size: 1.4rem; color: #0d9488; font-weight: 700;">RMM Group</h2>
       </div>
-      <!-- Mobile Hamburger Button -->
       <button class="mobile-toggle" aria-label="Toggle Navigation">☰</button>
       <nav>
         <ul style="display: flex; list-style: none; gap: 1.2rem; align-items: center;">
@@ -120,13 +124,11 @@
   </header>
 
   <div class="container">
-    <!-- Main Section Heading -->
     <div class="section-title" style="font-size: 1.6rem;">
       <div class="title-bar" style="height: 24px;"></div>
       About Principal Investigator
     </div>
     
-    <!-- PI Profile Header -->
     <div style="background: white; padding: 2rem; border-radius: 12px; display: flex; gap: 2rem; margin-top: 1.5rem; flex-wrap: wrap; box-shadow: 0 4px 12px rgba(0,0,0,0.04);">
       <div style="flex: 1; min-width: 250px; text-align: center;">
         <img src="images/Dr. R Mayilmurugan.png" alt="Dr. Ramasamy Mayilmurugan" style="width: 100%; max-width: 280px; border-radius: 12px;">
@@ -138,20 +140,17 @@
         <p style="color: #64748b; font-weight: 500;">Indian Institute of Technology (IIT), Bhilai</p>
         <p style="margin-top: 0.8rem; font-size: 0.95rem;"><strong>Email:</strong> murugan@iitbhilai.ac.in</p>
 
-        <!-- Academic Profile Buttons -->
         <div class="btn-group" style="margin-top: 1.2rem; display: flex; gap: 1rem;">
           <a href="https://scholar.google.co.in/citations?user=-9ywDWAAAAAJ&hl=en" target="_blank" class="btn btn-primary">Google Scholar Profile</a>
           <a href="https://orcid.org/0000-0002-5370-594X" target="_blank" class="btn btn-secondary">ORCID</a>
         </div>
 
-        <!-- Bio Text -->
         <p style="margin-top: 1.2rem; color: #334155; line-height: 1.7; text-align: justify;">
           Dr. R. Mayilmurugan received his PhD from the Bharathidasan University, Tiruchirapalli, under the supervision of distinguished bioinorganic chemist Prof. M. Palaniandavar, FNA, FASc, and M.Sc. from Madurai Kamaraj University (ANJA College). He was awarded a gold medal for securing the first rank in his M.Sc. He has done his Post-Doctoral Fellowship with Prof. Nadia C. Mösch-Zanetti, University of Graz, Austria, and his research focused on Biomimetic chemistry molybdenum-containing oxo transferase enzymes and the reaction mechanism. Then, he worked on iron-based PARACET MRI contrast agents at Prof. Janet Morrow’s group (Associate Editor, Inorganic Chemistry), University at Buffalo, SUNY, the USA, with his Fulbright Scholarship grant. Also, he was an INSA-DFG visiting scientist at Prof. Peter Comba’s laboratory at Heidelberg University, Germany. Before joining IIT Bhilai, he was an Assistant Professor at Madurai Kamaraj University.
         </p>
       </div>
     </div>
 
-    <!-- Section 1: Awards and Recognitions -->
     <div style="margin-top: 2rem; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.04);">
       <h3 style="color: var(--primary-color); margin-bottom: 1rem; border-bottom: 2px solid #f1f5f9; padding-bottom: 0.5rem;">Awards and Recognitions</h3>
       <ul style="margin-left: 1.5rem; color: #334155; line-height: 1.8;">
@@ -170,7 +169,6 @@
       </ul>
     </div>
 
-    <!-- Section 2: Visiting Professorship -->
     <div style="margin-top: 2rem; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.04);">
       <h3 style="color: var(--secondary-color); margin-bottom: 1rem; border-bottom: 2px solid #f1f5f9; padding-bottom: 0.5rem;">Visiting Professorship</h3>
       <ul style="margin-left: 1.5rem; color: #334155; line-height: 1.8;">
@@ -182,7 +180,6 @@
       </ul>
     </div>
 
-    <!-- Section 3: Workshops / Seminars / Conferences -->
     <div style="margin-top: 2rem; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.04);">
       <h3 style="color: var(--accent-pink); margin-bottom: 1rem; border-bottom: 2px solid #f1f5f9; padding-bottom: 0.5rem;">Workshops / Seminars / Conferences</h3>
       <ul style="margin-left: 1.5rem; color: #334155; line-height: 1.8;">
@@ -191,7 +188,6 @@
       </ul>
     </div>
 
-    <!-- Section 4: PhD / Master Thesis Supervised Table -->
     <div style="margin-top: 2rem; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.04);">
       <h3 style="color: var(--primary-color); margin-bottom: 1rem; border-bottom: 2px solid #f1f5f9; padding-bottom: 0.5rem;">PhD / Master Thesis Supervised</h3>
       <div class="table-container">
@@ -219,7 +215,6 @@
       </div>
     </div>
 
-    <!-- Section 5: Teaching -->
     <div style="margin-top: 2rem; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.04);">
       <h3 style="color: var(--primary-color); margin-bottom: 1rem; border-bottom: 2px solid #f1f5f9; padding-bottom: 0.5rem;">Teaching</h3>
       <ol style="margin-left: 1.5rem; color: #334155; line-height: 1.8;">
@@ -233,16 +228,13 @@
         <li>Advances in Cancer Biology</li>
       </ol>
     </div>
-
   </div>
 
-  <!-- Common Footer -->
   <footer>
     <p>© 2026 RMM Group, IIT Bhilai. All Rights Reserved.</p>
     <p class="designer">Designed by Vish Technologies</p>
   </footer>
 
-  <!-- Mobile Toggle Script -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const toggleBtn = document.querySelector('.mobile-toggle');
