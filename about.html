@@ -6,6 +6,29 @@
   <title>About - Dr. Ramasamy Mayilmurugan</title>
   <link rel="icon" href="images/fevicon.png" type="image/png">
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Mobile-specific responsive tweaks for about page layouts */
+    @media (max-width: 768px) {
+      .container > div[style*="display: flex"] {
+        flex-direction: column !important;
+        padding: 1.2rem !important;
+      }
+      .container div[style*="flex: 1"] {
+        width: 100% !important;
+      }
+      .container div[style*="flex: 2"] {
+        width: 100% !important;
+      }
+      .btn-group {
+        flex-direction: column !important;
+      }
+      .btn-group .btn {
+        width: 100% !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- Common Navigation Header -->
