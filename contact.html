@@ -132,6 +132,28 @@
     footer {
       padding: 1rem 0;
     }
+
+    /* Mobile Responsive Optimizations */
+    @media (max-width: 768px) {
+      html, body {
+        height: auto;
+      }
+      body {
+        display: block;
+      }
+      .container {
+        margin: 1rem auto !important;
+        padding: 0 1rem !important;
+        justify-content: flex-start;
+      }
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+      }
+      .contact-card {
+        padding: 1.2rem;
+      }
+    }
   </style>
 </head>
 <body>
