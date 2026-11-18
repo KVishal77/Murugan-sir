@@ -42,7 +42,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
   position: relative;
 }
 
@@ -90,7 +90,7 @@ nav a:hover, nav a.active {
   background-color: #f1f5f9;
 }
 
-/* Mobile Hamburger Toggle Button */
+/* Mobile Hamburger Toggle Button - Locked to Right Corner */
 .mobile-toggle {
   display: none;
   background: transparent;
@@ -99,6 +99,10 @@ nav a:hover, nav a.active {
   color: var(--primary-color);
   cursor: pointer;
   z-index: 1200;
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /* Main Container */
@@ -184,7 +188,7 @@ nav a:hover, nav a.active {
   font-size: 0.95rem;
 }
 
-/* Member Cards - Fixed Image Cut Issue */
+/* Member Cards - Original Desktop View Restored */
 .member-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -208,21 +212,16 @@ nav a:hover, nav a.active {
 }
 
 .member-img-box {
-  width: 100% !important;
-  height: 220px !important;
-  background-color: #f8fafc !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  overflow: hidden !important;
-  padding: 8px !important;
+  width: 100%;
+  height: 260px; /* Original Desktop Height */
+  background-color: #e2e8f0;
+  overflow: hidden;
 }
 
 .member-img-box img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: contain !important;
-  object-position: center !important;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Original Desktop Image Fit */
 }
 
 .member-info {
@@ -334,14 +333,15 @@ footer .designer {
   font-weight: 600;
 }
 
-/* Mobile Responsive Header & Compact Floating Dropdown */
+/* Mobile Responsive Header, Compact Floating Dropdown & Mobile-Only Image Fix */
 @media (max-width: 950px) {
   .mobile-toggle {
     display: block !important;
   }
   .nav-container {
     flex-wrap: wrap !important;
-    padding: 0.8rem 1rem !important;
+    padding: 1rem 1.5rem !important;
+    position: relative !important;
   }
   nav {
     width: auto !important;
@@ -399,6 +399,11 @@ footer .designer {
   .card-grid, .member-grid {
     grid-template-columns: 1fr !important;
     gap: 1.2rem !important;
+  }
+  /* Only apply contain object-fit on mobile screens so desktop remains untouched */
+  .member-img-box img {
+    object-fit: contain !important;
+    padding: 6px !important;
   }
   .btn-group {
     flex-direction: column !important;
