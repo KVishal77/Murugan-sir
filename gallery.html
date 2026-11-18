@@ -49,6 +49,7 @@
       flex-direction: column;
       justify-content: space-between;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
     }
 
     .gallery-card:hover {
@@ -89,6 +90,21 @@
       text-align: center;
       margin: 0.4rem 0 0.2rem 0;
       line-height: 1.35;
+    }
+
+    /* Mobile Responsive Optimizations */
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 1rem !important;
+        margin: 1.5rem auto !important;
+      }
+      .gallery-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.2rem;
+      }
+      .gallery-img-box {
+        height: 210px !important;
+      }
     }
   </style>
 </head>
@@ -212,5 +228,6 @@
     <p class="designer">Designed by Vish Technologies</p>
   </footer>
 
-</body>
+  <script src="script.js"></script>
+</body> 
 </html>
