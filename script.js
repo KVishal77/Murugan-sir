@@ -4,7 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if (hash) {
     const element = document.querySelector(hash);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      setTimeout(() => {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
     }
   }
 });
