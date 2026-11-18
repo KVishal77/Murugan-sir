@@ -7,7 +7,7 @@
   <link rel="icon" href="images/fevicon.png" type="image/png">
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Strict Mobile Dropdown Fix for About Page */
+    /* Strict Mobile Dropdown & Right Corner Toggle Fix for About Page */
     .mobile-toggle {
       display: none;
       background: transparent;
@@ -16,6 +16,10 @@
       color: #0d9488;
       cursor: pointer;
       z-index: 1200;
+      position: absolute;
+      right: 1.5rem;
+      top: 50%;
+      transform: translateY(-50%);
     }
 
     @media (max-width: 950px) {
@@ -24,7 +28,7 @@
       }
       .nav-container {
         flex-wrap: wrap !important;
-        padding: 0.8rem 1rem !important;
+        padding: 1rem 1.5rem !important;
         position: relative !important;
       }
       nav {
@@ -100,7 +104,7 @@
 </head>
 <body>
   <header style="position: sticky; top: 0; z-index: 1000; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(8px); box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
-    <div class="nav-container" style="max-width: 1250px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; position: relative;">
+    <div class="nav-container" style="max-width: 1250px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; position: relative;">
       <div class="logo-section" style="display: flex; align-items: center; gap: 12px;">
         <img src="images/fevicon.png" alt="RMM Group Logo" style="height: 45px;">
         <h2 style="font-size: 1.4rem; color: #0d9488; font-weight: 700;">RMM Group</h2>
