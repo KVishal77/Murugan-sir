@@ -10,7 +10,7 @@
   --transition: all 0.3s ease;
 }
 
-*, *::before, *::after {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -64,7 +64,6 @@ nav ul {
   display: flex;
   list-style: none;
   gap: 1.2rem;
-  align-items: center;
 }
 
 nav a {
@@ -80,16 +79,6 @@ nav a {
 nav a:hover, nav a.active {
   color: var(--primary-color);
   background-color: #f1f5f9;
-}
-
-/* Mobile Hamburger Menu Button */
-.mobile-menu-btn {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.6rem;
-  color: var(--dark-text);
-  cursor: pointer;
 }
 
 /* Main Container */
@@ -269,7 +258,6 @@ nav a:hover, nav a.active {
 /* Table Styling */
 .table-container {
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
   margin: 1.5rem 0;
 }
 
@@ -280,7 +268,6 @@ table {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  min-width: 600px;
 }
 
 th, td {
@@ -311,53 +298,4 @@ footer p {
 footer .designer {
   color: #cbd5e1;
   font-weight: 600;
-}
-
-/* Mobile Responsive Media Queries */
-@media screen and (max-width: 900px) {
-  .nav-container {
-    padding: 1rem;
-  }
-  .mobile-menu-btn {
-    display: block;
-  }
-  nav ul {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: #ffffff;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    padding: 1.5rem;
-    gap: 1rem;
-    border-top: 1px solid #e2e8f0;
-  }
-  nav ul.show {
-    display: flex;
-  }
-  nav a {
-    display: block;
-    width: 100%;
-    padding: 0.6rem 1rem;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .container {
-    margin: 1rem auto;
-    padding: 0 1rem;
-  }
-  .section-title {
-    font-size: 1.6rem;
-  }
-  .card-grid {
-    grid-template-columns: 1fr;
-    gap: 1.2rem;
-  }
-  .member-grid {
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 1rem;
-  }
 }
