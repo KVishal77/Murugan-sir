@@ -7,6 +7,7 @@
   <link rel="icon" href="images/fevicon.png" type="image/png">
   <link rel="stylesheet" href="style.css">
   <style>
+    /* Professional Scientific Background matching Website Theme */
     body {
       background-color: #060c1b;
       background-image: 
@@ -14,13 +15,20 @@
         linear-gradient(to bottom, #060c1b 0%, #0a1329 100%);
       background-size: 36px 36px, 100% 100%;
       color: #ffffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
       min-height: 100vh;
     }
+
+    /* Container Spacing */
     .container {
       max-width: 1250px !important;
       margin: 2.5rem auto !important;
       padding: 0 2rem !important;
     }
+
+    /* 4 Items Per Row Grid Layout */
     .member-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr) !important;
@@ -28,13 +36,20 @@
       margin-bottom: 3rem;
       align-items: stretch;
     }
+
     @media (max-width: 1050px) {
-      .member-grid { grid-template-columns: repeat(2, 1fr) !important; }
+      .member-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
     }
+
     @media (max-width: 650px) {
-      .member-grid { grid-template-columns: 1fr !important; }
-      .container { padding: 0 1rem !important; }
+      .member-grid {
+        grid-template-columns: 1fr !important;
+      }
     }
+
+    /* Minimal & Sleek Card Design (No Heavy Borders) */
     .member-card {
       background: #ffffff;
       border: none !important;
@@ -46,10 +61,13 @@
       justify-content: space-between;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
     .member-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 10px 25px rgba(56, 189, 248, 0.3);
     }
+
+    /* Image Display Container (Border-free) */
     .member-img-box {
       width: 100%;
       height: 220px;
@@ -61,24 +79,44 @@
       background: #f8fafc;
       padding: 0.5rem;
       margin-bottom: 0.8rem;
+      border: none !important;
     }
+
     .member-img-box img {
       max-width: 100%;
       max-height: 100%;
       object-fit: contain;
+      transition: transform 0.3s ease;
     }
-    .member-info { text-align: center; }
-    .member-info h4 { color: #0f172a; font-size: 1.05rem; font-weight: 700; margin: 0; }
+
+    .member-card:hover .member-img-box img {
+      transform: scale(1.05);
+    }
+
+    /* Clean Dark Text Under Image */
+    .member-info {
+      text-align: center;
+      padding: 0.2rem 0;
+    }
+
+    .member-info h4 {
+      color: #0f172a;
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin: 0;
+      line-height: 1.35;
+    }
   </style>
 </head>
 <body>
+
+  <!-- Header & Navigation -->
   <header>
     <div class="nav-container">
       <div class="logo-section">
         <img src="images/fevicon.png" alt="RMM Group Logo">
         <h2>RMM Group</h2>
       </div>
-      <button class="mobile-menu-btn" aria-label="Toggle navigation">☰</button>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -101,24 +139,134 @@
       <div class="title-bar"></div>
       Facilities
     </div>
-    <p class="section-subtitle" style="color: #cbd5e1; margin-bottom: 2rem;">The Group strongly believes that state-of-the-art research facilities are essential.</p>
+    <p class="section-subtitle" style="color: #cbd5e1; margin-bottom: 2rem;">The Group strongly believes that state-of-the-art research facilities are essential to carry out quality research work.</p>
 
+    <!-- 4 Items Per Row Grid containing all items -->
     <div class="member-grid">
+      
+      <!-- 1. Invitrogen Automated Cell Counter -->
       <div class="member-card">
         <div class="member-img-box"><img src="images/Invitrogen Automated Cell Counter.png" alt="Invitrogen Automated Cell Counter"></div>
         <div class="member-info"><h4>Invitrogen Automated Cell Counter</h4></div>
       </div>
+
+      <!-- 2. Centrifuge machine -->
       <div class="member-card">
         <div class="member-img-box"><img src="images/Centrifuge machine.png" alt="Centrifuge machine"></div>
         <div class="member-info"><h4>Centrifuge Machine</h4></div>
       </div>
+
+      <!-- 3. Microspin Mini Centrifuge -->
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/Microspin Mini Centrifuge.png" alt="Microspin Mini Centrifuge"></div>
+        <div class="member-info"><h4>Microspin Mini Centrifuge</h4></div>
+      </div>
+
+      <!-- 4. Electrochemical workstation -->
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/electrochemical workstation.png" alt="Electrochemical workstation"></div>
+        <div class="member-info"><h4>Electrochemical Workstation</h4></div>
+      </div>
+
+      <!-- 5. CO2 Incubator -->
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/CO2 Incubator.png" alt="CO2 Incubator"></div>
+        <div class="member-info"><h4>CO2 Incubator</h4></div>
+      </div>
+
+      <!-- 6. Potentmetric titrator -->
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/Potentmetric titrator.png" alt="Potentmetric titrator"></div>
+        <div class="member-info"><h4>Potentiometric Titrator</h4></div>
+      </div>
+
+      <!-- 7. Bio safety Cabinet Class II -->
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/Bio safety Cabinet Class II.png" alt="Bio safety Cabinet Class II"></div>
+        <div class="member-info"><h4>Bio Safety Cabinet Class II</h4></div>
+      </div>
+
+      <!-- 8. UV-Visible spectrophotometer -->
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/UV-Visible spectrophotometer.png" alt="UV-Visible spectrophotometer"></div>
+        <div class="member-info"><h4>UV-Visible Spectrophotometer</h4></div>
+      </div>
+
+      <!-- 9. Serological Pipettes and pipettes -->
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/Serological Pipettes and pipettes.png" alt="Serological Pipettes and pipettes"></div>
+        <div class="member-info"><h4>Serological Pipettes & Pipettes</h4></div>
+      </div>
+
+      <!-- 10. Relaxometer -->
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/Relaxometer.png" alt="Relaxometer"></div>
+        <div class="member-info"><h4>Relaxometer</h4></div>
+      </div>
+
+      <!-- 11. Microwave Oven -->
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/Microwave Oven.png" alt="Microwave Oven"></div>
+        <div class="member-info"><h4>Microwave Oven</h4></div>
+      </div>
+
+      <!-- 12. Liquid Nitrogen Tank -->
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/Liquid Nitrogen Tank.png" alt="Liquid Nitrogen Tank"></div>
+        <div class="member-info"><h4>Liquid Nitrogen Tank</h4></div>
+      </div>
+
+      <!-- 13. Vertex -->
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/Vertex.png" alt="Vertex"></div>
+        <div class="member-info"><h4>Vortex / Vertex</h4></div>
+      </div>
+
+      <!-- 14. Nikon Inverted Microscope -->
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/Nikon Inverted Microscope.png" alt="Nikon Inverted Microscope"></div>
+        <div class="member-info"><h4>Nikon Inverted Microscope</h4></div>
+      </div>
+
+      <!-- 15. pH meter -->
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/pH meter.png" alt="pH meter"></div>
+        <div class="member-info"><h4>pH Meter</h4></div>
+      </div>
+
+      <!-- 16. Work station -->
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/Work station.png" alt="Work station"></div>
+        <div class="member-info"><h4>Work Station</h4></div>
+      </div>
+
+      <!-- 17. UV Chamber -->
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/UV Chamber.png" alt="UV Chamber"></div>
+        <div class="member-info"><h4>UV Chamber</h4></div>
+      </div>
+
+      <!-- 18. Vaccum pump -->
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/Vaccum pump.png" alt="Vaccum pump"></div>
+        <div class="member-info"><h4>Vacuum Pump</h4></div>
+      </div>
+
+      <!-- 19. Rotary evaporator -->
+      <div class="member-card">
+        <div class="member-img-box"><img src="images/Rotary evaporator.png" alt="Rotary evaporator"></div>
+        <div class="member-info"><h4>Rotary Evaporator</h4></div>
+      </div>
+
     </div>
   </div>
 
+  <!-- Common Footer -->
   <footer>
     <p>© 2026 RMM Group, IIT Bhilai. All Rights Reserved.</p>
     <p class="designer">Designed by Vish Technologies</p>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
