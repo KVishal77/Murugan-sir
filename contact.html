@@ -7,142 +7,30 @@
   <link rel="icon" href="images/fevicon.png" type="image/png">
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Compact Single-Page Layout */
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
       background-color: #060c1b;
-      background-image: 
-        radial-gradient(rgba(56, 189, 248, 0.08) 1.5px, transparent 1.5px),
-        linear-gradient(to bottom, #060c1b 0%, #0a1329 100%);
-      background-size: 36px 36px, 100% 100%;
+      background-image: radial-gradient(rgba(56, 189, 248, 0.08) 1.5px, transparent 1.5px), linear-gradient(to bottom, #060c1b 0%, #0a1329 100%);
       color: #ffffff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
-
-    .container {
-      max-width: 1100px !important;
-      margin: 1.5rem auto !important;
-      padding: 0 1.5rem !important;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 1.8rem;
-      margin-top: 1rem;
-    }
-
-    /* Modern Card Design */
-    .contact-card {
-      background: #ffffff;
-      border-radius: 12px;
-      padding: 1.8rem;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-      border-top: 4px solid #38bdf8;
-      color: #0f172a;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .contact-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 14px 35px rgba(56, 189, 248, 0.35);
-      border-top-color: #0284c7;
-    }
-
-    .contact-card h3 {
-      color: #0284c7;
-      font-size: 1.25rem;
-      margin-top: 0;
-      margin-bottom: 0.8rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .contact-card p {
-      color: #334155;
-      font-size: 0.92rem;
-      line-height: 1.5;
-      margin: 0.4rem 0;
-    }
-
-    /* Openings Badges */
-    .openings-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 0.6rem;
-    }
-
-    .tag {
-      background: #f0f9ff;
-      color: #0369a1;
-      border: 1px solid #bae6fd;
-      padding: 0.3rem 0.7rem;
-      border-radius: 20px;
-      font-size: 0.82rem;
-      font-weight: 600;
-    }
-
-    /* Email Highlight Box */
-    .email-box {
-      background: #f8fafc;
-      border-left: 4px solid #38bdf8;
-      padding: 1rem;
-      border-radius: 8px;
-      margin: 1rem 0;
-    }
-
-    .email-box a {
-      color: #2563eb;
-      font-size: 1.1rem;
-      font-weight: 700;
-      text-decoration: none;
-      word-break: break-all;
-    }
-
-    .email-box a:hover {
-      text-decoration: underline;
-    }
-
-    .note-box {
-      font-size: 0.85rem;
-      color: #64748b;
-      background: #f1f5f9;
-      padding: 0.6rem 0.8rem;
-      border-radius: 6px;
-      margin-top: 0.5rem;
-    }
-
-    footer {
-      padding: 1rem 0;
-    }
+    .container { max-width: 1100px !important; margin: 1.5rem auto !important; padding: 0 1.5rem !important; flex: 1; width: 100%; box-sizing: border-box; }
+    .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.8rem; margin-top: 1rem; }
+    .contact-card { background: #ffffff; border-radius: 12px; padding: 1.8rem; border-top: 4px solid #38bdf8; color: #0f172a; }
+    .email-box { background: #f8fafc; border-left: 4px solid #38bdf8; padding: 1rem; border-radius: 8px; margin: 1rem 0; word-wrap: break-word; }
+    @media screen and (max-width: 768px) { .container { padding: 0 1rem !important; } .contact-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
-
-  <!-- Header Navigation -->
   <header>
     <div class="nav-container">
       <div class="logo-section">
         <img src="images/fevicon.png" alt="RMM Group Logo">
         <h2>RMM Group</h2>
       </div>
+      <button class="mobile-menu-btn" aria-label="Toggle navigation">☰</button>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -160,59 +48,27 @@
     </div>
   </header>
 
-  <!-- Single Page Content -->
   <div class="container">
-    <div class="section-title" style="color: #ffffff; font-size: 1.8rem; margin-bottom: 0.2rem;">
-      <div class="title-bar"></div>
-      Contact and Openings
-    </div>
-    <p class="section-subtitle" style="color: #cbd5e1; margin-bottom: 1.5rem;">Connect with us or join our research group at IIT Bhilai.</p>
-
+    <div class="section-title" style="color: #ffffff; font-size: 1.8rem;"><div class="title-bar"></div>Contact and Openings</div>
     <div class="contact-grid">
-      <!-- Find Us & Openings -->
       <div class="contact-card">
-        <div>
-          <h3>📍 Find Us</h3>
-          <p><b>Department of Chemistry & Department of Bioscience and Biomedical Engineering</b></p>
-          <p>Indian Institute of Technology (IIT) Bhilai, Chhattisgarh, India</p>
-        </div>
-
-        <div style="margin-top: 1.2rem;">
-          <h3 style="color: #db2777;">🎓 Openings</h3>
-          <p>Join us in our research projects:</p>
-          <div class="openings-tags">
-            <span class="tag">PhD Scholars</span>
-            <span class="tag">Project Staff</span>
-            <span class="tag">Postdocs</span>
-            <span class="tag">Interns</span>
-          </div>
-        </div>
+        <h3>📍 Find Us</h3>
+        <p><b>Department of Chemistry & BSBME</b></p>
+        <p>IIT Bhilai, Chhattisgarh, India</p>
       </div>
-
-      <!-- Write to Us -->
       <div class="contact-card">
-        <div>
-          <h3>✉️ Write to Us</h3>
-          <p>We are always eager to welcome motivated researchers, scholars, and interns to our lab.</p>
-
-          <div class="email-box">
-            <p style="margin: 0 0 0.2rem 0; font-size: 0.78rem; color: #64748b; font-weight: 600; text-transform: uppercase;">Direct Contact Email</p>
-            <a href="mailto:murugan@iitbhilai.ac.in">murugan@iitbhilai.ac.in</a>
-          </div>
-        </div>
-
-        <div class="note-box">
-          💡 <b>Application Tip:</b> Send your CV along with a short note describing your research background and what you wish to work on.
+        <h3>✉️ Write to Us</h3>
+        <div class="email-box">
+          <a href="mailto:murugan@iitbhilai.ac.in">murugan@iitbhilai.ac.in</a>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Footer -->
   <footer>
     <p>© 2026 RMM Group, IIT Bhilai. All Rights Reserved.</p>
     <p class="designer">Designed by Vish Technologies</p>
   </footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
