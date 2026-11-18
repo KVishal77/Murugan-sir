@@ -1,4 +1,4 @@
-// Smooth scrolling and Mobile Navigation Toggle
+// Smooth scrolling & Robust Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', () => {
   // Smooth scroll for hash links
   const hash = window.location.hash;
@@ -11,25 +11,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Mobile Hamburger Menu Toggle Logic
-  const navContainer = document.querySelector('.nav-container');
-  if (navContainer) {
-    const navUl = navContainer.querySelector('ul');
-    if (navUl && !document.querySelector('.mobile-toggle')) {
+  // Universal Mobile Toggle Injector for all pages (About, Contact, Home, etc.)
+  const navContainers = document.querySelectorAll('.nav-container');
+  navContainers.forEach(navContainer => {
+    const navUl = navContainer.querySelector('ul') || navContainer.querySelector('.nav-links');
+    if (navUl && !navContainer.querySelector('.mobile-toggle')) {
       const toggleBtn = document.createElement('button');
       toggleBtn.className = 'mobile-toggle';
       toggleBtn.innerHTML = '☰';
       toggleBtn.setAttribute('aria-label', 'Toggle Navigation');
       
-      // Insert toggle button before nav element
-      navContainer.insertBefore(toggleBtn, navContainer.querySelector('nav'));
+      const navElement = navContainer.querySelector('nav') || navUl.parentElement;
+      navContainer.insertBefore(toggleBtn, navElement);
 
-      toggleBtn.addEventListener('click', () => {
+      toggleBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
         navUl.classList.toggle('active');
         toggleBtn.innerHTML = navUl.classList.contains('active') ? '✕' : '☰';
       });
 
-      // Close menu on link click in mobile view
+      // Close menu when clicking outside or on a link
+      document.addEventListener('click', (e) => {
+        if (!navContainer.contains(e.target)) {
+          navUl.classList.remove('active');
+          toggleBtn.innerHTML = '☰';
+        }
+      });
+
       navUl.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
           navUl.classList.remove('active');
@@ -37,5 +45,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       });
     }
-  }
+  });
 });
