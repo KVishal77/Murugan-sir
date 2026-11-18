@@ -7,6 +7,58 @@
   <link rel="icon" href="images/fevicon.png" type="image/png">
   <link rel="stylesheet" href="style.css">
   <style>
+    /* Mobile Toggle Button */
+    .mobile-toggle {
+      display: none;
+      background: transparent;
+      border: none;
+      font-size: 1.8rem;
+      color: #0d9488;
+      cursor: pointer;
+      z-index: 1200;
+    }
+
+    /* Mobile Responsive Header & Nav Dropdown */
+    @media (max-width: 950px) {
+      .mobile-toggle {
+        display: block !important;
+      }
+      .nav-container {
+        flex-wrap: wrap !important;
+        padding: 0.8rem 1rem !important;
+      }
+      nav {
+        width: 100% !important;
+      }
+      nav ul {
+        display: none !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        background: #ffffff !important;
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        padding: 0.8rem 0 !important;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important;
+        z-index: 1100 !important;
+        margin: 0 !important;
+      }
+      nav ul.active {
+        display: flex !important;
+      }
+      nav ul li {
+        width: 100% !important;
+        text-align: left !important;
+      }
+      nav ul li a {
+        display: block !important;
+        padding: 0.7rem 1.2rem !important;
+        font-size: 1rem !important;
+        border-radius: 0 !important;
+        color: #1e293b !important;
+      }
+    }
+
     /* Compact Single-Page Layout */
     html, body {
       height: 100%;
@@ -159,14 +211,16 @@
 <body>
 
   <!-- Header Navigation -->
-  <header>
-    <div class="nav-container">
-      <div class="logo-section">
-        <img src="images/fevicon.png" alt="RMM Group Logo">
-        <h2>RMM Group</h2>
+  <header style="position: sticky; top: 0; z-index: 1000; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(8px); box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+    <div class="nav-container" style="max-width: 1250px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; position: relative;">
+      <div class="logo-section" style="display: flex; align-items: center; gap: 12px;">
+        <img src="images/fevicon.png" alt="RMM Group Logo" style="height: 45px;">
+        <h2 style="font-size: 1.4rem; color: #0d9488; font-weight: 700;">RMM Group</h2>
       </div>
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-toggle" aria-label="Toggle Navigation">☰</button>
       <nav>
-        <ul>
+        <ul style="display: flex; list-style: none; gap: 1.2rem; align-items: center;">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="index.html#research">Research</a></li>
@@ -236,5 +290,25 @@
     <p class="designer">Designed by Vish Technologies</p>
   </footer>
 
+  <!-- Mobile Toggle Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggleBtn = document.querySelector('.mobile-toggle');
+      const navUl = document.querySelector('nav ul');
+      if (toggleBtn && navUl) {
+        toggleBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          navUl.classList.toggle('active');
+          toggleBtn.innerHTML = navUl.classList.contains('active') ? '✕' : '☰';
+        });
+        document.addEventListener('click', (e) => {
+          if (!e.target.closest('header')) {
+            navUl.classList.remove('active');
+            toggleBtn.innerHTML = '☰';
+          }
+        });
+      }
+    });
+  </script>
 </body>
 </html>
