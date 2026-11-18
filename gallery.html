@@ -7,6 +7,7 @@
   <link rel="icon" href="images/fevicon.png" type="image/png">
   <link rel="stylesheet" href="style.css">
   <style>
+    /* Professional Scientific Dark Theme Background */
     body {
       background-color: #060c1b;
       background-image: 
@@ -14,42 +15,92 @@
         linear-gradient(to bottom, #060c1b 0%, #0a1329 100%);
       background-size: 36px 36px, 100% 100%;
       color: #ffffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
       min-height: 100vh;
     }
-    .container { max-width: 1250px !important; margin: 2.5rem auto !important; padding: 0 2rem !important; }
+
+    .container {
+      max-width: 1250px !important;
+      margin: 2.5rem auto !important;
+      padding: 0 2rem !important;
+    }
+
+    /* Gallery Grid Layout matching uniform design */
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 1.8rem;
+      align-items: stretch;
       margin-top: 2rem;
     }
+
+    /* Gallery Card Styling */
     .gallery-card {
+      position: relative;
       background: #ffffff;
       border-radius: 12px;
       padding: 0.9rem;
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
       border-top: 3px solid #38bdf8;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
+    .gallery-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(56, 189, 248, 0.35);
+      border-top-color: #0284c7;
+    }
+
     .gallery-img-box {
       width: 100%;
       height: 230px;
-      border-radius: 6px;
+      border-radius: 6px !important;
       overflow: hidden;
+      margin-bottom: 0.8rem;
       background: #f8fafc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
     }
-    .gallery-img-box img { width: 100%; height: 100%; object-fit: cover; }
-    .gallery-caption { color: #0f172a; font-size: 0.95rem; font-weight: 600; text-align: center; margin-top: 0.5rem; }
-    @media (max-width: 768px) { .container { padding: 0 1rem !important; } }
+
+    .gallery-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-card:hover .gallery-img-box img {
+      transform: scale(1.04);
+    }
+
+    .gallery-caption {
+      color: #0f172a;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-align: center;
+      margin: 0.4rem 0 0.2rem 0;
+      line-height: 1.35;
+    }
   </style>
 </head>
 <body>
+
+  <!-- Header & Navigation -->
   <header>
     <div class="nav-container">
       <div class="logo-section">
         <img src="images/fevicon.png" alt="RMM Group Logo">
         <h2>RMM Group</h2>
       </div>
-      <button class="mobile-menu-btn" aria-label="Toggle navigation">☰</button>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -75,17 +126,91 @@
     <p class="section-subtitle" style="color: #cbd5e1; margin-bottom: 2rem;">Workshops, field visits and life in the lab.</p>
 
     <div class="gallery-grid">
+      <!-- 1 -->
       <div class="gallery-card">
-        <div class="gallery-img-box"><img src="images/Sharing the moment Dr. Mayilmurugan with a group member.png" alt="Gallery"></div>
+        <div class="gallery-img-box"><img src="images/Sharing the moment Dr. Mayilmurugan with a group member.png" alt="Sharing the moment: Dr. Mayilmurugan with a group member" onerror="this.src='images/fevicon.png'"></div>
         <p class="gallery-caption">Sharing the moment: Dr. Mayilmurugan with a group member</p>
+      </div>
+
+      <!-- 2 -->
+      <div class="gallery-card">
+        <div class="gallery-img-box"><img src="images/A proud milestone group members with Dr. Mayilmurugan.png" alt="A proud milestone: group members with Dr. Mayilmurugan" onerror="this.src='images/fevicon.png'"></div>
+        <p class="gallery-caption">A proud milestone: group members with Dr. Mayilmurugan</p>
+      </div>
+
+      <!-- 3 -->
+      <div class="gallery-card">
+        <div class="gallery-img-box"><img src="images/Team dinner with Dr. Mayilmurugan and the RMM Group.png" alt="Team dinner with Dr. Mayilmurugan and the RMM Group" onerror="this.src='images/fevicon.png'"></div>
+        <p class="gallery-caption">Team dinner with Dr. Mayilmurugan and the RMM Group</p>
+      </div>
+
+      <!-- 4 -->
+      <div class="gallery-card">
+        <div class="gallery-img-box"><img src="images/Lab get-together an evening with the whole group.png" alt="Lab get-together: an evening with the whole group" onerror="this.src='images/fevicon.png'"></div>
+        <p class="gallery-caption">Lab get-together: an evening with the whole group</p>
+      </div>
+
+      <!-- 5 -->
+      <div class="gallery-card">
+        <div class="gallery-img-box"><img src="images/Group discussion with Professor Peter Comba.png" alt="Group discussion with Professor Peter Comba" onerror="this.src='images/fevicon.png'"></div>
+        <p class="gallery-caption">Group discussion with Professor Peter Comba</p>
+      </div>
+
+      <!-- 6 -->
+      <div class="gallery-card">
+        <div class="gallery-img-box"><img src="images/Chemistry group members in the lab.png" alt="Chemistry group members in the lab" onerror="this.src='images/fevicon.png'"></div>
+        <p class="gallery-caption">Chemistry group members in the lab</p>
+      </div>
+
+      <!-- 7 -->
+      <div class="gallery-card">
+        <div class="gallery-img-box"><img src="images/Delhi tour with group members.png" alt="Delhi tour with group members" onerror="this.src='images/fevicon.png'"></div>
+        <p class="gallery-caption">Delhi tour with group members</p>
+      </div>
+
+      <!-- 8 -->
+      <div class="gallery-card">
+        <div class="gallery-img-box"><img src="images/Dantewada workshop.png" alt="Dantewada workshop" onerror="this.src='images/fevicon.png'"></div>
+        <p class="gallery-caption">Dantewada workshop</p>
+      </div>
+
+      <!-- 9 -->
+      <div class="gallery-card">
+        <div class="gallery-img-box"><img src="images/Fun time in the lab.png" alt="Fun time in the lab" onerror="this.src='images/fevicon.png'"></div>
+        <p class="gallery-caption">Fun time in the lab</p>
+      </div>
+
+      <!-- 10 -->
+      <div class="gallery-card">
+        <div class="gallery-img-box"><img src="images/Kanker trip.png" alt="Kanker trip" onerror="this.src='images/fevicon.png'"></div>
+        <p class="gallery-caption">Kanker trip</p>
+      </div>
+
+      <!-- 11 -->
+      <div class="gallery-card">
+        <div class="gallery-img-box"><img src="images/Tirathgarh waterfall.png" alt="Tirathgarh waterfall" onerror="this.src='images/fevicon.png'"></div>
+        <p class="gallery-caption">Tirathgarh waterfall</p>
+      </div>
+
+      <!-- 12 -->
+      <div class="gallery-card">
+        <div class="gallery-img-box"><img src="images/Chitrakoot waterfall.png" alt="Chitrakoot waterfall" onerror="this.src='images/fevicon.png'"></div>
+        <p class="gallery-caption">Chitrakoot waterfall</p>
+      </div>
+
+      <!-- 13 -->
+      <div class="gallery-card">
+        <div class="gallery-img-box"><img src="images/Meeting with locals.png" alt="Meeting with locals" onerror="this.src='images/fevicon.png'"></div>
+        <p class="gallery-caption">Meeting with locals</p>
       </div>
     </div>
   </div>
 
+  <!-- Common Footer -->
   <footer>
     <p>© 2026 RMM Group, IIT Bhilai. All Rights Reserved.</p>
     <p class="designer">Designed by Vish Technologies</p>
   </footer>
-  <script src="script.js"></script>
+
 </body>
 </html>
