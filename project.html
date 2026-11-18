@@ -7,36 +7,103 @@
   <link rel="icon" href="images/fevicon.png" type="image/png">
   <link rel="stylesheet" href="style.css">
   <style>
+    /* Professional Scientific Background matching Website Theme */
     body {
       background-color: #060c1b;
-      background-image: radial-gradient(rgba(56, 189, 248, 0.08) 1.5px, transparent 1.5px), linear-gradient(to bottom, #060c1b 0%, #0a1329 100%);
+      background-image: 
+        radial-gradient(rgba(56, 189, 248, 0.08) 1.5px, transparent 1.5px),
+        linear-gradient(to bottom, #060c1b 0%, #0a1329 100%);
+      background-size: 36px 36px, 100% 100%;
       color: #ffffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
       min-height: 100vh;
     }
-    .container { max-width: 1200px !important; margin: 2.5rem auto !important; padding: 0 2rem !important; }
+
+    /* Container Spacing */
+    .container {
+      max-width: 1200px !important;
+      margin: 2.5rem auto !important;
+      padding: 0 2rem !important;
+    }
+
+    /* Section Subheadings */
+    .project-subheading {
+      color: #38bdf8;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin: 2.5rem 0 1rem 0;
+      border-left: 4px solid #38bdf8;
+      padding-left: 10px;
+    }
+
+    /* Table Wrapper */
     .table-responsive {
       width: 100%;
       overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
       background: #ffffff;
       border-radius: 14px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
       margin-bottom: 2.5rem;
     }
-    .project-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem; min-width: 650px; }
-    .project-table th { background: #0f172a; color: #38bdf8; padding: 1.1rem; }
-    .project-table td { padding: 1.1rem; color: #000; border-bottom: 1px solid #e2e8f0; font-weight: 600; }
-    @media screen and (max-width: 768px) { .container { padding: 0 1rem !important; } }
+
+    /* Styled Tables with Black Text for Maximum Readability */
+    .project-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+
+    .project-table th {
+      background: #0f172a;
+      color: #38bdf8;
+      font-weight: 700;
+      padding: 1.1rem;
+      border-bottom: 2px solid #38bdf8;
+    }
+
+    .project-table td {
+      padding: 1.1rem;
+      color: #000000; /* Pure Black Text */
+      border-bottom: 1px solid #e2e8f0;
+      vertical-align: middle;
+      font-weight: 600;
+    }
+
+    .project-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .project-table tr:hover {
+      background: #f1f5f9;
+    }
+
+    .sno-col {
+      width: 60px;
+      text-align: center;
+      font-weight: 700;
+      color: #1e3a8a;
+    }
+
+    /* Ensures Year never breaks into second line */
+    .year-col {
+      white-space: nowrap;
+      font-weight: 700;
+      color: #1e293b;
+    }
   </style>
 </head>
 <body>
+
+  <!-- Header & Navigation -->
   <header>
     <div class="nav-container">
       <div class="logo-section">
         <img src="images/fevicon.png" alt="RMM Group Logo">
         <h2>RMM Group</h2>
       </div>
-      <button class="mobile-menu-btn" aria-label="Toggle navigation">☰</button>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -55,21 +122,147 @@
   </header>
 
   <div class="container">
-    <div class="section-title" style="color: #ffffff; font-size: 1.8rem;"><div class="title-bar"></div>Research Projects</div>
+    <div class="section-title" style="color: #ffffff; font-size: 1.8rem;">
+      <div class="title-bar"></div>
+      Research Projects
+    </div>
+    <p class="section-subtitle" style="color: #cbd5e1; margin-bottom: 1.5rem;">Externally funded research projects undertaken by the RMM Research Group.</p>
+
+    <!-- ONGOING PROJECTS SECTION -->
+    <h3 class="project-subheading">Ongoing Projects</h3>
     <div class="table-responsive">
       <table class="project-table">
-        <thead><tr><th>S.No.</th><th>Project Title</th><th>Funding Agency</th><th>Amount (₹)</th><th>Year</th></tr></thead>
+        <thead>
+          <tr>
+            <th class="sno-col">S.No.</th>
+            <th>Project Title</th>
+            <th>Funding Agency</th>
+            <th>Amount (₹)</th>
+            <th class="year-col">Year</th>
+          </tr>
+        </thead>
         <tbody>
-          <tr><td>1</td><td>Bioinspired Copper and Nickel Complexes</td><td>SERB</td><td>51.82 lakhs</td><td>2020-2023</td></tr>
+          <tr>
+            <td class="sno-col">1</td>
+            <td>Bioinspired Copper and Nickel Complexes for Activation and Conversion of CO₂ into C1-Feedstock</td>
+            <td>SERB, New Delhi</td>
+            <td>51.82 lakhs</td>
+            <td class="year-col">2020-2023</td>
+          </tr>
+          <tr>
+            <td class="sno-col">2</td>
+            <td>Redox Activated Smart Manganese-Based MRI-Contrast Agents</td>
+            <td>SERB, New Delhi</td>
+            <td>42.50 lakhs</td>
+            <td class="year-col">2023-2026</td>
+          </tr>
+          <tr>
+            <td class="sno-col">3</td>
+            <td>Optical Imaging Probe Appended Smart MRI Contrast Agents</td>
+            <td>RIG, IIT Bhilai</td>
+            <td>12 lakhs</td>
+            <td class="year-col">2022-2025</td>
+          </tr>
+          <tr>
+            <td class="sno-col">4</td>
+            <td>Healthcare and Community Medicine Empowerment of Underprivileged Tribal-Population: Biological Validation of Cancer and Sickle Cell Anemia</td>
+            <td>DST: IBITF IIT Bhilai</td>
+            <td>99.96 lakhs</td>
+            <td class="year-col">2024-2026</td>
+          </tr>
         </tbody>
       </table>
     </div>
+
+    <!-- COMPLETED PROJECTS SECTION -->
+    <h3 class="project-subheading">Completed Projects</h3>
+    <div class="table-responsive">
+      <table class="project-table">
+        <thead>
+          <tr>
+            <th class="sno-col">S.No.</th>
+            <th>Project Title</th>
+            <th>Funding Agency</th>
+            <th>Amount (₹)</th>
+            <th class="year-col">Year</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="sno-col">1</td>
+            <td>Biological Thiol-Oxidation by Cysteine Dioxygenase Enzymes: Biomimetic Approach</td>
+            <td>DST, New Delhi, India</td>
+            <td>26.72 Lakhs</td>
+            <td class="year-col">2012-15</td>
+          </tr>
+          <tr>
+            <td class="sno-col">2</td>
+            <td>Dioxygen Activation by Non-Heme Iron enter: Insight into Catalytic and Mechanistic Aspects</td>
+            <td>UGC, New Delhi, India</td>
+            <td>13.62 Lakhs</td>
+            <td class="year-col">2012-15</td>
+          </tr>
+          <tr>
+            <td class="sno-col">3</td>
+            <td>Bioinspired Models for Unusual Tri Histidine Motif in Non-Heme Iron Enzymes</td>
+            <td>BRNS Mumbai, India</td>
+            <td>29.00 Lakhs</td>
+            <td class="year-col">2013-17</td>
+          </tr>
+          <tr>
+            <td class="sno-col">4</td>
+            <td>Mobility Project for International Collaboration</td>
+            <td>DST-OEAD Indo-Austrian Project</td>
+            <td>06.70 Lakhs</td>
+            <td class="year-col">2013-15</td>
+          </tr>
+          <tr>
+            <td class="sno-col">5</td>
+            <td>Development of Biocompatible Iron-Based ParaCEST MRI Contrast Agents: Targeting Glucose and Glutamine Transporters of Cancer Cells</td>
+            <td>DBT, New Delhi</td>
+            <td>25.00 Lakhs</td>
+            <td class="year-col">2015-18</td>
+          </tr>
+          <tr>
+            <td class="sno-col">6</td>
+            <td>Development Biologically viable Iron-Based MRI Contrast Agents</td>
+            <td>SERB, New Delhi</td>
+            <td>70 Lakhs</td>
+            <td class="year-col">2017-20</td>
+          </tr>
+          <tr>
+            <td class="sno-col">7</td>
+            <td>Molecular Design and Development of Imaging Agents and Inhibitors: A Chemical Biology Approach</td>
+            <td>RUSA, MHRD, New Delhi</td>
+            <td>358 Lakhs</td>
+            <td class="year-col">2020-22</td>
+          </tr>
+          <tr>
+            <td class="sno-col">8</td>
+            <td>Design and Development of Imaging probes and Potential Inhibitors for Neurodegenerative Disorders: A Chemical Biology Approach</td>
+            <td>TANCHE, Higher Education (K2) Department, Tamil Nadu Government</td>
+            <td>47.88 Lakhs</td>
+            <td class="year-col">2020-22</td>
+          </tr>
+          <tr>
+            <td class="sno-col">9</td>
+            <td>Bioinspired Copper Coordination Polymers as Filter for COVID-19: Targeting Catalytic Site of Virus</td>
+            <td>SERB, New Delhi COVID-19 Special</td>
+            <td>16.81 lakhs</td>
+            <td class="year-col">2020-2021</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
   </div>
 
+  <!-- Common Footer -->
   <footer>
     <p>© 2026 RMM Group, IIT Bhilai. All Rights Reserved.</p>
     <p class="designer">Designed by Vish Technologies</p>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
