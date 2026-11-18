@@ -98,8 +98,7 @@ nav a:hover, nav a.active {
   font-size: 1.8rem;
   color: var(--primary-color);
   cursor: pointer;
-  padding: 0.2rem 0.5rem;
-  z-index: 1100;
+  z-index: 1200;
 }
 
 /* Main Container */
@@ -209,21 +208,21 @@ nav a:hover, nav a.active {
 }
 
 .member-img-box {
-  width: 100%;
-  height: 240px;
-  background-color: #f8fafc;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem;
+  width: 100% !important;
+  height: 220px !important;
+  background-color: #f8fafc !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  padding: 8px !important;
 }
 
 .member-img-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain; /* Ensures complete image is visible without cutting */
-  object-position: center;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important; /* Forces full image to show without cropping */
+  object-position: center !important;
 }
 
 .member-info {
@@ -335,47 +334,56 @@ footer .designer {
   font-weight: 600;
 }
 
-/* Comprehensive Mobile View Optimizations */
+/* Mobile Responsive Header & Compact Floating Dropdown */
 @media (max-width: 950px) {
   .mobile-toggle {
-    display: block;
+    display: block !important;
   }
   .nav-container {
-    flex-wrap: wrap;
-    padding: 0.8rem 1rem;
+    flex-wrap: wrap !important;
+    padding: 0.8rem 1rem !important;
   }
   nav {
-    width: 100%;
+    width: 100% !important;
   }
-  nav ul {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background: #ffffff;
-    padding: 0.8rem 0;
-    margin-top: 0.6rem;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-    border-radius: 8px;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1050;
+  
+  /* Compact Floating Dropdown Menu (Not Full Screen) */
+  nav ul, .nav-links {
+    display: none !important;
+    flex-direction: column !important;
+    width: 240px !important;
+    background: #ffffff !important;
+    position: absolute !important;
+    top: 100% !important;
+    right: 1rem !important;
+    left: auto !important;
+    padding: 0.5rem 0 !important;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25) !important;
+    border-radius: 10px !important;
+    z-index: 1100 !important;
+    margin-top: 0.5rem !important;
   }
-  nav ul.active {
-    display: flex;
+  
+  nav ul.active, .nav-links.active {
+    display: flex !important;
   }
-  nav ul li {
-    width: 100%;
-    text-align: left;
+  
+  nav ul li, .nav-links li {
+    width: 100% !important;
+    text-align: left !important;
   }
-  nav a {
-    display: block;
-    padding: 0.7rem 1.2rem;
-    font-size: 0.95rem;
-    border-radius: 0;
+  
+  nav ul li a, .nav-links li a {
+    display: block !important;
+    padding: 0.6rem 1.2rem !important;
+    font-size: 0.92rem !important;
+    color: #1e293b !important;
+    border-radius: 0 !important;
   }
-  nav a:hover, nav a.active {
-    background-color: #f1f5f9;
+  
+  nav ul li a:hover, .nav-links li a:hover {
+    background-color: #f1f5f9 !important;
+    color: #0d9488 !important;
   }
 }
 
@@ -399,7 +407,7 @@ footer .designer {
     width: 100% !important;
   }
   .table-container {
-    overflow-x: auto;
+    overflow-x: auto !important;
   }
   table th, table td {
     padding: 8px 10px !important;
