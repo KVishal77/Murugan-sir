@@ -303,7 +303,7 @@ table, .project-table {
   width: 100%;
   border-collapse: collapse;
   background: white;
-  min-width: 600px; /* Forces smooth horizontal scrolling instead of breaking layout */
+  min-width: 600px;
 }
 
 th, td {
@@ -397,6 +397,29 @@ footer .designer {
     margin: 1rem auto !important;
     max-width: 100% !important;
     overflow-x: hidden !important;
+  }
+
+  /* Center PI / Hero Image Caption & Text Below Image on Mobile */
+  .hero-section, .pi-section, .pi-card, .pi-box, .profile-card, .profile-box {
+    text-align: center !important;
+  }
+
+  .hero-section img, .pi-section img, .pi-card img, .pi-box img, .profile-card img, .profile-box img {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+  }
+
+  .hero-section p, .pi-section p, .pi-card p, .pi-box p, .profile-card p, .profile-box p,
+  .hero-section h1, .hero-section h2, .hero-section h3,
+  .pi-section h1, .pi-section h2, .pi-section h3,
+  .pi-card h1, .pi-card h2, .pi-card h3,
+  .profile-card h1, .profile-card h2, .profile-card h3 {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 
   /* Resized Headings for Mobile View */
