@@ -399,7 +399,7 @@ footer .designer {
     overflow-x: hidden !important;
   }
 
-  /* Equal Left/Right Padding on Sections & Justify Long Paragraphs Only */
+  /* Equal Left/Right Padding on Sections & Containers */
   .hero-section, .pi-section, .pi-card, .pi-box, .profile-card, .profile-box, .pi-details, .pi-info,
   section, .about-section, .intro-section {
     width: 100% !important;
@@ -416,25 +416,19 @@ footer .designer {
     display: block !important;
   }
 
-  /* Do NOT justify PI profile name/designation/department lines */
-  .pi-section p, .pi-card p, .pi-box p, .profile-card p, .profile-box p,
-  .pi-details p, .pi-info p,
-  .pi-section h1, .pi-section h2, .pi-section h3,
-  .pi-card h1, .pi-card h2, .pi-card h3,
-  .profile-card h1, .profile-card h2, .profile-card h3,
-  .pi-details h1, .pi-details h2, .pi-details h3,
-  .pi-info h1, .pi-info h2, .pi-info h3 {
+  /* Keep short PI name/role/dept lines centered without justification */
+  .pi-name, .pi-role, .pi-dept, .profile-name, .profile-role, .profile-dept {
     width: 100% !important;
     max-width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
     text-align: center !important;
   }
 
-  /* Justify long narrative paragraphs in hero/research/section blocks */
-  .hero-section p, section p, .about-section p, .intro-section p {
+  /* Justify all narrative paragraphs across home/sections with equal left/right spacing */
+  section p, .hero-section p, .about-section p, .intro-section p, .container > p {
     width: 100% !important;
     max-width: 100% !important;
     margin-left: 0 !important;
