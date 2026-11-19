@@ -90,7 +90,7 @@ nav a:hover, nav a.active {
   background-color: #f1f5f9;
 }
 
-/* Mobile Hamburger Toggle Button - Locked to Exact Right Corner */
+/* Mobile Hamburger Toggle Button - Locked to Exact Right Corner Globally */
 .mobile-toggle {
   display: none;
   background: transparent;
@@ -189,7 +189,7 @@ nav a:hover, nav a.active {
   font-size: 0.95rem;
 }
 
-/* Member Cards - Original Desktop View Unchanged */
+/* Member Cards - Desktop View Restored */
 .member-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -336,7 +336,7 @@ footer .designer {
   font-weight: 600;
 }
 
-/* Mobile Responsive Header, Compact Dropdown & Heading Resizing */
+/* Mobile Responsive Header & Compact Dropdown */
 @media (max-width: 950px) {
   .mobile-toggle {
     display: block !important;
@@ -391,6 +391,7 @@ footer .designer {
   }
 }
 
+/* Mobile View Specific Layout & Paragraph Justification Fix */
 @media (max-width: 768px) {
   .container {
     padding: 0 1rem !important;
@@ -399,7 +400,7 @@ footer .designer {
     overflow-x: hidden !important;
   }
 
-  /* Equal Left/Right Padding on Sections & Containers */
+  /* Equal Outer Padding for Containers on Mobile */
   .hero-section, .pi-section, .pi-card, .pi-box, .profile-card, .profile-box, .pi-details, .pi-info,
   section, .about-section, .intro-section {
     width: 100% !important;
@@ -408,6 +409,7 @@ footer .designer {
     padding-right: 1.25rem !important;
     margin-left: auto !important;
     margin-right: auto !important;
+    box-sizing: border-box !important;
   }
 
   .hero-section img, .pi-section img, .pi-card img, .pi-box img, .profile-card img, .profile-box img {
@@ -416,8 +418,10 @@ footer .designer {
     display: block !important;
   }
 
-  /* Keep short PI name/role/dept lines centered without justification */
-  .pi-name, .pi-role, .pi-dept, .profile-name, .profile-role, .profile-dept {
+  /* Keep PI short profile info centered (Name, Designation, Dept) */
+  .pi-name, .pi-role, .pi-dept, .profile-name, .profile-role, .profile-dept,
+  .hero-section h2, .pi-section h2, .profile-card h2,
+  .hero-section p[style*="color: var"], .pi-section p[style*="color: var"] {
     width: 100% !important;
     max-width: 100% !important;
     margin-left: auto !important;
@@ -427,26 +431,22 @@ footer .designer {
     text-align: center !important;
   }
 
-  /* Justify all narrative paragraphs across home/sections with equal left/right spacing */
-  section p, .hero-section p, .about-section p, .intro-section p, .container > p {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+  /* Strictly Justify all long narrative research paragraphs with equal left-right margin */
+  body main p,
+  body .container p,
+  body section p,
+  div[style*="background"] p,
+  .hero-section p, 
+  .about-section p, 
+  .intro-section p {
     text-align: justify !important;
     text-justify: inter-word !important;
-  }
-
-  .hero-section h1, .hero-section h2, .hero-section h3 {
-    width: 100% !important;
-    max-width: 100% !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    box-sizing: border-box !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    text-align: left !important;
+    width: 100% !important;
   }
 
   /* Resized Headings for Mobile View */
@@ -488,7 +488,7 @@ footer .designer {
     font-size: 0.9rem !important;
   }
 
-  /* Perfect Table Scrolling without breaking screen width */
+  /* Table Scrolling Fix */
   .table-responsive, .table-container {
     width: 100% !important;
     overflow-x: auto !important;
