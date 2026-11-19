@@ -399,15 +399,15 @@ footer .designer {
     overflow-x: hidden !important;
   }
 
-  /* Equal Left/Right Padding & Centered Text Below Image on Mobile */
-  .hero-section, .pi-section, .pi-card, .pi-box, .profile-card, .profile-box, .pi-details, .pi-info {
+  /* Justified Text & Equal Left/Right Padding on Mobile */
+  .hero-section, .pi-section, .pi-card, .pi-box, .profile-card, .profile-box, .pi-details, .pi-info,
+  section, .about-section, .intro-section {
     width: 100% !important;
     max-width: 100% !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
     margin-left: auto !important;
     margin-right: auto !important;
-    text-align: center !important;
   }
 
   .hero-section img, .pi-section img, .pi-card img, .pi-box img, .profile-card img, .profile-box img {
@@ -417,7 +417,17 @@ footer .designer {
   }
 
   .hero-section p, .pi-section p, .pi-card p, .pi-box p, .profile-card p, .profile-box p,
-  .pi-details p, .pi-info p,
+  .pi-details p, .pi-info p, section p, .about-section p, .intro-section p {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-align: justify !important;
+    text-justify: inter-word !important;
+  }
+
   .hero-section h1, .hero-section h2, .hero-section h3,
   .pi-section h1, .pi-section h2, .pi-section h3,
   .pi-card h1, .pi-card h2, .pi-card h3,
@@ -426,11 +436,11 @@ footer .designer {
   .pi-info h1, .pi-info h2, .pi-info h3 {
     width: 100% !important;
     max-width: 100% !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
-    text-align: center !important;
+    text-align: left !important;
   }
 
   /* Resized Headings for Mobile View */
